@@ -18,7 +18,7 @@
         "title": "The Godfather",
         "runtime": "02:58",
         "rating": "R",
-        "img": "link",
+        "img": "https://static.metacritic.com/images/products/movies/3/47c2b1f35087fc23c5ce261bbc3ad9e0.jpg",
         "showtime": "",
         "director": "Francis Ford Coppola",
         "actors": [
@@ -33,7 +33,7 @@
         "title": "The Godfather: Part II",
         "runtime": "03:22",
         "rating": "R",
-        "img": "link",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/41N2vp6wUiL._AC_.jpg",
         "showtime": "",
         "director": "Francis Ford Coppola",
         "actors": [
@@ -48,7 +48,7 @@
         "title": "Pulp Fiction",
         "runtime": "02:58",
         "rating": "R",
-        "img": "link",
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
         "showtime": "",
         "director": "Quentin Tarantino",
         "actors": [
@@ -63,7 +63,7 @@
         "title": "The Good, the Bad and the Ugly",
         "runtime": "03:58",
         "rating": "R",
-        "img": "link",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/81keqIN-tlL._SL1500_.jpg",
         "showtime": "",
         "director": "Sergio Leone",
         "actors": [
@@ -78,7 +78,7 @@
         "title": "The Dark Knight",
         "runtime": "02:32",
         "rating": "12",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbkGrsXlSWxIbDFi3cN-nvFXa0yx4oPzmmEQ&usqp=CAU",
         "showtime": "",
         "director": "Christopher Nolan",
         "actors": [
@@ -93,7 +93,7 @@
         "title": "Happy Feet",
         "runtime": "01:48",
         "rating": "U",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBJDDTBtsuh_3QNUbJimqM365k_jCMFLaoSw&usqp=CAU",
         "showtime": "",
         "director": "George Miller",
         "actors": [
@@ -108,7 +108,7 @@
         "title": "Schindler's List",
         "runtime": "03:17",
         "rating": "15",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_x2R3vCPhY7WsfXwlR16hyYb1KyvVvQFUA&usqp=CAU",
         "showtime": "",
         "director": "Steven Spielberg",
         "actors": [
@@ -123,7 +123,7 @@
         "title": "The Lord of the Rings: The Return of the King",
         "runtime": "04:11",
         "rating": "U",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5J2yTsfeGPw4Vc-7fNYI6bZomizpmwxiOg&usqp=CAU",
         "showtime": "",
         "director": "Peter Jackson",
         "actors": [
@@ -138,7 +138,7 @@
         "title": "Fight Club",
         "runtime": "02:31",
         "rating": "18",
-        "img": "link",
+        "img": "https://akns-images.eonline.com/eol_images/Entire_Site/2019914/rs_685x1024-191014113838-634-fight-club-poster.cl.101419.jpg?fit=around%7C685:1024&output-quality=90&crop=685:1024;center,top",
         "showtime": "",
         "director": "David Fincher",
         "actors": [
@@ -153,7 +153,7 @@
         "title": "Star Wars: Episode V - The Empire Strikes Back",
         "runtime": "02:07",
         "rating": "U",
-        "img": "link",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/71CNDHGNE1L.jpg",
         "showtime": "",
         "director": "Irvin Kershner",
         "actors": [
@@ -168,7 +168,7 @@
         "title": "Avatar",
         "runtime": "02:42",
         "rating": "12A",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ744GAK-UOL9HlWTIUFuXg9v3BIL-qQSY_sQ&usqp=CAU",
         "showtime": "",
         "director": "James Cameron",
         "actors": [
@@ -183,7 +183,7 @@
         "title": "Harry Potter and the Goblet of Fire",
         "runtime": "02:37",
         "rating": "12A",
-        "img": "link",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/51SGDS0R38L._AC_SY445_.jpg",
         "showtime": "",
         "director": "Mike Newell",
         "actors": [
@@ -198,7 +198,7 @@
         "title": "Inception",
         "runtime": "02:42",
         "rating": "12A",
-        "img": "link",
+        "img": "https://resizing.flixster.com/4MrL62heb7yBgBt8zllSeqNZxg4=/206x305/v2/https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg",
         "showtime": "",
         "director": "Christopher Nolan",
         "actors": [
@@ -213,7 +213,7 @@
         "title": "Goodfellas",
         "runtime": "02:28",
         "rating": "18",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-bXZGsEYYIezL2mmSR98HIPZf__Y2l2_LRA&usqp=CAU",
         "showtime": "",
         "director": "Martin Scorsese",
         "actors": [
@@ -228,7 +228,7 @@
         "title": "Penguin",
         "runtime": "02:12",
         "rating": "18",
-        "img": "link",
+        "img": "https://moviegalleri.net/wp-content/uploads/2019/10/Actress-Keerthi-Suresh-Penguin-Movie-Title-Look-Poster-HD.jpg",
         "showtime": "",
         "director": "Eashvar Karthic",
         "actors": [
@@ -243,7 +243,7 @@
         "title": "Seven Samurai",
         "runtime": "03:27",
         "rating": "PG",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfk44G9kcps_9RBUnz2_e4bjsihz51VtS0ew&usqp=CAU",
         "showtime": "",
         "director": "Akira Kurosawa",
         "actors": [
@@ -258,7 +258,7 @@
         "title": "Forrest Gump",
         "runtime": "02:22",
         "rating": "12",
-        "img": "link",
+        "img": "https://fesapusewebsite.blob.core.windows.net/fathom/d37f805a8a9089dcf1b5b12fb399958a.png",
         "showtime": "",
         "director": "Robert Xemeckis",
         "actors": [
@@ -273,7 +273,7 @@
         "title": "The Matrix",
         "runtime": "02:30",
         "rating": "15",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfDYkbVRFwOgUyLnwzGpQjYse751vlM8Pmww&usqp=CAU",
         "showtime": "",
         "director": "Lana Wachowski",
         "actors": [
@@ -288,7 +288,7 @@
         "title": "Shark Tale",
         "runtime": "01:31",
         "rating": "U",
-        "img": "link",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjFwZ_d3PkZY-vTYrxV-sqBSBQaY7A7bV_Ew&usqp=CAU",
         "showtime": "",
         "director": "Rob Letterman",
         "actors": [
