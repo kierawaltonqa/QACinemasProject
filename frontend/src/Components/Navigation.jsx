@@ -37,13 +37,13 @@ const Navigation = (props) => {
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    Film Listings
+                                    <NavLink href="/listings">Film Listings</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    New Releases
+                                    <NavLink href="/newreleases">New Releases</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    Film Classification
+                                    <NavLink href="/classification">Film Classification</NavLink>
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
