@@ -29,9 +29,28 @@ router.get("/getAll", (req, res, next) => {
     });
 });
 
-//!Read by movie title
+//*Read by movie title
+router.get("/getName/:movie", (req, res, next) => {
+    Discuss.find({ movie: req.params.movie }, (err, result) => {
+        if (err) {
+            next(err)
+        }
+        res.status(200).send(result)
+    })
+})
 
 //!update
+router.patch("/updateById/:id", (req, res, next) => {
+    Discuss.findByIdAndUpdate(req.params.id,
+        req.body,
+        { new: true },
+        (err) => {
+            if (err) {
+                next(err);
+            }
+            res.status(202).send(`Successfully updated!`);
+        })
+});
 
 //!delete
 
