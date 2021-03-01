@@ -20,6 +20,7 @@ const BookingSchema = new Schema ({
 })
     
 const Cinema = model(`Cinema`, Cinemachema);
+const Booking = model('Booking', BookingSchema);
 
 mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if(err){
@@ -30,3 +31,4 @@ mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?
 })
 
 module.exports = { "Cinema": Cinema };
+module.exports = {"Booking" : Booking};
