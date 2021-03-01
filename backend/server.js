@@ -18,9 +18,10 @@ const logger = (req, res, next) => {
 
 app.use(logger);
 
-const cinemaRoute = require("./Routes/Cinema");
 
-app.use("/cinema", cinemaRoute);
+const bookingRoute = require("./Routes/Booking");
+
+app.use("/bookings", bookingRoute);
 
 // error handling
 app.use((req,res,next) => {

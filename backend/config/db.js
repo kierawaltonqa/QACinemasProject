@@ -3,26 +3,20 @@
 const mongoose = require('mongoose');
 const {Schema, model} = mongoose;
 
-const Cinemachema = new Schema ({
-    // : String,
-    //locations : String,
-});
 
 const BookingSchema = new Schema ({
 
-    moviename : String,
-    date : String,
-    time : String,
-    bookername : String,
-    adultseats : Number,
-    childseats : Number
+    moviename : { type: String, required: true },
+    date : { type: String, required: true },
+    time : { type: String, required: true },
+    bookername : { type: String, required: true },
+    adultseats : { type: String, required: true },
+    childseats : { type: String, required: true },
     
 })
-    
-const Cinema = model(`Cinema`, Cinemachema);
 const Booking = model('Booking', BookingSchema);
 
-mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/cinema?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if(err){
         console.log(err);
     }else{
@@ -30,5 +24,4 @@ mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?
     }
 })
 
-module.exports = { "Cinema": Cinema };
 module.exports = {"Booking" : Booking};
