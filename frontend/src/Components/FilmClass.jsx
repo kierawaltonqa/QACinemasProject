@@ -4,8 +4,10 @@ import PG from './FilmClassifications/PG';
 import TwelveA from './FilmClassifications/TwelveA';
 import Twelve from './FilmClassifications/Twelve';
 import U from './FilmClassifications/U';
-// import { Card, CardBody, CardTitle } from "reactstrap";
+
 import '../Resources/Sidebar.css';
+
+// import { Toast } from 'react-bootstrap'
 
 
 
@@ -13,6 +15,8 @@ import '../Resources/Sidebar.css';
 
 
 const FilmClass = () => {
+
+
 
 
 
@@ -55,15 +59,12 @@ other class are child of this one  */}
 
                     </div>
                 </div> */}
-            {/* <div className="container">
-                <div className="col-md-9">
-                    <div className="alert alert-success"></div>
-                    {/* <ReadRatings /> */}
 
-            {/* </div> */}
-            {/* // </div > */}
 
-            {/* </div >  */}
+            {/* <ReadRatings /> */}
+
+
+
 
         </>
 
