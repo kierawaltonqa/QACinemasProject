@@ -18,7 +18,18 @@ router.post("/create", (req, res, next) => {
         .catch((err) => next(err));
 });
 
-//!read
+
+//*read - getAll
+router.get("/getAll", (req, res, next) => {
+    Discuss.find((err, discuss) => {
+        if (err) {
+            next(err);
+        }
+        res.send(discuss);
+    });
+});
+
+//!Read by movie title
 
 //!update
 
