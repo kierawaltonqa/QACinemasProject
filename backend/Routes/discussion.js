@@ -39,7 +39,7 @@ router.get("/getName/:movie", (req, res, next) => {
     })
 })
 
-//!update
+//*update
 router.patch("/updateById/:id", (req, res, next) => {
     Discuss.findByIdAndUpdate(req.params.id,
         req.body,
@@ -53,6 +53,14 @@ router.patch("/updateById/:id", (req, res, next) => {
 });
 
 //!delete
+router.delete("/delete/:id", (req, res, next) => {
+    Discuss.findByIdAndDelete(req.params.id, (err) => {
+        if (err) {
+            next(err);
+        }
+        res.status(204).send(`Successfully deleted`);
+    });
+});
 
 
 
