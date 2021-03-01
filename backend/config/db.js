@@ -3,12 +3,9 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
-const Cinemachema = new Schema({
-    // : String,
-    //locations : String,
-});
 
-const Cinema = model(`Cinema`, Cinemachema);
+
+
 
 const paymentSchema = new Schema({
     fullName: { type: String, required: true },
@@ -21,7 +18,7 @@ const paymentSchema = new Schema({
 });
 const Payment = model(`Payment`, paymentSchema);
 
-mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/cinema?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
         console.log(err);
     } else {
@@ -29,5 +26,4 @@ mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/test?
     }
 })
 
-module.exports = { "Cinema": Cinema };
 module.exports = { "Payment": Payment };
