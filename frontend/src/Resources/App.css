@@ -4,18 +4,22 @@ body {
 #listingheader{
     text-align: center;
 }
+#modalimage{
+    text-align: center;
+}
 
    .modal-dialog{
-   
-     width: 100%;
+     width: 1200px;
      height: 100%;
      margin: 0;
      padding: 0;
    }
-
+.modal-container{
+    width: 1200px;
+}
    .modal-content {
      height: auto;
-     min-width: 100vh;
+     min-width: 100%;
      min-height: 100%;
      border-radius: 0;
   }

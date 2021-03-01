@@ -16,19 +16,24 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                 <ModalHeader>{title}</ModalHeader>
                 <ModalBody>
                     <div class="row-md">
-                        <div className="col-md-6">
-                            <img src={poster} height="50%" width="50%" />
+                        <div className="col-md-12" id="modalimage">
+                            <img src={poster} height="30%" width="30%" />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                             <hr />
                             <h5>Details...</h5>
-                            <ul>
-                                <li>The runtime for this movie is: {runtime}</li>
-                                <li>This movie has a rating of {rating} (to see more info on ratings, visit the classification page)</li>
-                                <li>{director} directed this movie.</li>
-                                <li>The main cast: {actors}</li>
-                            </ul>
-                            <hr />
+                            <p>Directed by: {director}</p>
+                            <p>The main cast:
+                                    <ul>
+                                    {
+                                        actors.map((actor) => (
+                                            <li>{actor}</li>
+                                        ))
+                                    }
+                                </ul>
+                            </p>
+                            <p>Runtime: {runtime}</p>
+                            <p>Rating: {rating}</p>
                         </div>
                     </div>
 
