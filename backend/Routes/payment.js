@@ -17,6 +17,8 @@ router.post("/create", (req, res, next) => {
         .catch((err) => next(err));
 });
 
+//?http://localhost:4500/payment/create
+
 router.get("/getAll", (req, res, next) => {
     Payment.find((err, pay) => {
         if (err) {
