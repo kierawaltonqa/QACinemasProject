@@ -2,6 +2,7 @@ import './Resources/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Listings from './Components/Movies/Listings';
+import NewReleases from './Components/Movies/NewReleases';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route path="/listings">
             <Listings />
           </Route>
+          {/* <Route path="/newreleases">
+            <NewReleases />
+          </Route> */}
         </Switch>
       </Router>
 

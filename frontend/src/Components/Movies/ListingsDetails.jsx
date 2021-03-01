@@ -1,4 +1,3 @@
-import { useParams, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
