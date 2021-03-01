@@ -25,14 +25,15 @@ app.use(cors());
 // app.use("/cinema", cinemaRoute);
 
 // app.use(logger);
-
+//!payment
 const paymentRoute = require('./Routes/payment');
-
 app.use("/payment", paymentRoute);
-
+//!Booking
 const bookingRoute = require("./Routes/Booking");
-
 app.use("/bookings", bookingRoute);
+//!Discussiondi
+const discssionRoute = require('./Routes/discussion');
+app.use("/discussion", discssionRoute);
 
 // error handling
 app.use((req, res, next) => {

@@ -18,20 +18,32 @@ const paymentSchema = new Schema({
 });
 const Payment = model(`Payment`, paymentSchema);
 
-const BookingSchema = new Schema ({
+const BookingSchema = new Schema({
 
-    moviename : { type: String, required: true },
-    date : { type: String, required: true },
-    time : { type: String, required: true },
-    bookername : { type: String, required: true },
-    adultseats : { type: String, required: true },
-    childseats : { type: String, required: true },
-    
+    moviename: { type: String, required: true },
+    date: { type: String, required: true },
+    time: { type: String, required: true },
+    bookername: { type: String, required: true },
+    adultseats: { type: String, required: true },
+    childseats: { type: String, required: true },
+
 })
 const Booking = model('Booking', BookingSchema);
 
+const discussionSchema = new Schema({
+
+    name: { type: String },
+    movie: { type: String },
+    topic: { type: String },
+    discussion: { type: String },
+    rating: { type: Number, min: 1, max: 10 }
+
+})
+
+const Discuss = model('Discuss', discussionSchema);
+
 mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/cinema?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-    if(err){
+    if (err) {
         console.log(err);
     } else {
         console.log(`Connection has worked`);
@@ -39,4 +51,5 @@ mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/cinem
 })
 
 module.exports = { "Payment": Payment };
-module.exports = {"Booking" : Booking};
+module.exports = { "Booking": Booking };
+module.exports = { "Discuss": Discuss };
