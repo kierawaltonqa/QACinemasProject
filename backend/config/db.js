@@ -7,6 +7,17 @@ const Cinemachema = new Schema ({
     // : String,
     //locations : String,
 });
+
+const BookingSchema = new Schema ({
+
+    moviename : String,
+    date : String,
+    time : String,
+    bookername : String,
+    adultseats : Number,
+    childseats : Number
+    
+})
     
 const Cinema = model(`Cinema`, Cinemachema);
 
