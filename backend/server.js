@@ -30,6 +30,10 @@ const paymentRoute = require('./Routes/payment');
 
 app.use("/payment", paymentRoute);
 
+const bookingRoute = require("./Routes/Booking");
+
+app.use("/bookings", bookingRoute);
+
 // error handling
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found'));
