@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
+const { DB_URL, DB_NAME } = require('./CONSTS.json');
 
 
 
@@ -42,7 +43,7 @@ const discussionSchema = new Schema({
 
 const Discuss = model('Discuss', discussionSchema);
 
-mongoose.connect(`mongodb+srv://cinema:root@spellcluster.tnmib.mongodb.net/cinema?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
         console.log(err);
     } else {
