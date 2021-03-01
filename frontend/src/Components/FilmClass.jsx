@@ -4,12 +4,16 @@ import PG from './FilmClassifications/PG';
 import TwelveA from './FilmClassifications/TwelveA';
 import Twelve from './FilmClassifications/Twelve';
 import U from './FilmClassifications/U';
-import { Card, CardBody, CardTitle } from "reactstrap";
+// import { Card, CardBody, CardTitle } from "reactstrap";
 import '../Resources/Sidebar.css';
 
 
 
+
+
+
 const FilmClass = () => {
+
 
 
     return (
@@ -23,26 +27,43 @@ other class are child of this one  */}
 
 
             <h1>this is the film classifications</h1>
-            <div className="bg-light border-right" id="sidebar">
-                <Card>
-                    <CardBody>
-                        <CardTitle>Film Classifications</CardTitle>
-                        <p>hi</p>
-                        <Eighteen />
-                        <Fifteen />
-                        <PG />
-                        <TwelveA />
-                        <Twelve />
-                        <U />
-                        <p>what are the standard film classifications : done </p>
+            {/* <div className="row">
+                <div className="col-md-3">
+                    <div className="bg-light border-right" id="sidebar">
+                        <Card>
+                            <CardBody>
+                                <CardTitle>Film Classifications</CardTitle> */}
 
-                        <p>what are the rules and conidions relating to each classification</p>
+            <p>hi</p>
 
-                        <p>link to external resources </p>
-                    </CardBody>
-                </Card>
+            <Eighteen />
 
-            </div>
+
+
+            <Fifteen />
+            <PG />
+            <TwelveA />
+            <Twelve />
+            <U />
+            <p>what are the standard film classifications : done </p>
+
+            <p>what are the rules and conidions relating to each classification</p>
+
+            <p>link to external resources </p>
+            {/* </CardBody>
+                        </Card>
+
+                    </div>
+                </div> */}
+            {/* <div className="container">
+                <div className="col-md-9">
+                    <div className="alert alert-success"></div>
+                    {/* <ReadRatings /> */}
+
+            {/* </div> */}
+            {/* // </div > */}
+
+            {/* </div >  */}
 
         </>
 
@@ -53,7 +74,6 @@ other class are child of this one  */}
 
 
 }
-
 
 
 
