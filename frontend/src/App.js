@@ -1,6 +1,8 @@
 import './Resources/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
+import FilmClass from './Components/FilmClass';
+import './Resources/Sidebar.css';
 
 function App() {
   return (
@@ -10,6 +12,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
 
+          </Route>
+          <Route path="/FilmClass">
+            <FilmClass />
           </Route>
         </Switch>
       </Router>
