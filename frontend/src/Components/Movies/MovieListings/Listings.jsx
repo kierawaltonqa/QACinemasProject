@@ -14,6 +14,7 @@ const Listings = () => {
                 {
                     data.map((film) => (
                         <div className="col-md-3">
+                            <br />
                             <ListingsFilm
                                 key={film.id}
                                 title={film.title}
@@ -26,6 +27,7 @@ const Listings = () => {
                         </div>
                     ))
                 }
+
             </div>
         </div>
     )

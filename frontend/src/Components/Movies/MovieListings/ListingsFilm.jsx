@@ -9,7 +9,7 @@ const ListingsFilm = (props) => {
             <CardImg src={props.poster} id="L-img" />
             <CardBody>
                 <CardTitle id="L-title">
-                    <hr />
+
                     <h5>{props.title}</h5>
                     <hr />
                 </CardTitle>

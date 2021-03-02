@@ -6,7 +6,7 @@ const NRFilms = (props) => {
             <CardImg src={props.poster} id="NR-img" />
             <CardBody>
                 <CardTitle id="NR-title">
-                    <hr />
+
                     <h5>{props.title}</h5>
                     <hr />
                 </CardTitle>

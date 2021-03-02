@@ -1,5 +1,8 @@
 #listingheader, #newreleasesheader{
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+
 }
 #modalimage{
     text-align: center;
@@ -21,6 +24,8 @@
 #NR-card, #L-card{
     background-color: #708090;
     text-align: center;
+    height: 600px;
+    width:260px;
 }
 
 #NR-title, #L-title{

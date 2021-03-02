@@ -36,7 +36,7 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                     </div>
 
                 </ModalBody>
-                <ModalFooter>
+                <ModalFooter id="modalfooter">
                     <button onClick={toggle} className="btn btn-outline-danger">Go Back</button>
                 </ModalFooter>
             </Modal>
