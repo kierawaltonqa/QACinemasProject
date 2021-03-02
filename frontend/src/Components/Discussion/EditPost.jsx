@@ -22,7 +22,8 @@ const EditPost = ({ item, trigger }) => {
             .then((response) => {
                 toggle();
                 trigger(response.data);
-            }).catch((error) => {
+            })
+            .catch((error) => {
                 trigger(error.data);
             })
     }
@@ -72,6 +73,6 @@ const EditPost = ({ item, trigger }) => {
             </Modal>
         </>
     )
-
 }
+
 export default EditPost;
