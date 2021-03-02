@@ -31,3 +31,6 @@ app.use((req, res, next) => {
 const server = app.listen(4500, () => {
     console.log(`server has started on port number:  ${server.address().port}`);
 });
+
+
+module.exports = server;
