@@ -1,3 +1,22 @@
 #bodyIndex {
     background-color: black;
 }
+
+#beauty {
+    font-family: monospace;
+    font-size: 6vmin;
+    font-weight: 300;
+    color: white;
+    padding-left: 20%;
+}
+
+.slider-container {
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+    /* position: relative; */
+    
+    /* Add this */
+    
+    }
+
