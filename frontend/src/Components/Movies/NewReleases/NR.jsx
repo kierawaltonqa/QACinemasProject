@@ -7,15 +7,16 @@ const NR = () => {
     return (
         <div className="container">
             <div className="row-md" id="newreleasesheader">
-                <hr />
+                <hr id="hr" />
                 <h3>New Releases.</h3>
-                <hr />
+                <hr id="hr" />
                 <p>This page shows details of the new film releases we have at QA Cinemas.</p>
             </div>
             <div className="row">
                 {
                     data.map((film) => (
                         <div className="col-md-3">
+                            <br />
                             <NRFilms
                                 key={film.id}
                                 title={film.title}
