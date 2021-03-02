@@ -1,4 +1,6 @@
 import { Card, CardBody, CardTitle, CardSubtitle, CardImg } from 'reactstrap';
+import NRDetails from './NRDetails';
+
 const NRFilms = (props) => {
 
     return (
@@ -15,6 +17,15 @@ const NRFilms = (props) => {
                     <p>Rating: {props.rating}</p>
                 </CardSubtitle>
                 <hr />
+                <div className="col-md-12">
+                    <NRDetails id={props.id}
+                        title={props.title}
+                        runtime={props.runtime}
+                        rating={props.rating}
+                        poster={props.poster}
+                        director={props.director}
+                        actors={props.actors} />
+                </div>
             </CardBody>
         </Card>
     )
