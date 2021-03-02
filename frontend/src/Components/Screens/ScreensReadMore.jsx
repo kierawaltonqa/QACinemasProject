@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReadMoreText from './ReadMoreText'
 import "./Screen.css"
 
-const ScreensReadMore = () => {
+const ScreensReadMore = ({screen, toggleState}) => {
+
+
+
+
+
+
     return (
-            <button id="myButton" className="btn btn-secondary btn-block">Read More</button>
+            <button id="myButton" className="btn btn-secondary btn-block" onClick={toggleState} >Read More</button>
     )
 }
 

@@ -7,11 +7,26 @@ import pic4 from "./ScreenPics/deluxeSeating1.png"
 import pic5 from "./ScreenPics/deluxeSeating2.png"
 import pic6 from "./ScreenPics/DeluxeSeatingPlan.png"
 import ScreensReadMore from "./ScreensReadMore";
+import ReadMoreText from "./ReadMoreText";
+import { useState } from "react";
 
 
 
 
 const Screenpage = () => {
+
+    const [toggleOn, setToggleOn] = useState("")
+    const [isHidden, setIsHidden] = useState(false);
+
+    const CardInfoStandard = () => {
+        setToggleOn("standard");
+        // console.log(screen);
+    }
+
+    const CardInfoDeluxe = () => {
+        setToggleOn("deluxe");
+    }
+
 
 
 
@@ -48,14 +63,17 @@ const Screenpage = () => {
 
             <div className="row">
                 <div className="col-md-6">
-                    <ScreensReadMore />
+                    <ScreensReadMore screen="standard" toggleState={CardInfoStandard} />
                 </div>
                 <div className="col-md-6">
-                    <ScreensReadMore />
+                    <ScreensReadMore screen="deluxe" toggleState={CardInfoDeluxe} />
                 </div>
             </div>
 
+            {/* TEST */}
 
+            <br />
+            <ReadMoreText toggleOn={toggleOn} />
 
         </>
     )

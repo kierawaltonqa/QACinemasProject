@@ -33,3 +33,11 @@
     /* Add this */
     
     }
+
+#myInfo {
+        font-family: monospace;
+        font-weight: 300;
+        color: white;
+        font-size: 3vmin;
+
+    }
