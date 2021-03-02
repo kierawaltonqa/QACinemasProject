@@ -52,6 +52,12 @@ mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-
     }
 })
 
-module.exports = { "Payment": Payment };
-module.exports = { "Booking": Booking };
-module.exports = { "Discuss": Discuss };
+module.exports = {
+    "Payment": Payment,
+    "Booking": Booking,
+    "Discuss": Discuss
+}
+
+// exports = { "Payment": Payment };
+// exports = { "Booking": Booking };
+// exports = { "Discuss": Discuss };
