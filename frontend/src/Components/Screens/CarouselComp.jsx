@@ -55,15 +55,14 @@ const CarouselComp = ({image1, image2, image3}) => {
          onExited={() => setAnimating(false)}
          key={item.src}
          >
-                <img src={item.src} alt={item.altText} style={{height:"350px"}}/>
+                <img src={item.src} alt={item.altText} style={{height:"400px", width:"100%"}}/>
                 <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
             </CarouselItem>
         );
     });
 
     return (
-        <Carousel 
-        interval={false}
+        <Carousel data-interval="false"
             activeIndex={activeIndex}
             next={next}
             previous={previous}
