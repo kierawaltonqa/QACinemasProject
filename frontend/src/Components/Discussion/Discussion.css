@@ -1,3 +1,47 @@
-Toast{
+
+
+#toast{
     background-color: gold;
+    color: black;
+    font-family: monospace;
+    
+}
+#toastheader{
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+
+#discussionboard-title{
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #000;
+    text-align: center;
+}
+#discussionboard-subtitle{
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    text-align: center;
+}
+#rating{
+    text-align: right;
+    font-size: small;
+    padding-right: 2rem;
+    padding-top: .5rem;
+}
+#film-header {
+    text-align: center;
+    line-height: 0%;
+    font-size: small;
+    padding-top: .6rem;
+}
+#topic-header, #discussion-header {
+    text-align: center;
+    line-height: 0%;
+    font-size: small;
+}
+#topic-point, #film-point, #discussion-point{
+    text-align: center;
+    font-size: medium;
+    padding-bottom: .8rem;
 }
