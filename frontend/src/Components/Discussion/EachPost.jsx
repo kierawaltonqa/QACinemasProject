@@ -1,4 +1,5 @@
 import { Toast, ToastBody, ToastHeader } from "reactstrap";
+import DeletePost from "./DeletePost";
 
 const EachPost = ({ item, trigger }) => {
     return (
@@ -11,11 +12,12 @@ const EachPost = ({ item, trigger }) => {
                     <p>{item.discussion}</p>
                     <p>Rating: {item.rating}</p>
                     <hr />
-                    {/* <DeletePost className="float-right" del={item._id} trigger={trigger} />
-                    <EditPost className="float-right" item={item} trigger={trigger} /> */}
+                    <DeletePost className="float-right" del={item._id} trigger={trigger} />
+                    {/* <EditPost className="float-right" item={item} trigger={trigger} />  */}
                 </ToastBody>
             </Toast>
         </div>
+
     )
 }
 export default EachPost;

@@ -31,7 +31,7 @@ const ReadDiscussion = ({ message, trigger }) => {
         return (
             <div className="row">
                 {discussionList.map((item) => (
-                    <div className="col-md-12">
+                    <div className="col-md-6">
                         <EachPost key={item._id} trigger={trigger} item={item} />
                     </div>
                 ))}
