@@ -5,8 +5,8 @@ const ReadMoreText = ({toggleOn}) => {
 
 
     if (toggleOn == "standard") {
-        const title = "Standard";
-        const cost = "£8.50";
+        const title = "Standard Seating";
+        const cost = "£8.50   per ticket " ;
         const desc = "Standard seating allows you access to the large array of seating inside our cinema! Providing you with the full QACinema Experience. ";
         return(
         
@@ -23,9 +23,7 @@ const ReadMoreText = ({toggleOn}) => {
         )
     }
     else{ 
-        return((
-            <p>Hi</p>
-        ))
+        return null;
 }
 }
 

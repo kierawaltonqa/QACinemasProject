@@ -1,5 +1,4 @@
 import React from 'react'
-import { Toast, ToastBody, ToastHeader } from 'reactstrap'
 import "./Screen.css"
 const ScreenInfoCard = ({title,cost,desc}) => {
 
@@ -7,7 +6,7 @@ const ScreenInfoCard = ({title,cost,desc}) => {
         <center>
             <div className="container" style={{backgroundColor:"gray"}} type="hidden">
                 <div className="col-4">
-                <p id="myInfo">{title}</p>
+                <p id="myInfoTitle" style={{fontSize:"6vmin", color:"black", fontWeight:"800"}}>{title}</p>
                 <p id="myInfo">{cost}</p>
                 <p id="myInfo">{desc}</p>
 
