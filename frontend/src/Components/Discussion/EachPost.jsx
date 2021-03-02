@@ -17,7 +17,7 @@ const EachPost = ({ item, trigger }) => {
                     <p id="discussion-point">{item.discussion}</p>
                     <p id="rating">Rating: {item.rating}</p>
                     <hr />
-                    <DeletePost className="float-right" del={item._id} trigger={trigger} />
+                    <DeletePost className="float-right" item={item} trigger={trigger} />
                     <EditPost className="float-right" item={item} trigger={trigger} />
                 </ToastBody>
             </Toast>
