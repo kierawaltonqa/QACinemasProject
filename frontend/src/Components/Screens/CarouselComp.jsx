@@ -9,7 +9,7 @@ import {
 
 
 
-const Carousel = (props, image1, image2, image3) => {
+const CarouselComp = ({image1, image2, image3}) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -51,18 +51,19 @@ const Carousel = (props, image1, image2, image3) => {
     const slides = items.map((item) => {
         return (
             <CarouselItem
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-                key={item.src}
-            >
-                <img src={item.src} alt={item.altText} />
+         onExiting={() => setAnimating(true)}
+         onExited={() => setAnimating(false)}
+         key={item.src}
+         >
+                <img src={item.src} alt={item.altText} style={{height:"350px"}}/>
                 <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
             </CarouselItem>
         );
     });
 
     return (
-        <Carousel
+        <Carousel 
+        interval={false}
             activeIndex={activeIndex}
             next={next}
             previous={previous}
@@ -75,4 +76,4 @@ const Carousel = (props, image1, image2, image3) => {
     );
 }
 
-export default Carousel;
+export default CarouselComp;
