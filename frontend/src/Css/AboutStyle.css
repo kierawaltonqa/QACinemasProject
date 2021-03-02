@@ -1,0 +1,57 @@
+
+
+body {
+    font-family: monospace;
+    background: black;
+    color: white;
+    font-size: 19px;
+}
+
+.footer {
+    
+    background-color: #f8f9fa;
+    text-align: center;
+    color:black;
+    width: 100;
+
+
+}
+
+.br {
+    padding-top: 6vmin;
+    text-align: center;
+}
+
+.title {
+padding-top: 10vmin;
+padding-bottom:15vmin;
+  height: 10vmin;
+  text-align: center;
+  
+}
+
+.mid{
+    padding-top: 30vmin;
+    text-align: center;
+    padding-right: 30vmin;
+
+}
+
+
+.img {
+  padding-top: 10vmin;
+  padding-left: 10vmin;
+
+}
+
+.beauty {
+
+  position: inherit;
+  position: relative;
+}
+
+
+.footerinfo{
+    text-align: left;
+    
+}
