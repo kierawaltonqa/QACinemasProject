@@ -1,0 +1,33 @@
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    color:black;
+    width: 100;
+
+
+}
+
+.title {
+padding-top: 10vmin;
+padding-bottom:15vmin;
+  height: 10vmin;
+  text-align: center;
+  
+}
+
+
+.img {
+  padding-top: 10vmin;
+}
+
+.beauty {
+  font-family: monospace, monospace;
+  position: inherit;
+  position: relative;
+}
+
+
+.footerinfo{
+    text-align: left;
+    
+}
