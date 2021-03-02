@@ -2,6 +2,7 @@ import './Resources/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import AboutPage from './Components/AboutPage';
+import CantFindPage from './Components/CantFindPage';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
           <Route path="/About" exact>
             <AboutPage></AboutPage>
             </Route>
+            <CantFindPage></CantFindPage>
         </Switch>
+
       </Router>
 
 

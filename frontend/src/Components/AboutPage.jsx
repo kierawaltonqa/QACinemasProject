@@ -2,7 +2,6 @@
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import logo from "../Resources/Logo/logo.jpg";
-import PropTypes from "prop-types";
 import FindUs from "./FindUs";
 import MeetTheTeam from "./MeetTheTeam";
 import ContactForm from "./ContactForm";
@@ -10,11 +9,14 @@ import QaCinemaInfo from "./QaCinemaInfo";
 import Footer from "./Footer";
 import Map from "./Map";
 
-
 const AboutPage = () => {
   return (
     <>
+    <br className="br"></br>
+    <br className="br"></br>
+{/* <img src={background}  class="rounded float-left" alt="..."></img> */}
       <Container maxWidth="lg">
+     
         <Container>
           <div className="row">
             <Col>
@@ -50,6 +52,6 @@ const AboutPage = () => {
   );
 };
 
-AboutPage.propTypes = {};
+
 
 export default AboutPage;

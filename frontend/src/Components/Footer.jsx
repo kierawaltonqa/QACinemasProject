@@ -3,11 +3,12 @@ import {Card, Button, Nav} from 'react-bootstrap/'
 
 const Footer = () => {
 
-    const link = `https://imagecolorpicker.com/en`;
 
     return (
         <div>
 
+<br></br>
+<br></br>
 <Card >
   
   <Card.Body className="footer">
@@ -29,7 +30,7 @@ const Footer = () => {
 </Nav> 
 
     <row>
-        <tb>  <Button onClick={link} variant="primary" >Twitter</Button> </tb>
+        <tb>  <Button variant="primary" >Twitter</Button> </tb>
 
         <tb>    <Button variant="primary">Facebook</Button></tb>
 
