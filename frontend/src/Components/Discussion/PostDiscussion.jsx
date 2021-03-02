@@ -33,9 +33,10 @@ const PostDiscussion = ({ trigger }) => {
     return (
         <div className="border-right" id="sidebar">
             <Card>
-                <CardBody>
-                    <CardTitle>Post A Discussion Point</CardTitle>
-                    <form onSubmit={createDiscussion}>
+                <CardBody id="discussion-body">
+                    <CardTitle id="discussion-card-title">Post A Discussion Point</CardTitle>
+                    <hr id="hr" />
+                    <form id="form" onSubmit={createDiscussion}>
                         <input type="text"
                             value={name}
                             className="form-control"
