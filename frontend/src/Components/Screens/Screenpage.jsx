@@ -37,18 +37,22 @@ const Screenpage = () => {
 
             <div className="row">
                 <div className="col-6">
-                    <p id="beauty">Standard Seating</p>
+                    <p id="beauty" className="myTitle">Standard Seating</p>
                 </div>
                 <div className="col-6">
-                    <p id="beauty" style={{ textAlign: "left" }}>Deluxe Seating</p>
+                    <p id="beauty" className="myTitle" style={{ textAlign: "left" }}>Deluxe Seating</p>
                 </div>
             </div>
 
             {/* Buttons for Read More */}
 
             <div className="row">
+                <div className="col-md-6">
                     <ScreensReadMore />
+                </div>
+                <div className="col-md-6">
                     <ScreensReadMore />
+                </div>
             </div>
 
 

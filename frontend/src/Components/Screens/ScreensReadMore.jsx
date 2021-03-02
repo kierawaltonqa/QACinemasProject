@@ -1,12 +1,9 @@
 import React from 'react'
+import "./Screen.css"
 
 const ScreensReadMore = () => {
     return (
-        <div className="col-6">
-
-            <button className="btn btn-secondary">Read More</button>
-            
-        </div>
+            <button id="myButton" className="btn btn-secondary btn-block">Read More</button>
     )
 }
 

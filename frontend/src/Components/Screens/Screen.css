@@ -4,10 +4,24 @@
 
 #beauty {
     font-family: monospace;
+    font-weight: 300;
+    color: white;
+}
+
+.myTitle {
+    font-family: monospace;
     font-size: 6vmin;
     font-weight: 300;
     color: white;
     padding-left: 20%;
+}
+
+#myButton {
+    font-family: monospace;
+    font-weight: 300;
+    color: white;
+    font-size: 2vmin;
+
 }
 
 .slider-container {
