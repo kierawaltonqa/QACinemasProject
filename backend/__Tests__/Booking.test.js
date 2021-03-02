@@ -5,17 +5,7 @@ const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 const app = require('../server');
 const { BOOKING } = require('../config/CONSTS.json');
-const { response } = require('express');
 const { Booking } = require('../config/db');
-
-
-describe(`Delete`, (done) => {
-    afterEach(() => {
-        Booking.deleteMany({}, (err, response) => {
-            done();
-        })
-    })
-})
 
 
 describe(`Booking routes`, () => {
@@ -43,7 +33,7 @@ describe(`Booking routes`, () => {
 
     it(`Test failure of booking create`, (done) => {
         chai.request(app)
-            .post(`${BOOKING}/create`)
+            .post(`${BOOKING}/creat`)
             .send({
                 'movienam': 'jumanji',
                 'date': '10/10/2020',
@@ -57,7 +47,7 @@ describe(`Booking routes`, () => {
                 if (err) done(err);
 
                 expect(response).not.to.be.null;
-                expect(response).to.have.status(500);
+                expect(response).to.have.status(404);
 
                 done();
             });
@@ -91,6 +81,7 @@ describe(`Booking routes`, () => {
 
 
     after(() => {
+        Booking.deleteMany({}, (err) => console.log(err));
         app.close();
     });
 });

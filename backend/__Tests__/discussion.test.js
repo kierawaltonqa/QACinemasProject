@@ -5,6 +5,7 @@ const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 const app = require('../server');
 const { DISCUSSION } = require('../config/CONSTS.json');
+const { Discuss } = require('../config/db');
 
 
 
@@ -86,6 +87,7 @@ describe(`Discussion Routes`, () => {
     // })
 
     after(() => {
+        Discuss.deleteMany({}, (err) => console.log(err));
         app.close();
     });
 });
