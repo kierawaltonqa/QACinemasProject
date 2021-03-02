@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Seven Samurai",
+        "runtime": "03:27",
+        "rating": "PG",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfk44G9kcps_9RBUnz2_e4bjsihz51VtS0ew&usqp=CAU",
+        "showtime": "",
+        "director": "Akira Kurosawa",
+        "actors": [
+            "Toshiro Mifune",
+            "Seiji Miyaguchi",
+            "Takashi Shimura",
+            "Isao Kimura"
+        ],
+        "id": "tt0047478"
+    },
+    {
+        "title": "Forrest Gump",
+        "runtime": "02:22",
+        "rating": "12",
+        "img": "https://fesapusewebsite.blob.core.windows.net/fathom/d37f805a8a9089dcf1b5b12fb399958a.png",
+        "showtime": "",
+        "director": "Robert Xemeckis",
+        "actors": [
+            "Tom Hanks",
+            "Gary Sinise",
+            "Robin Wright",
+            "Sally Field"
+        ],
+        "id": "tt0109830"
+    },
+    {
+        "title": "The Matrix",
+        "runtime": "02:30",
+        "rating": "15",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfDYkbVRFwOgUyLnwzGpQjYse751vlM8Pmww&usqp=CAU",
+        "showtime": "",
+        "director": "Lana Wachowski",
+        "actors": [
+            "Keanu Reeves",
+            "Carries-A Moss",
+            "Laurence Fishburne",
+            "Hugo Weaving"
+        ],
+        "id": "tt0133093"
+    },
+    {
+        "title": "Shark Tale",
+        "runtime": "01:31",
+        "rating": "U",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREttz2E_egNo4jfzi5isNNnKLHU6RiryEhiQ&usqp=CAU",
+        "showtime": "",
+        "director": "Rob Letterman",
+        "actors": [
+            "Will Smith",
+            "Renee Zellweger",
+            "Angelina Jolie",
+            "Matin Scorsese"
+        ],
+        "id": "tt0167261"
+    }
+]
