@@ -1,18 +1,13 @@
 import Media from "react-bootstrap/Media";
-import logo from "../Resources/Logo/logo.jpg";
+import logo from "../../Resources/Logo/logo.jpg"
+import "../../Css/AboutStyle.css";
 
 const MeetTheTeam = () => {
   return (
     <div className="container" maxWidth="md" className="beauty">
       <>
         <h1 className="br"> Meet The Team</h1>
-        <hr
-          style={{
-            color: "white",
-            backgroundColor: "white",
-            height: 1,
-          }}
-        />
+        <hr/>
 
         <br></br>
 
@@ -39,13 +34,7 @@ const MeetTheTeam = () => {
               eu leo. Cum sociis natoque penatibus et magnis dis parturient
               montes, nascetur ridiculus mus.
             </p>
-            <hr
-              style={{
-                color: "white",
-                backgroundColor: "white",
-                height: 1,
-              }}
-            />
+            <hr/>
           </Media.Body>
         </Media>
 
@@ -71,13 +60,7 @@ const MeetTheTeam = () => {
               eu leo. Cum sociis natoque penatibus et magnis dis parturient
               montes, nascetur ridiculus mus.
             </p>
-            <hr
-              style={{
-                color: "white",
-                backgroundColor: "white",
-                height: 1,
-              }}
-            />
+            <hr/>
           </Media.Body>
         </Media>
 
@@ -103,13 +86,7 @@ const MeetTheTeam = () => {
               eu leo. Cum sociis natoque penatibus et magnis dis parturient
               montes, nascetur ridiculus mus.
             </p>
-            <hr
-              style={{
-                color: "white",
-                backgroundColor: "white",
-                height: 1,
-              }}
-            />
+            <hr/>
           </Media.Body>
         </Media>
 
@@ -136,13 +113,7 @@ const MeetTheTeam = () => {
               eu leo. Cum sociis natoque penatibus et magnis dis parturient
               montes, nascetur ridiculus mus.
             </p>
-            <hr
-              style={{
-                color: "white",
-                backgroundColor: "white",
-                height: 1,
-              }}
-            />
+            <hr/>
           </Media.Body>
         </Media>
       </>
