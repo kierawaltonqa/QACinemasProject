@@ -62,7 +62,8 @@ const CarouselComp = ({image1, image2, image3}) => {
     });
 
     return (
-        <Carousel data-interval="false"
+        <Carousel 
+        pause= "false"
             activeIndex={activeIndex}
             next={next}
             previous={previous}
