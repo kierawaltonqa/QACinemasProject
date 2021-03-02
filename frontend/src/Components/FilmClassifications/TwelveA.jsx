@@ -1,7 +1,17 @@
-const TwelveA = () => {
+import { Button } from 'react-bootstrap';
 
-    return null;
+const TwelveA = ({ toggleShow12A }) => {
 
+    return (
+        <>
+
+
+
+            <Button onClick={() => toggleShow12A()}>Show 12A</Button>
+
+
+        </>
+    )
 
 }
 

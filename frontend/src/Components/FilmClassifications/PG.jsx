@@ -1,6 +1,30 @@
-const PG = () => {
 
-    return null;
+import { Button } from 'react-bootstrap'
+
+
+const PG = ({ toggleShowPG }) => {
+
+
+
+
+
+
+    return (
+        <>
+
+
+
+            <Button onClick={() => toggleShowPG()}>Show PG</Button>
+
+
+
+
+
+
+        </>
+    );
+
+
 
 
 }
