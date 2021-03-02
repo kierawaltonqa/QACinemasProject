@@ -26,8 +26,9 @@ function App() {
           <Route path="/about">
             <AboutPage />
           </Route>
+          <CantFindPage />
         </Switch>
-        <CantFindPage />
+        
       </Router>
 
 
