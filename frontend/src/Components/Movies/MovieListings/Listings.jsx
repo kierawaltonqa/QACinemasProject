@@ -6,9 +6,9 @@ const Listings = () => {
     return (
         <div className="container">
             <div className="row-md" id="listingheader">
-                <hr />
+                <hr id="hr" />
                 <h3>Movies Available To Watch.</h3>
-                <hr />
+                <hr id="hr" />
                 <p>On this page you will find a summary of all of the films we have available for viewing at QA Cinemas. Select the details button under each film to view more about it.</p>
             </div>
             <div className="row">
