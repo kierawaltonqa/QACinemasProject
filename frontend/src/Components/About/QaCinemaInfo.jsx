@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '@material-ui/core/Container';
+import "../../Css/AboutStyle.css";
 
 
 const QaCinemaInfo = () => {
@@ -15,13 +16,7 @@ const QaCinemaInfo = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi dolores esse qui eius sit repellendus id adipisci vero iste enim dolor pariatur hic explicabo ullam tenetur, vitae voluptatem aliquam. </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi dolores esse qui eius sit repellendus id adipisci vero iste enim dolor pariatur hic explicabo ullam tenetur, vitae voluptatem aliquam. </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi dolores esse qui eius sit repellendus id adipisci vero iste enim dolor pariatur hic explicabo ullam tenetur, vitae voluptatem aliquam. </p>
-        <hr
-        style={{
-            color: 'white',
-            backgroundColor: 'white',
-            height: 1
-        }}
-    />
+        <hr/>
     <br></br>
 
 </Container>
