@@ -1,5 +1,6 @@
 import data from '../../../Resources/Movies.json';
 import ListingsFilm from './ListingsFilm';
+import '../Movies.css';
 
 const Listings = () => {
     return (

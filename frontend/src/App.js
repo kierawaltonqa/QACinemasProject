@@ -1,5 +1,4 @@
 import './Resources/App.css';
-import './Components/Movies/Movies.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Listings from './Components/Movies/MovieListings/Listings';

@@ -16,26 +16,24 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                     id="listingmodal"
                     dialogClassName="modal-dialog"
                     isOpen={modal}>
-                    <ModalHeader>{title}</ModalHeader>
-                    <ModalBody>
+                    <ModalHeader id="modal-header">{title}</ModalHeader>
+                    <ModalBody id="modal-body">
                         <div class="row-md">
                             <div className="col-md-12" id="modalimage">
                                 <img src={poster} height="30%" width="30%" />
                             </div>
                             <div className="col-md-12">
                                 <hr />
-                                <p>Directed by: {director}</p>
-                                <p>The main cast:
-                                    <ul>
-                                        {
-                                            actors.map((actor) => (
-                                                <li>{actor}</li>
-                                            ))
-                                        }
-                                    </ul>
-                                </p>
-                                <p>Runtime: {runtime}</p>
-                                <p>Rating: {rating}</p>
+                                <p id="director">Directed by {director}</p>
+                                <h6>The main cast: </h6>
+                                {
+                                    actors.map((actor) => (
+                                        <p id="cast">{actor}</p>
+                                    ))
+                                }
+                                <br />
+                                <p id="runtime">Runtime: {runtime}</p>
+                                <p id="rating">Rating: {rating}</p>
                             </div>
                         </div>
 
