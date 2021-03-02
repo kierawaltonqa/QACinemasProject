@@ -33,7 +33,7 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                                 }
                                 <br />
                                 <p id="runtime">Runtime: {runtime}</p>
-                                <p id="rating">Rating: {rating}</p>
+                                <p id="card-rating">Rating: {rating}</p>
                             </div>
                         </div>
 
