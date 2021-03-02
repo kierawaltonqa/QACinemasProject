@@ -20,7 +20,6 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                         </div>
                         <div className="col-md-12">
                             <hr />
-                            <h5>Details...</h5>
                             <p>Directed by: {director}</p>
                             <p>The main cast:
                                     <ul>

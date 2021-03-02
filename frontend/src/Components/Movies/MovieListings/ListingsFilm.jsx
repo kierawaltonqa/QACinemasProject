@@ -5,10 +5,10 @@ const ListingsFilm = (props) => {
 
     return (
 
-        <Card>
-            <CardImg src={props.poster} />
+        <Card id="L-card">
+            <CardImg src={props.poster} id="L-img" />
             <CardBody>
-                <CardTitle>
+                <CardTitle id="L-title">
                     <hr />
                     <h5>{props.title}</h5>
                     <hr />
