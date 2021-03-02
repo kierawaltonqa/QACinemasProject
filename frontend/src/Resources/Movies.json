@@ -1,0 +1,242 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "runtime": "02:22",
+        "rating": "15",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkmMH-bEDUS2TmK8amBqgIMgrfzN1_mImChPuMrunA1XjNTSKm",
+        "showtime": "",
+        "director": "Frank Darabont",
+        "actors": [
+            "Morgan Freeman",
+            "Tim Robbins",
+            "Bob Gunton",
+            "William Sadler"
+        ],
+        "id": "tt0111161"
+    },
+    {
+        "title": "The Godfather",
+        "runtime": "02:58",
+        "rating": "R",
+        "img": "https://static.metacritic.com/images/products/movies/3/47c2b1f35087fc23c5ce261bbc3ad9e0.jpg",
+        "showtime": "",
+        "director": "Francis Ford Coppola",
+        "actors": [
+            "Al Pacino",
+            "Diane Keaton",
+            "Marlon Brando",
+            "James Caan"
+        ],
+        "id": "tt0068646"
+    },
+    {
+        "title": "The Godfather: Part II",
+        "runtime": "03:22",
+        "rating": "R",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/41N2vp6wUiL._AC_.jpg",
+        "showtime": "",
+        "director": "Francis Ford Coppola",
+        "actors": [
+            "Al Pacino",
+            "Robert De Niro",
+            "Diane Keaton",
+            "Talia Shire"
+        ],
+        "id": "tt0071562"
+    },
+    {
+        "title": "Pulp Fiction",
+        "runtime": "02:58",
+        "rating": "R",
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
+        "showtime": "",
+        "director": "Quentin Tarantino",
+        "actors": [
+            "Quentin Tarantino",
+            "John Travolta",
+            "Uma Thurman",
+            "Samuel L Jackson"
+        ],
+        "id": "tt0110912"
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "runtime": "03:58",
+        "rating": "R",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/81keqIN-tlL._SL1500_.jpg",
+        "showtime": "",
+        "director": "Sergio Leone",
+        "actors": [
+            "Clint Eastwood",
+            "Eli Wallach",
+            "Lee Van Cleef",
+            "Aldo Giuffre"
+        ],
+        "id": "tt0060196"
+    },
+    {
+        "title": "The Dark Knight",
+        "runtime": "02:32",
+        "rating": "12",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbkGrsXlSWxIbDFi3cN-nvFXa0yx4oPzmmEQ&usqp=CAU",
+        "showtime": "",
+        "director": "Christopher Nolan",
+        "actors": [
+            "Christian Bale",
+            "Gary Oldman",
+            "Heath Ledger",
+            "Michael Caine"
+        ],
+        "id": "tt0468569"
+    },
+    {
+        "title": "Happy Feet",
+        "runtime": "01:48",
+        "rating": "U",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBJDDTBtsuh_3QNUbJimqM365k_jCMFLaoSw&usqp=CAU",
+        "showtime": "",
+        "director": "George Miller",
+        "actors": [
+            "Robin Williams",
+            "Elijah Wood",
+            "Brittany Murphy",
+            "Hugo Weaving"
+        ],
+        "id": "tt0050083"
+    },
+    {
+        "title": "Schindler's List",
+        "runtime": "03:17",
+        "rating": "15",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_x2R3vCPhY7WsfXwlR16hyYb1KyvVvQFUA&usqp=CAU",
+        "showtime": "",
+        "director": "Steven Spielberg",
+        "actors": [
+            "Liam Neeson",
+            "Ben Kingsley",
+            "Ralph Fiennes",
+            "Edbeth Davidtz"
+        ],
+        "id": "tt0108052"
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "runtime": "04:11",
+        "rating": "U",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5J2yTsfeGPw4Vc-7fNYI6bZomizpmwxiOg&usqp=CAU",
+        "showtime": "",
+        "director": "Peter Jackson",
+        "actors": [
+            "Viggo Mortensen",
+            "Elijah Wood",
+            "Ian McKellen",
+            "Sean Astin"
+        ],
+        "id": "tt0167260"
+    },
+    {
+        "title": "Fight Club",
+        "runtime": "02:31",
+        "rating": "18",
+        "img": "https://akns-images.eonline.com/eol_images/Entire_Site/2019914/rs_685x1024-191014113838-634-fight-club-poster.cl.101419.jpg?fit=around%7C685:1024&output-quality=90&crop=685:1024;center,top",
+        "showtime": "",
+        "director": "David Fincher",
+        "actors": [
+            "Brad Pitt",
+            "Edward Norton",
+            "Helena Bonham Carter",
+            "Meat Loaf"
+        ],
+        "id": "tt0137523"
+    },
+    {
+        "title": "Star Wars: Episode V - The Empire Strikes Back",
+        "runtime": "02:07",
+        "rating": "U",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/71CNDHGNE1L.jpg",
+        "showtime": "",
+        "director": "Irvin Kershner",
+        "actors": [
+            "Mark Hamill",
+            "Harrison Ford",
+            "Carrie Fisher",
+            "George Lucas"
+        ],
+        "id": "tt0080684"
+    },
+    {
+        "title": "Avatar",
+        "runtime": "02:42",
+        "rating": "12A",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ744GAK-UOL9HlWTIUFuXg9v3BIL-qQSY_sQ&usqp=CAU",
+        "showtime": "",
+        "director": "James Cameron",
+        "actors": [
+            "Zoe Saldana",
+            "Sam WWorthing",
+            "Sigourney Weaver",
+            "Stephen Lang"
+        ],
+        "id": "tt0120737"
+    },
+    {
+        "title": "Harry Potter and the Goblet of Fire",
+        "runtime": "02:37",
+        "rating": "12A",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/51SGDS0R38L._AC_SY445_.jpg",
+        "showtime": "",
+        "director": "Mike Newell",
+        "actors": [
+            "Daniel Radcliffe",
+            "Emma Watson",
+            "Rupert Grint",
+            "Robert Pattinson"
+        ],
+        "id": "tt0073486"
+    },
+    {
+        "title": "Inception",
+        "runtime": "02:42",
+        "rating": "12A",
+        "img": "https://resizing.flixster.com/4MrL62heb7yBgBt8zllSeqNZxg4=/206x305/v2/https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg",
+        "showtime": "",
+        "director": "Christopher Nolan",
+        "actors": [
+            "Leonardo DiCaprio",
+            "Joeseph Gordon-Levitt",
+            "Tom Hardy",
+            "Cillian Murphy"
+        ],
+        "id": "tt1375666"
+    },
+    {
+        "title": "Goodfellas",
+        "runtime": "02:28",
+        "rating": "18",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-bXZGsEYYIezL2mmSR98HIPZf__Y2l2_LRA&usqp=CAU",
+        "showtime": "",
+        "director": "Martin Scorsese",
+        "actors": [
+            "Ray Liotta",
+            "Robert De Niro",
+            "Joe Pesci",
+            "Lorraine Bracco"
+        ],
+        "id": "tt0099685"
+    },
+    {
+        "title": "Penguin",
+        "runtime": "02:12",
+        "rating": "18",
+        "img": "https://moviegalleri.net/wp-content/uploads/2019/10/Actress-Keerthi-Suresh-Penguin-Movie-Title-Look-Poster-HD.jpg",
+        "showtime": "",
+        "director": "Eashvar Karthic",
+        "actors": [
+            "Keerthy Suresh",
+            "Madham Rangaraj",
+            "Nithya Kriupa",
+            "Muthazhagan"
+        ],
+        "id": "tt0076759"
+    }
+]

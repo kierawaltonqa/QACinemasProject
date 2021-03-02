@@ -9,14 +9,13 @@ const { Payment } = require('../config/db');
 
 router.post("/create", (req, res, next) => {
 
-    const pay = new Payment(req.body);
-    console.log(pay);
-    pay.save().then((result) => {
-        res.status(201).send(`payment from ${pay} was succesfull`);
+    const payment = new Payment(req.body);
+    console.log(payment);
+    payment.save().then((result) => {
+        res.status(201).send(`${payment} created`);
     })
         .catch((err) => next(err));
 });
-
 //?http://localhost:4500/payment/create
 
 router.get("/getAll", (req, res, next) => {
