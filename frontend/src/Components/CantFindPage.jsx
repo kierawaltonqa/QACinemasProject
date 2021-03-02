@@ -11,7 +11,7 @@ const CantFindPage = () => {
     <>
       <div className="row">
         <Col sm={6}>
-          <Image style={{height: '80vmin', }} className="img" src={lost} roundedCircle />
+          <Image style={{height: '80vmin'}} className="img" src={lost} roundedCircle />
         </Col>
         <Col>
           <Col>
