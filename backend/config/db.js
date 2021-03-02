@@ -10,6 +10,7 @@ const { DB_URL, DB_NAME } = require('./CONSTS.json');
 
 const paymentSchema = new Schema({
     fullName: { type: String, required: true },
+    cardType: { type: String, required: true },
     cardNumber: { type: Number, required: true },
     expiryDate: { type: String, required: true },
     CVC: { type: Number, required: true }
