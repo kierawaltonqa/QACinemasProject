@@ -1,0 +1,13 @@
+[{
+    "title" : "Standard Seating"  , 
+    "cost" : 8.50,
+    "desciption" : "Standard seating allows you access to the large array of seating inside our cinema! Providing you with the full QACinema Experience. "
+
+},
+
+{
+    "title" : "Deluxe Seating",
+    "cost" : 12.50,
+    "description" : "Deluxe seating provides you with the full QACinema experience, A new fully immersive feeling to movie viewing in premium seats with a premium view!"
+
+}]

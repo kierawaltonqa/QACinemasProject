@@ -56,7 +56,7 @@ const Navigation = (props) => {
                                 Bookings
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href="/screens">
                                     Screens
                                 </DropdownItem>
                                 <DropdownItem>

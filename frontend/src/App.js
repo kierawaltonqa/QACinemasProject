@@ -2,6 +2,7 @@ import './Resources/App.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
+import Screenpage from './Components/Screens/Screenpage';
 
 import FilmClass from './Components/FilmClass';
 import './Resources/Sidebar.css';
@@ -35,8 +36,11 @@ function App() {
           <Route path="/about">
             <AboutPage />
           </Route>
-          <CantFindPage />
 
+          <Route path="/screens">
+            <Screenpage />
+          </Route>
+          <CantFindPage />
         </Switch>
         
       </Router>
