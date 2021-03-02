@@ -5,6 +5,7 @@ import Navigation from './Components/Navigation';
 import Listings from './Components/Movies/MovieListings/Listings';
 import NR from './Components/Movies/NewReleases/NR';
 import AboutPage from './Components/About/AboutPage';
+import CantFindPage from './Components/CantFindPage';
 
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
           <Route path="/about">
             <AboutPage />
           </Route>
+          <CantFindPage />
         </Switch>
+        
       </Router>
 
 
