@@ -4,109 +4,108 @@ import PG from './FilmClassifications/PG';
 import TwelveA from './FilmClassifications/TwelveA';
 import Twelve from './FilmClassifications/Twelve';
 import U from './FilmClassifications/U';
-// import '../Resources/Sidebar.css';
-import { useState } from "react";
-import EighteenToast from './FilmClassifications/EighteenToast';
-import FifteenToast from './FilmClassifications/FifteenToast';
-import TwelveToast from './FilmClassifications/TwelveToast';
-import TwelveAToast from './FilmClassifications/TwelveAToast';
-import PGToast from './FilmClassifications/PGToast';
-import UToast from './FilmClassifications/UToast';
-
-
-// import { Toast } from 'react-bootstrap'
-
-
+import {Nav, Col, Tab, Row} from 'react-bootstrap'
+import "../Css/FilmClass.css";
+import Info from './FilmClassifications/Info';
+import Footer from './Footer';
 
 
 
 
 const FilmClass = () => {
-
-    const [show18, setShow18] = useState(false);
-    const toggleShow18 = () => setShow18(!show18);
-
-    const [show15, setShow15] = useState(false);
-    const toggleShow15 = () => setShow15(!show15);
-
-    const [show12A, setShow12A] = useState(false);
-    const toggleShow12A = () => setShow12A(!show12A);
-
-    const [show12, setShow12] = useState(false);
-    const toggleShow12 = () => setShow12(!show12);
-
-    const [showPG, setShowPG] = useState(false);
-    const toggleShowPG = () => setShowPG(!showPG);
-
-    const [showU, setShowU] = useState(false);
-    const toggleShowU = () => setShowU(!showU);
-
-
-
-
+    
 
 
     return (
         <>
+        <div className="container"> 
+<h1 style={{color: 'gold', textAlign: 'center', paddingTop: '5vmin'}}> Film Classification</h1>
+<hr/>
+<br/>
+<br/>
+</div>
 
-            {/* create a new page for each classification and then reference them here - parent to classification
-other class are child of this one  */}
+<div className="container" maxWidth="5000px" paddingTop="300px"> 
+
+<Tab.Container id="middle-tabs-example" defaultActiveKey="Info">
+  <Row>
+    <Col sm={2}>
+      <Nav variant="pills" className="flex-column">
+      <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="Info">Info</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="U">U</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="PG">PG</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="12U">12U</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="12A">12A</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  className="goldenB" eventKey="Fifteen">Fifteen</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link className="goldenB" eventKey="Eighteen">Eighteen</Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </Col>
+    
+
+    <Col sm={9}>
+      <Tab.Content>
+
+        <Tab.Pane eventKey="Info">
+         <Info/>
+        </Tab.Pane>
+
+        <Tab.Pane eventKey="U">
+         <U/>
+        </Tab.Pane>
+
+        <Tab.Pane eventKey="PG">
+         <PG/>
+        </Tab.Pane>
+
+
+        <Tab.Pane eventKey="12U">
+         <Twelve/>
+        </Tab.Pane>
+
+
+        <Tab.Pane eventKey="12A">
+         <TwelveA/>
+        </Tab.Pane>
+
+        <Tab.Pane eventKey="Fifteen">
+         <Fifteen/>
+        </Tab.Pane>
+
+
+        <Tab.Pane eventKey="Eighteen">
+         <Eighteen/>
+        </Tab.Pane>
+
+       
+      </Tab.Content>
+    </Col>
 
 
 
 
 
-            <h1>this is the film classifications</h1>
 
-            <p>hi</p>
-            <div className="row" id="toggleButton">
-                <div className="col-md-5">
-                    <Eighteen toggleShow18={toggleShow18} />
-                    <Fifteen toggleShow15={toggleShow15} />
-                    <TwelveA toggleShow12A={toggleShow12A} />
-                    <Twelve toggleShow12={toggleShow12} />
-                    <PG toggleShowPG={toggleShowPG} />
-                    <U toggleShowU={toggleShowU} />
-                </div>
-            </div>
+  </Row>
+</Tab.Container>
 
+</div>
 
-
-
-
-
-
-
-
-
-            <p>what are the standard film classifications : done </p>
-
-            <p>what are the rules and conidions relating to each classification</p>
-
-            <p>link to external resources </p>
-
-            <div className="row" id="toastPopUp">
-
-                <EighteenToast show18={show18} setShow18={setShow18} />
-                <FifteenToast show15={show15} setShow15={setShow15} />
-                <TwelveAToast show12A={show12A} setShow12A={setShow12A} />
-                <TwelveToast show12={show12} setShow12={setShow12} />
-                <PGToast showPG={showPG} setShowPG={setShowPG} />
-                <UToast showU={showU} setShowU={setShowU} />
-
-
-
-            </div>
-
-
-
-
-
-
+<Footer/>
         </>
-
-
-
 
     )
 

@@ -21,14 +21,42 @@ body {
     text-align: center;
 }
 
+.goldenHours{
+    background-color: gold;
+    color: black;
+    font-family: ;
+}
+
+.goldenB{
+    
+    text-align: center;
+    background-color: black;
+    color: gold;
+}
+
+.align{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+
+}
 .title {
 padding-top: 10vmin;
 padding-bottom:15vmin;
   height: 10vmin;
   text-align: center;
+  color: gold;
   
 }
 
+hr{
+
+    background-color: gold;
+
+}
 .mid{
     padding-top: 30vmin;
     text-align: center;
