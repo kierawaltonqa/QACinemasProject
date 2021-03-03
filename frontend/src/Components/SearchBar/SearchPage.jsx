@@ -1,22 +1,17 @@
 import { useState } from 'react';
 import data from '../../Resources/Movies.json';
+import List from './List';
 
 import SearchBarForNav from "./SearchBarForNav"
 
 const SearchPage = () => {
 
     const [query, setQuery] = useState('');
-    const [films, setFilms] = useState([data]);
-    const [err, setErr] = useState('');
-
-    const handleChange = ({ target }) => {
-        setQuery(target.value);
-    }
-
-    const handleSearch = (e) => {
-        e.preventDefault();
+    // const [films, setFilms] = useState([data]);
 
 
+    const handleQuery = (e) => {
+        setQuery(e.target.value);
     }
 
     //prepopulate data into fimls array
@@ -31,7 +26,8 @@ const SearchPage = () => {
     return (
 
         <>
-            <SearchBarForNav handleChange={handleChange} query={query} search={handleSearch} />
+            <SearchBarForNav handleChange={handleQuery} query={query} />
+            <List list={data} query={query} />
 
         </>
     )
