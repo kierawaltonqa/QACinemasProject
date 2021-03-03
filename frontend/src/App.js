@@ -11,6 +11,7 @@ import Listings from './Components/Movies/MovieListings/Listings';
 import NR from './Components/Movies/NewReleases/NR';
 import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
+import TicketBooking from './Components/TicketBooking/MainPage/TicketBooking';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
 
           <Route path="/screens">
             <Screenpage />
+          </Route>
+          <Route path="/bookings">
+            <TicketBooking />
           </Route>
           <CantFindPage />
         </Switch>

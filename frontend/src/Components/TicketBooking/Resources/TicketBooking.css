@@ -1,0 +1,11 @@
+#bookingside {
+    min-height: 100vh; 
+}
+
+#ticketform {
+    text-align: center;
+  }
+
+#monotext {
+    font-family: monospace;
+}

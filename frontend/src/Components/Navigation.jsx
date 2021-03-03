@@ -59,7 +59,7 @@ const Navigation = (props) => {
                                 <DropdownItem href="/screens">
                                     Screens
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem href="/bookings">
                                     Tickets
                                 </DropdownItem>
                                 <DropdownItem>
