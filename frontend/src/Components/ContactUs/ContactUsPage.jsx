@@ -3,8 +3,8 @@ import ContactForm from './ContactForm'
 
 const ContactUsPage = () => {
     return (
-        <div className="container">
-            <h1 className="goldenHours"> Hello Sir </h1>
+        <div className="container" style={{paddingTop: '20vmin'}}>
+          
 
             <ContactForm/>
         </div>

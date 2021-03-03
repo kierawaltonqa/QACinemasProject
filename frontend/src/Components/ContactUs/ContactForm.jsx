@@ -1,78 +1,65 @@
-import React from 'react'
-import {Form, Button} from 'react-bootstrap'
-import { useState } from 'react';
+import React from "react";
+import { Form, Button } from "react-bootstrap";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const printToScreen = (e) => {
+    e.preventDefault();
 
-    const printToScreen = (e) => {
-        e.preventDefault();
+    console.log({ name, body, subject });
+  };
 
-        console.log({name, email,subject})
-   
-    }
+  const [name, setName] = useState("");
+  const [body, setBody] = useState("");
+  const [subject, setSubject] = useState("");
 
-    const sendEmail = (e) => {
-       e.preventDefault();
-       return window.location = mailto : "xyz@abc.com";
-       
+  return (
+    <>
 
-    }
-
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-
-  
-
-     return(
-        <>
-        <di className="container" className="title">
+    <h1 className="beauty"> Contact Us </h1>
+    <hr></hr>
+      <div className="formdiv">
         <form>
+          <br />
 
-        <label>Name</label>
-        <input 
-        type="text"
-        name="name"
-        value={name}
-       onChange={e => setName(e.target.value)} />       
+          <from>
+            <label> Subject </label>
+            <input
+              className="form"
+              type="text"
+              subject="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
 
+            <br />
 
-<br/>
-       
-<label>Email</label>
-        <input 
-        type="text"
-        email="email"
-        value={email}
-       onChange={e => setEmail(e.target.value)} />       
+            <label className="formcontroller" size="lg">
+              Details
+            </label>
+            <input
+              className="formDetails"
+              type="text"
+              body="body"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+            />
 
+            <br />
 
-<br/>
-<label>Subject</label>
-        <input 
-        type="text"
-        subject="subject"
-        value={subject}
-       onChange={e => setSubject(e.target.value)} />       
-
-
-
-
-<br/>
-
-{/* <a class="mailto" href="mailto:contact@test.com">Send</a> */}
-
-<button onclick={sendEmail}>Send e-mail</button>
-
-
-
-
-
+            <div className="send">
+              <a
+                className="send"
+                href={`mailto:abc@example.com?subject=${subject}&body=${body}`}
+              >
+                Send
+              </a>
+            </div>
+          </from>
         </form>
-        
-        </di>
-        </>
-     );
-}
+      </div>
+    </>
+  );
+};
 
-export default ContactForm
+export default ContactForm;
