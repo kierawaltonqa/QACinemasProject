@@ -11,6 +11,7 @@ import Listings from './Components/Movies/MovieListings/Listings';
 import NR from './Components/Movies/NewReleases/NR';
 import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
+import ContactUsPage from './Components/ContactUs/ContactUsPage';
 
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
 
           <Route path="/screens">
             <Screenpage />
+          </Route>
+
+          <Route path="/contact">
+            <ContactUsPage />
           </Route>
           <CantFindPage />
         </Switch>

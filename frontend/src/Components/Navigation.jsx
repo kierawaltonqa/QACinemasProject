@@ -69,6 +69,9 @@ const Navigation = (props) => {
                         <NavItem>
                             <NavLink href='/discussion' >Discussion</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink href='/contact' >Contact</NavLink>
+                        </NavItem>
                     </Nav>
                 </Collapse>
                 <Form inline>
