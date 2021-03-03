@@ -14,13 +14,13 @@ const CarouselPage = ({ image1, image2, image3 }) => {
     const items = [
         {
             src: image1,
-            altText: 'Slide 1',
-            caption: 'Slide 1'
+            altText: 'button to show films',
+            caption: 'Top Rated Films.'
         },
         {
             src: image2,
             altText: 'Slide 2',
-            caption: 'Slide 2'
+            caption: 'Now Showing in 3D'
         },
         {
             src: image3,

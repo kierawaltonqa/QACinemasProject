@@ -5,6 +5,7 @@ import image1 from '../../Resources/cinema1.jpg';
 import image2 from '../../Resources/cinema4.jpg';
 import image3 from '../../Resources/cinema5.jpg';
 import WelcomePage from './WelcomePage';
+import Footer from '../Footer';
 
 const Home = () => {
     return (
@@ -15,8 +16,8 @@ const Home = () => {
                         <br />
                         <br />
                         <h1 id="title">Welcome To QA Cinemas
-                        {/* <img src={penguin} alt="penguin-wave" id="penguin-wave" /> */}
                         </h1>
+                        <hr />
                         <br />
                     </div>
                 </div>
@@ -28,12 +29,18 @@ const Home = () => {
                 <div className="row">
                     <WelcomePage />
                 </div>
+                <div className="row-md">
+                    <hr />
+                    <div className="col-md-4">
+
+                    </div>
+                    <div className="col-md-4">
+                        <img src={penguin} alt="penguin-wave" id="penguin-wave" />
+                    </div>
+
+                </div>
             </div>
-
-
-
-
-
+            <Footer />
         </>
     )
 }
