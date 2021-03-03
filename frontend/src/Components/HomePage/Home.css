@@ -1,0 +1,11 @@
+#title {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+#penguin-wave{
+    height:100px;
+    width: 100px;
+    padding-left: 1rem;
+}

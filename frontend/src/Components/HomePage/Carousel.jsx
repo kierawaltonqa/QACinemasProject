@@ -7,9 +7,7 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-
-
-const CarouselComp = ({ image1, image2, image3 }) => {
+const CarouselPage = ({ image1, image2, image3 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -75,5 +73,4 @@ const CarouselComp = ({ image1, image2, image3 }) => {
         </Carousel>
     );
 }
-
-export default CarouselComp;
+export default CarouselPage;

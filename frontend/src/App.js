@@ -12,6 +12,7 @@ import NR from './Components/Movies/NewReleases/NR';
 import DiscussionBoard from './Components/Discussion/DiscussionBoard';
 import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
+import Home from './Components/HomePage/Home';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/" exact>
+            <Home />
 
           </Route>
 
