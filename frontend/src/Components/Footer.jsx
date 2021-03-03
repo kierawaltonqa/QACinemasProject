@@ -17,7 +17,7 @@ const Footer = () => {
           <Card.Text > ©TeamSpell 2021    </Card.Text>
           <Card.Text>
           </Card.Text>
-          <Nav defaultActiveKey="/home" as="ul">
+          <Nav defaultActiveKey="/home" as="ul" style={{ marginLeft: "42%" }}>
             <Nav.Item as="li" className="footer">
               <Nav.Link href="/home">Home</Nav.Link>
             </Nav.Item>
