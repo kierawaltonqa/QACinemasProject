@@ -49,12 +49,14 @@ const CarouselPage = ({ image1, image2, image3 }) => {
     const slides = items.map((item) => {
         return (
             <CarouselItem
+
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
                 <img src={item.src} alt={item.altText} style={{ height: "400px", width: "100%" }} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                <CarouselCaption captionText={item.caption} />
+                {/* captionHeader={item.caption}*/}
             </CarouselItem>
         );
     });
@@ -65,6 +67,7 @@ const CarouselPage = ({ image1, image2, image3 }) => {
             activeIndex={activeIndex}
             next={next}
             previous={previous}
+
         >
             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
