@@ -16,6 +16,15 @@ body {
 
 }
 
+.mailto{
+
+    display:block;
+    width:100px;
+    height:20px;
+    background-color: gold;
+
+}
+
 .br {
     padding-top: 6vmin;
     text-align: center;
