@@ -25,7 +25,7 @@ const CarouselPage = ({ image1, image2, image3 }) => {
         {
             src: image3,
             altText: 'Slide 3',
-            caption: 'Slide 3'
+            caption: ''
         }
     ];
 
