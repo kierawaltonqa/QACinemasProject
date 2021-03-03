@@ -4,7 +4,7 @@ import image1 from '../../Resources/cinema1.jpg';
 import image2 from '../../Resources/cinema4.jpg';
 import image3 from '../../Resources/cinema5.jpg';
 import WelcomePage from './WelcomePage';
-import Footer from '../Footer';
+import Footer from '../FooterFolder/Footer';
 import WelcomePage2 from './WelcomePage2';
 import Connect from './Connect';
 

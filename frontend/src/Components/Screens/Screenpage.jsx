@@ -9,7 +9,7 @@ import pic6 from "./ScreenPics/DeluxeSeatingPlan.png"
 import ScreensReadMore from "./ScreensReadMore";
 import ReadMoreText from "./ReadMoreText";
 import { useState } from "react";
-import Footer from "../Footer";
+import Footer from "../FooterFolder/Footer";
 
 
 
