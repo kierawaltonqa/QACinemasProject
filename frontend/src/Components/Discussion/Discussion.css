@@ -60,7 +60,7 @@
     color: black;
 }
 #hr {
-    border: 1.4px solid black;
+    border: 1.5px solid black;
 }
 #alert{
     font-family: monospace;
@@ -78,4 +78,16 @@
 #edit-form{
     font-family: monospace;
     
+}
+#discussionpenguins{
+    height: 100px;
+    width: 100px;
+    padding-top: 1rem;
+}
+#penguin{
+    height: 180px;
+    width: 250px;
+    padding: .2rem;
+    margin-left:.1rem;
+
 }
