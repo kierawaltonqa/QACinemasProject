@@ -11,7 +11,10 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
-import { Form, FormControl, Button } from 'react-bootstrap';
+
+
+import SearchBarForNav from './SearchBar/SearchBarForNav';
+import SearchPage from './SearchBar/SearchPage';
 
 
 const Navigation = (props) => {
@@ -72,11 +75,10 @@ const Navigation = (props) => {
                         </NavItem>
                     </Nav>
                 </Collapse>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
-                </Form>
+                <SearchPage />
+
             </Navbar>
+
         </div>
     )
 }

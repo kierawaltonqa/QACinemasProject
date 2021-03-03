@@ -13,10 +13,11 @@ import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
 
 
+
 function App() {
   return (
     <div className="page-container">
-      <Router>  
+      <Router>
         <Navigation />
         <Switch>
           <Route path="/" exact>
@@ -40,9 +41,10 @@ function App() {
           <Route path="/screens">
             <Screenpage />
           </Route>
+
           <CantFindPage />
         </Switch>
-        
+
       </Router>
 
 
