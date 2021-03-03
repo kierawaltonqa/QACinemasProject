@@ -6,7 +6,7 @@ import { DISCUSSION_URL } from './CONSTS.json';
 const EditPost = ({ item, trigger }) => {
 
     const { name, movie, topic, discussion, rating } = item;
-    const [updateName, setUName] = useState(name);
+    // const [updateName, setUName] = useState(name);
     const [updateMovie, setUMovie] = useState(movie);
     const [updateTopic, setUTopic] = useState(topic);
     const [updateDiscussion, setUDiscussion] = useState(discussion);
@@ -18,10 +18,10 @@ const EditPost = ({ item, trigger }) => {
     const updatePost = (e) => {
         e.preventDefault();
         axios.patch(`${DISCUSSION_URL}/updateById/${item._id}`,
-            { name: updateName, movie: updateMovie, topic: updateTopic, discussion: updateDiscussion, rating: updateRating })
+            { name, movie: updateMovie, topic: updateTopic, discussion: updateDiscussion, rating: updateRating })
             .then((response) => {
                 toggle();
-                trigger(`${response.data} about ${updateMovie} by ${updateName}`);
+                trigger(`${response.data} about ${updateMovie} by ${name}`);
 
             })
             .catch((error) => {
@@ -36,12 +36,12 @@ const EditPost = ({ item, trigger }) => {
                 <ModalHeader id="edit-header">Post By: {item.name}</ModalHeader>
                 <form id="edit-form" onSubmit={updatePost}>
                     <ModalBody>
-                        <label>Posted by:</label>
+                        {/* <label>Posted by:</label>
                         <input type="text"
                             value={updateName}
                             className="form-control"
                             placeholder="enter your name"
-                            onChange={({ target }) => setUName(target.value)} />
+                            onChange={({ target }) => setUName(target.value)} /> */}
                         <br />
                         <label>Film:</label>
                         <input type="text"
