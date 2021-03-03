@@ -27,6 +27,10 @@ app.use((req, res, next) => {
     next(createError(404, 'Resource not found'));
 });
 
+app.use((err, req, res, next) => {
+    res.status(err.statusCode || 500).send(err.message || "something went wrong");
+})
+
 
 const server = app.listen(4500, () => {
     console.log(`server has started on port number:  ${server.address().port}`);

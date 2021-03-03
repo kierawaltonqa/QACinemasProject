@@ -77,14 +77,22 @@ describe(`Discussion Routes`, () => {
             })
     })
 
-    // it(`test fails`, (done) => {
+    // it(`Test /updateById/:id fail`, (done) => {
     //     chai.request(app)
-    //         .delete(`${DISCUSSION}/delete/1`)
+    //         .patch(`${DISCUSSION}/updateById/603e54de4dc74637041d5a1b`)
+    //         .send({
+    // name: "Fred" //even though key is wrong it still passes 
+    //         })
     //         .end((err, response) => {
-    //             expect(response).to.have.status(404);
+    //             if (err) done(err);
+    //             expect(response).to.have.status(500);//202
+
     //             done();
     //         })
+
     // })
+
+
 
     after(() => {
         Discuss.deleteMany({}, (err) => console.log(err));

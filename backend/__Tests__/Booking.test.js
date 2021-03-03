@@ -6,6 +6,7 @@ chai.use(chaiHttp);
 const app = require('../server');
 const { BOOKING } = require('../config/CONSTS.json');
 const { Booking } = require('../config/db');
+const { response } = require('express');
 
 
 describe(`Booking routes`, () => {
@@ -31,7 +32,7 @@ describe(`Booking routes`, () => {
 
     });
 
-    it(`Test failure of booking create`, (done) => {
+    it(`Test failure of booking create to get a 404`, (done) => {
         chai.request(app)
             .post(`${BOOKING}/creat`)
             .send({
@@ -78,6 +79,120 @@ describe(`Booking routes`, () => {
             })
 
     })
+
+    it(`Test update by ID`, (done) => {
+        chai.request(app)
+            .patch(`${BOOKING}/updateOne/603cf45e69fcfa243083da0f`)
+            .send({
+                "moviename": "goldy"
+            })
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(202);
+                done();
+            })
+    })
+
+    it(`Testing replacing whole booking`, (done) => {
+        chai.request(app)
+            .put(`${BOOKING}/update/603cf45e69fcfa243083da0f`)
+            .send({
+                moviename: "happy man",
+                date: "11/10/2020",
+                time: "15.50",
+                bookername: "sally",
+                adultseats: "5",
+                childseats: "2"
+
+            })
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(202);
+                done();
+            })
+    })
+
+    it(`Test the delete fucntion`, (done) => {
+        chai.request(app)
+            .delete(`${BOOKING}/delete/603cf45e69fcfa243083da0f`)
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(204);
+                done();
+            })
+    })
+
+    //!14
+    it(`Test failure of booking create to get a 500`, (done) => {
+        chai.request(app)
+            .post(`${BOOKING}/create`)
+            .send({
+                movienam: 'jumanji',
+                date: '10/10/2020',
+                time: '10.50',
+                bookername: 'sally',
+                adultseats: '2',
+                childseats: '6'
+
+            })
+            .end((err, response) => {
+                if (err) done(err);
+
+                expect(response).not.to.be.null;
+                expect(response).to.have.status(500);
+
+                done();
+            });
+
+    });
+
+
+    // //!46
+    // it(`Test update by ID failure`, (done) => {
+    //     chai.request(app)
+    //         .patch(`${BOOKING}/updateOne/603cf45e69fcfa243083da0f`)
+    //         .send({
+    //             movienam: 1
+    //         })
+    //         .end((err, response) => {
+    //             if (err) done(err);
+    //             expect(response).to.have.status(500);
+    //             done();
+    //         })
+    // })
+    //!67
+
+    // it(`test the replace method fail`, (done) => {
+    //     chai.request(app)
+    //         .put(`${BOOKING}/update/603cf45e69fcfa243083da0`)
+    //         .send({
+    //             'moviename': "pingu",
+    //             'date': "30/09/2022",
+    //             'time': "11.00 ",
+    //             'bookername': "sally red",
+    //             'adultseats': "3",
+    //             'childseats': "5"
+    //         })
+    //         .end((err, response) => {
+    //             if (err) done(err);
+    //             expect(response).to.have.status(500);
+    //             done();
+    //         })
+    // })
+    //!78
+    it(`Test the delete fucntion`, (done) => {
+        chai.request(app)
+            .delete(`${BOOKING}/delet/603cf45e69fcfa243083da0f`)
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(404);
+                done();
+            })
+    })
+
+
+
+
 
 
     after(() => {

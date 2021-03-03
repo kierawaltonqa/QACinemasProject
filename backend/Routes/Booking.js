@@ -1,11 +1,11 @@
 'use strict'
 
 const router = require('express').Router();
-const {Booking} = require('../config/db');
+const { Booking } = require('../config/db');
 
 // CREATE BOOKING
 
-router.post("/create", (req,res,next) => {
+router.post("/create", (req, res, next) => {
     const book = new Booking(req.body);
     book.save()
         .then((result) => {
@@ -26,9 +26,9 @@ router.get("/read", (req, res, next) => {
 });
 
 // GET ONE
-router.get("/read/:id", (req,res,next) => {
-    Booking.findById(req.params.id, (err,result) => {
-        if(err){
+router.get("/read/:id", (req, res, next) => {
+    Booking.findById(req.params.id, (err, result) => {
+        if (err) {
             next(err);
         }
         res.status(200).send(result);
@@ -38,34 +38,43 @@ router.get("/read/:id", (req,res,next) => {
 // UPDATE PARTIAL
 
 router.patch("/updateOne/:id", (req, res, next) => {
-    Booking.findByIdAndUpdate(req.params.id, 
-     req.body, 
-     {new: true}, 
-     (err) => {
-        if(err){
-            next(err);
-        }
-        res.status(202).send(`Successfully updated!`);
-    })
- });
+    Booking.findByIdAndUpdate(req.params.id,
+        req.body,
+        { new: true },
+        (err) => {
+            if (err) {
+                next(err);
+            }
+            res.status(202).send(`Successfully updated!`);
+        })
+});
 
 //  UPDATE ALL
 
-router.put("/update/:id", (req,res,next) => {
-    const {name, price, onSale} = req.body;
-    Booking.findByIdAndUpdate(req.params.id, {name,price,onSale}, {new: true}, (err)=>{
-        if(err){
-            next(err);
-        }
-        res.status(202).send(`Successfully replaced!`);
-    });
+router.put("/update/:id", (req, res, next) => {
+    const { moviename, date, time, bookername, adultseats, childseats } = req.body;
+    Booking.findByIdAndUpdate(req.params.id,
+        {
+            moviename,
+            date,
+            time,
+            bookername,
+            adultseats,
+            childseats
+        },
+        { new: true }, (err) => {
+            if (err) {
+                next(err);
+            }
+            res.status(202).send(`Successfully replaced!`);
+        });
 });
 
 // DELETE
 
 router.delete("/delete/:id", (req, res, next) => {
     Booking.findByIdAndDelete(req.params.id, (err) => {
-        if(err){
+        if (err) {
             next(err);
         }
         res.status(204).send(`Successfully deleted`);

@@ -34,7 +34,7 @@ const Booking = model('Booking', BookingSchema);
 
 const discussionSchema = new Schema({
 
-    name: { type: String },
+    name: { type: String, required: true },
     movie: { type: String },
     topic: { type: String },
     discussion: { type: String },
