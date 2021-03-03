@@ -17,7 +17,6 @@ const Home = () => {
                         <h1 id="title">Welcome To QA Cinemas
                         </h1>
                         <hr />
-                        <br />
                     </div>
                 </div>
                 <div className="row" style={{ height: "500px" }}>
@@ -27,10 +26,7 @@ const Home = () => {
                 </div>
                 <WelcomePage />
                 <Connect />
-                <div className="row-md">
-                    <WelcomePage2 />
-                </div>
-
+                <WelcomePage2 />
             </div>
             <Footer />
         </>

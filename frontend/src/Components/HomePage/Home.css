@@ -39,3 +39,8 @@
 #star{
     color: gold;
 }
+#name1, #name2, #name3{
+    text-align: center;
+    line-height: 0%;
+    font-size: medium;
+}
