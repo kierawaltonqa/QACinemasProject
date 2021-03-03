@@ -1,11 +1,12 @@
 import './Home.css';
-import penguin from '../../Resources/penguin-wave2.jpg';
 import CarouselPage from './Carousel';
 import image1 from '../../Resources/cinema1.jpg';
 import image2 from '../../Resources/cinema4.jpg';
 import image3 from '../../Resources/cinema5.jpg';
 import WelcomePage from './WelcomePage';
 import Footer from '../Footer';
+import WelcomePage2 from './WelcomePage2';
+import Connect from './Connect';
 
 const Home = () => {
     return (
@@ -29,16 +30,11 @@ const Home = () => {
                 <div className="row">
                     <WelcomePage />
                 </div>
+                <Connect />
                 <div className="row-md">
-                    <hr />
-                    <div className="col-md-4">
-
-                    </div>
-                    <div className="col-md-4">
-                        <img src={penguin} alt="penguin-wave" id="penguin-wave" />
-                    </div>
-
+                    <WelcomePage2 />
                 </div>
+
             </div>
             <Footer />
         </>

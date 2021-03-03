@@ -8,13 +8,24 @@
 #penguin-wave{
     height: 90px;
     width: 80px;
-    margin-left: 31rem;
+    /* margin-left: 31rem; */
+    margin-top: .8rem;
 }
-#welcomepage{
+#welcomepage, #connect{
     color: white;
     font-family: monospace;
     font-size: x-large;
 }
 #welcome-header{
     text-align: center;
+}
+#connect{
+    text-align: center;
+}
+#fb-icon, #i-icon, #t-icon, #gm-icon{
+    color:white;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
