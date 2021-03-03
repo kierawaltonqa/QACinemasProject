@@ -48,7 +48,7 @@ router.patch("/updateById/:id", (req, res, next) => {
             if (err) {
                 next(err);
             }
-            res.status(202).send(`Successfully updated!`);
+            res.status(202).send(`Successfully updated post`);
         })
 });
 

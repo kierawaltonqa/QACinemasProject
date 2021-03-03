@@ -21,7 +21,8 @@ const EditPost = ({ item, trigger }) => {
             { name: updateName, movie: updateMovie, topic: updateTopic, discussion: updateDiscussion, rating: updateRating })
             .then((response) => {
                 toggle();
-                trigger(response.data);
+                trigger(`${response.data} about ${updateMovie} by ${updateName}`);
+
             })
             .catch((error) => {
                 trigger(error.data);
