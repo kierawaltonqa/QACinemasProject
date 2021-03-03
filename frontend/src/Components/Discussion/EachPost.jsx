@@ -1,6 +1,7 @@
 import { Toast, ToastBody, ToastHeader } from "reactstrap";
 import DeletePost from "./DeletePost";
 import EditPost from "./EditPost";
+import { CardLink } from "reactstrap";
 
 const EachPost = ({ item, trigger }) => {
     return (
@@ -19,6 +20,7 @@ const EachPost = ({ item, trigger }) => {
                     <hr />
                     <DeletePost className="float-right" item={item} trigger={trigger} />
                     <EditPost className="float-right" item={item} trigger={trigger} />
+                    <CardLink className="btn btn-outline-primary">Comment</CardLink>
                 </ToastBody>
             </Toast>
         </div>
