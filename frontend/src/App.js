@@ -1,9 +1,18 @@
 import './Resources/App.css';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
+import Screenpage from './Components/Screens/Screenpage';
+
+import FilmClass from './Components/FilmClass';
+import './Resources/Sidebar.css';
+
 import Listings from './Components/Movies/MovieListings/Listings';
 import NR from './Components/Movies/NewReleases/NR';
 import DiscussionBoard from './Components/Discussion/DiscussionBoard';
+import AboutPage from './Components/About/AboutPage';
+import CantFindPage from './Components/CantFindPage';
+
 
 function App() {
   return (
@@ -14,6 +23,11 @@ function App() {
           <Route path="/" exact>
 
           </Route>
+
+          <Route path="/FilmClass">
+            <FilmClass />
+          </Route>
+
           <Route path="/listings">
             <Listings />
           </Route>
@@ -23,11 +37,22 @@ function App() {
           <Route path="/discussion">
             <DiscussionBoard />
           </Route>
+
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+
+          <Route path="/screens">
+            <Screenpage />
+          </Route>
+          <CantFindPage />
+
         </Switch>
+
       </Router>
 
 
-    </div>
+    </div >
   );
 }
 

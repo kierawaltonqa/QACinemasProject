@@ -21,7 +21,7 @@ const Navigation = (props) => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md" id="navbar">
+            <Navbar  style={{color: 'white', backgroundColor: 'gold', fontSize: '19px'}} light expand="md" id="navbar">
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
@@ -43,7 +43,10 @@ const Navigation = (props) => {
                                     <NavLink href="/newreleases">New Releases</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    <NavLink href="/classification">Film Classification</NavLink>
+
+                                    <NavLink href="/FilmClass"> Film Classification</NavLink>
+
+
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
@@ -52,7 +55,7 @@ const Navigation = (props) => {
                                 Bookings
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href="/screens">
                                     Screens
                                 </DropdownItem>
                                 <DropdownItem>

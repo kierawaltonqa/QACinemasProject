@@ -57,3 +57,4 @@ module.exports = {
     "Booking": Booking,
     "Discuss": Discuss
 }
+
