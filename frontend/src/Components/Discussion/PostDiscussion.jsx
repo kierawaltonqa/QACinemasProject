@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import axios from 'axios';
 import { DISCUSSION_URL } from './CONSTS.json';
+// import penguinimg from '../../Resources/penguinwtf2.png';
+import data from '../../Resources/Movies.json';
 
 const PostDiscussion = ({ trigger }) => {
 
@@ -12,12 +14,12 @@ const PostDiscussion = ({ trigger }) => {
     const [rating, setRating] = useState(0);
 
     const Filter = require('bad-words')
-    const filter = new Filter();
-
+    // const filter = new Filter();
+    var customFilter = new Filter({ placeHolder: '*' });
 
     const createDiscussion = async (e) => {
         e.preventDefault();
-        await axios.post(`${DISCUSSION_URL}/create`, { name, movie, topic: filter.clean(topic), discussion: filter.clean(discussion), rating })
+        await axios.post(`${DISCUSSION_URL}/create`, { name, movie, topic: customFilter.clean(topic), discussion: customFilter.clean(discussion), rating })
             .then((response) => {
                 clearForm();
                 trigger(response.data);
@@ -47,11 +49,24 @@ const PostDiscussion = ({ trigger }) => {
                             placeholder="enter your name"
                             onChange={({ target }) => setName(target.value)} />
                         <br />
-                        <input type="text"
+                        <label>Select the Movie</label>
+                        <select name="film" id="film-post" class="form-control" placeholder="Select film"
+                            onChange={({ target }) => setMovie(target.value)}>
+                            {
+                                data.map((film) => (
+                                    <option
+                                        value={film.title}
+                                        onSelect={({ target }) => setMovie(target.value)}>
+                                        {film.title}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                        {/* <input type="text"
                             value={movie}
                             className="form-control"
                             placeholder="movie title"
-                            onChange={({ target }) => setMovie(target.value)} />
+                            onChange={({ target }) => setMovie(target.value)} /> */}
                         <br />
                         <input type="text"
                             value={topic}
