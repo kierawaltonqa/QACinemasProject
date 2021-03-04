@@ -11,9 +11,13 @@ const PostDiscussion = ({ trigger }) => {
     const [discussion, setDiscussion] = useState('');
     const [rating, setRating] = useState(0);
 
+    const Filter = require('bad-words')
+    const filter = new Filter();
+
+
     const createDiscussion = async (e) => {
         e.preventDefault();
-        await axios.post(`${DISCUSSION_URL}/create`, { name, movie, topic, discussion, rating })
+        await axios.post(`${DISCUSSION_URL}/create`, { name, movie, topic: filter.clean(topic), discussion: filter.clean(discussion), rating })
             .then((response) => {
                 clearForm();
                 trigger(response.data);
