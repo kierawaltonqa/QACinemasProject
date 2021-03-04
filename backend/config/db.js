@@ -58,6 +58,3 @@ module.exports = {
     "Discuss": Discuss
 }
 
-// exports = { "Payment": Payment };
-// exports = { "Booking": Booking };
-// exports = { "Discuss": Discuss };

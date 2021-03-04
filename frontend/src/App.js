@@ -9,18 +9,24 @@ import './Resources/Sidebar.css';
 
 import Listings from './Components/Movies/MovieListings/Listings';
 import NR from './Components/Movies/NewReleases/NR';
+import DiscussionBoard from './Components/Discussion/DiscussionBoard';
 import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
+
 import ContactUsPage from './Components/ContactUs/ContactUsPage';
+
+import Home from './Components/HomePage/Home';
+
 
 
 function App() {
   return (
     <div className="page-container">
-      <Router>  
+      <Router>
         <Navigation />
         <Switch>
           <Route path="/" exact>
+            <Home />
 
           </Route>
 
@@ -34,6 +40,10 @@ function App() {
           <Route path="/newreleases">
             <NR />
           </Route>
+          <Route path="/discussion">
+            <DiscussionBoard />
+          </Route>
+
           <Route path="/about">
             <AboutPage />
           </Route>
@@ -46,12 +56,13 @@ function App() {
             <ContactUsPage />
           </Route>
           <CantFindPage />
+
         </Switch>
-        
+
       </Router>
 
 
-    </div>
+    </div >
   );
 }
 

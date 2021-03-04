@@ -13,7 +13,7 @@ router.post("/create", (req, res, next) => {
     const discuss = new Discuss(req.body);
     console.log(discuss);
     discuss.save().then((result) => {
-        res.status(201).send(`${discuss} created`);
+        res.status(201).send(`${discuss.name} posted about ${discuss.movie}`);
     })
         .catch((err) => next(err));
 });
@@ -48,7 +48,7 @@ router.patch("/updateById/:id", (req, res, next) => {
             if (err) {
                 next(err);
             }
-            res.status(202).send(`Successfully updated!`);
+            res.status(202).send(`Successfully updated post`);
         })
 });
 

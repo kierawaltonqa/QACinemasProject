@@ -5,16 +5,16 @@ import logo from "../../Resources/Logo/logo.jpg"
 import FindUs from "./FindUs";
 import MeetTheTeam from "./MeetTheTeam";
 import QaCinemaInfo from "./QaCinemaInfo";
-import Footer from "../Footer";
+import Footer from "../FooterFolder/Footer";
 import Map from "./Map";
 
 const AboutPage = () => {
   return (
     <>
-    <br className="br"></br>
-    <br className="br"></br>
+      <br className="br"></br>
+      <br className="br"></br>
       <Container maxWidth="lg">
-     
+
         <Container>
           <div className="row">
             <Col>
