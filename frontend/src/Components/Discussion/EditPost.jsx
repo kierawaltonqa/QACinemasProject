@@ -16,10 +16,13 @@ const EditPost = ({ item, trigger }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
+    const Filter = require('bad-words')
+    const filter = new Filter();
+
     const updatePost = (e) => {
         e.preventDefault();
         axios.patch(`${DISCUSSION_URL}/updateById/${item._id}`,
-            { name, movie: updateMovie, topic: updateTopic, discussion: updateDiscussion, rating: updateRating })
+            { name, movie: updateMovie, topic: filter.clean(updateTopic), discussion: filter.clean(updateDiscussion), rating: updateRating })
             .then((response) => {
                 toggle();
                 trigger(`${response.data} about ${updateMovie} by ${name}`);
