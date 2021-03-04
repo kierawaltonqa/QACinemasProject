@@ -8,7 +8,7 @@ import data from '../../Resources/Movies.json';
 const PostDiscussion = ({ trigger }) => {
 
     const [name, setName] = useState('');
-    const [movie, setMovie] = useState('');
+    const [movie, setMovie] = useState("reset");
     const [topic, setTopic] = useState('');
     const [discussion, setDiscussion] = useState('');
     const [rating, setRating] = useState(0);
@@ -29,17 +29,15 @@ const PostDiscussion = ({ trigger }) => {
     }
 
     function resetSelectElement(selectElement) {
-        selectElement.selectedIndex = -1;
-
+        selectElement.selectedIndex = null; // or = null?
     }
 
     const clearForm = () => {
         setName('');
-        // setMovie(resetSelectElement(movie));
-        setMovie('');
         setTopic('');
         setDiscussion('');
         setRating(0);
+        setMovie("reset");
     }
 
     return (
@@ -57,7 +55,10 @@ const PostDiscussion = ({ trigger }) => {
                         <br />
                         <label>Select the Movie</label>
                         <select name="film" class="form-control" placeholder="Select film"
-                            onChange={({ target }) => setMovie(target.value)}>
+                            onChange={({ target }) => setMovie(target.value)}
+                            value={movie}
+                        // defaultValue={{ label: "Please Choose...", value: "reset" }}
+                        >
                             <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (

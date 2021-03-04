@@ -60,11 +60,7 @@ const EditPost = ({ item, trigger }) => {
                                 ))
                             }
                         </select>
-                        {/* <input type="text"
-                            value={updateMovie}
-                            className="form-control"
-                            placeholder="movie title"
-                            onChange={({ target }) => setUMovie(target.value)} /> */}
+
                         <br />
                         <label>Topic:</label>
                         <input type="text"
