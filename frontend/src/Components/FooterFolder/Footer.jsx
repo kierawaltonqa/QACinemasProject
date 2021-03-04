@@ -40,7 +40,7 @@ const Footer = () => {
           </row>
         </Card.Body>
       </Card>
-      <Times/>
+      <Times style={{color: 'red'}}/>
     </div>
   )
 }
