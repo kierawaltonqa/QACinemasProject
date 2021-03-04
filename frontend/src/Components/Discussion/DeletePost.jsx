@@ -1,10 +1,12 @@
 import axios from "axios";
-import { CardLink } from "reactstrap";
+import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { DISCUSSION_URL } from './CONSTS.json';
+import { useState } from 'react';
 
 const DeletePost = ({ item, trigger }) => {
 
-    // const time = new Date().toLocaleString;
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
 
     const deletePost = (e) => {
         e.preventDefault();
@@ -17,7 +19,19 @@ const DeletePost = ({ item, trigger }) => {
     }
 
     return (
-        <CardLink className="btn btn-outline-danger" onClick={deletePost}>X</CardLink>
+        <>
+            <CardLink className="btn btn-outline-danger" onClick={toggle}>X</CardLink>
+            <Modal isOpen={modal}>
+                <ModalHeader id="delete-header">Delete...</ModalHeader>
+                <ModalBody>
+                    <h4>Are you sure that you want to delete this post?</h4>
+                </ModalBody>
+                <ModalFooter id="delete-footer">
+                    <button onClick={toggle} className="btn btn-outline-dark">No, Go Back</button>
+                    <button onClick={deletePost} type="submit" className="btn btn-outline-danger">Yes, Delete</button>
+                </ModalFooter>
+            </Modal>
+        </>
     )
 }
 export default DeletePost;
