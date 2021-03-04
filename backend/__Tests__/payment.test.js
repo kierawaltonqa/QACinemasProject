@@ -88,7 +88,7 @@ describe(`Payment Routes`, () => {
     });
 
     after(() => {
-        Payment.deleteMany({}, (err) => console.log(err));
+        // Payment.deleteMany({}, (err) => console.log(err));
         app.close();
     });
 });
