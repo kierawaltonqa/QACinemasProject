@@ -8,10 +8,11 @@ const { Discuss } = require('../config/db');
 
 
 //*create
-router.post("/create", (req, res, next) => {
+router.post("/create", async (req, res, next) => {
 
     const discuss = new Discuss(req.body);
     console.log(discuss);
+    await discuss.validate();
     discuss.save().then((result) => {
         res.status(201).send(`${discuss.name} posted about ${discuss.movie}`);
     })
@@ -43,10 +44,14 @@ router.get("/getName/:movie", (req, res, next) => {
 router.patch("/updateById/:id", (req, res, next) => {
     Discuss.findByIdAndUpdate(req.params.id,
         req.body,
-        { new: true },
-        (err) => {
+
+        { new: true, runValidators: true },
+        (err, product) => {
+
             if (err) {
                 next(err);
+            } else {
+                res.status(202).send(`${product}Successfully updated!`);
             }
             res.status(202).send(`Successfully updated post`);
         })
