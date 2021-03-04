@@ -52,13 +52,22 @@ router.patch("/updateOne/:id", (req, res, next) => {
 //  UPDATE ALL
 
 router.put("/update/:id", (req, res, next) => {
-    const { name, price, onSale } = req.body;
-    Booking.findByIdAndUpdate(req.params.id, { name, price, onSale }, { new: true }, (err) => {
-        if (err) {
-            next(err);
-        }
-        res.status(202).send(`Successfully replaced!`);
-    });
+    const { moviename, date, time, bookername, adultseats, childseats } = req.body;
+    Booking.findByIdAndUpdate(req.params.id,
+        {
+            moviename,
+            date,
+            time,
+            bookername,
+            adultseats,
+            childseats
+        },
+        { new: true }, (err) => {
+            if (err) {
+                next(err);
+            }
+            res.status(202).send(`Successfully replaced!`);
+        });
 });
 
 // DELETE
