@@ -33,7 +33,6 @@ const ToggleInput = ({ filmname, adulttic, childtic, deluxetic }) => {
 
 
 
-
     return (
 
         <>

@@ -13,6 +13,7 @@ const TicketBooking = () => {
     const [adultTic, setAdultTic] = useState(0)
     const [childTic, setChildTic] = useState(0)
     const [deluxe, setDeluxe] = useState("off")
+
     
 
 
