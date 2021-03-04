@@ -54,22 +54,22 @@ const discussionSchema = new Schema({
 
 const Discuss = model('Discuss', discussionSchema);
 
-// mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log(`Connection has worked`);
-//     }
-// })
-
-//!FOR TESTING PURPOSES
-mongoose.connect(`${DB_URL}/test?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
         console.log(err);
     } else {
         console.log(`Connection has worked`);
     }
 })
+
+// //!FOR TESTING PURPOSES
+// mongoose.connect(`${DB_URL}/test?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log(`Connection has worked`);
+//     }
+// })
 
 module.exports = {
     "Payment": Payment,
