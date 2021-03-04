@@ -5,14 +5,9 @@ import "../Resources/TicketBooking.css"
 
 const TicketBooking = () => {
 
+    const [basketid, setbasketid] = useState("");
 
-    const [movieName, setMovieName] = useState("")
-    const [date, setDate] = useState(Date())
-    const [time, setTime] = useState("")
-    const [bookName, setBookName] = useState("")
-    const [adultTic, setAdultTic] = useState(0)
-    const [childTic, setChildTic] = useState(0)
-    const [deluxe, setDeluxe] = useState("off")
+
 
     
 
@@ -29,11 +24,11 @@ const TicketBooking = () => {
                     <br />
                     <br />
                     <div className="">
-                        <ReadAll adulttic={setAdultTic} childtic={setChildTic} deluxetic={setDeluxe}  />
+                        <ReadAll basketid={setbasketid} />
                     </div>
                 </div>
                 <div className="col-3">
-                    <Sidebar />
+                    <Sidebar basketid={basketid} />
                 </div>
             </div>
         </>

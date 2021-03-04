@@ -1,33 +1,69 @@
 import React, { useState } from 'react'
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import "../Resources/TicketBooking.css"
+import axios from "axios";
+import { BOOKING_URL } from "../Resources/CONST.json"
 
 
-const ToggleInput = ({ filmname, adulttic, childtic, deluxetic }) => {
+const ToggleInput = ({ filmname, basketid }) => {
+
+    const date1 = new Date();
+    const [movieName, setMovieName] = useState(filmname)
+    const [date, setDate] = useState(date1.toLocaleDateString())
+    const [time, setTime] = useState("")
+    const [bookName, setBookName] = useState("")
+    const [adultTic, setAdultTic] = useState(0)
+    const [childTic, setChildTic] = useState(0)
+    const [deluxe, setDeluxe] = useState(false)
+
+    const [basketdata, setbasketdata] = useState("")
 
     const [hidden, setHidden] = useState(false)
 
     const toggleHidden = () => {
 
         setHidden(!hidden);
-        clearVals();
     }
 
-    const clearVals = () => {
 
-        adulttic(0);
-        childtic(0);
-        deluxetic("off");
 
+    // CREATE METHOD
+
+    const create = (e) => {
+        e.preventDefault();
+        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe })
+            .then((res) =>  {
+                setbasketdata(res.data)
+                getBasket();
+                console.log(res.data);
+            }).catch((err) => {
+                console.log(err);
+            })
     }
 
-    const testVals = () => {
+    // GET METHOD
 
-        adulttic(0);
-        childtic(0);
-        deluxetic("off");
+    const getBasket = async (e) => {
+        await axios.get(`${BOOKING_URL}/read/${basketdata}`)
+            .then((res) => {
+                basketid(res.data)
+                console.log(res);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+    }
 
-        setHidden(!hidden);
+
+    //! TEST
+    const testing = () => {
+        console.log(movieName);
+        console.log(date);
+        console.log(time);
+        console.log(bookName);
+        console.log(adultTic);
+        console.log(childTic);
+        console.log(deluxe);
     }
 
 
@@ -48,17 +84,16 @@ const ToggleInput = ({ filmname, adulttic, childtic, deluxetic }) => {
                 <ModalBody style={{ backgroundColor: "gold" }} >
 
                     <div className="form-mb position-relative">
-                        {/* <center> */}
                         <div >
                             <label htmlFor="" style={{ fontSize: "17px" }}>Ticket Holder Name:</label>
                             <br />
-                            <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" />
+                            <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" onChange={({ target }) => setBookName(target.value)} />
                         </div>
                         <hr style={{ backgroundColor: "black" }} />
                         <div>
                             <label htmlFor="" style={{ fontSize: "17px" }}>Screen Time:</label>
                             <br />
-                            <input style={{ width: "90px" }} type="time" placeholder="Screen Time" />
+                            <input style={{ width: "90px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
                         </div>
                         <br />
                         <div>
@@ -66,17 +101,15 @@ const ToggleInput = ({ filmname, adulttic, childtic, deluxetic }) => {
                         <label htmlFor="" style={{ fontSize: "17px" }}>Tickets:</label>
 
                         <div>
-                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="Adult" onChange={({ target }) => adulttic(target.value)} />
+                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
-                        <input style={{ width: "90px", }} type="number" placeholder="Child" onChange={({ target }) => childtic(target.value)} />
+                        <input style={{ width: "90px", }} type="number" placeholder="Child" onChange={({ target }) => setChildTic(target.value)} />
 
                         <hr />
                         <div className="form-check form-switch">
-                            <input className="form-check-input" type="checkbox" onChange={({ target }) => deluxetic(target.value)} />
+                            <input className="form-check-input" type="checkbox" value={deluxe} onChange={() => setDeluxe(!deluxe)} />
                             <label className="form-check-label" style={{ color: "black" }}>Deluxe?</label>
                         </div>
-
-                        {/* </center> */}
 
 
                     </div>
@@ -84,7 +117,7 @@ const ToggleInput = ({ filmname, adulttic, childtic, deluxetic }) => {
 
                 </ModalBody>
                 <ModalFooter style={{ backgroundColor: "black" }}>
-                    <button className="btn btn-warning" onClick={testVals}>Confirm</button>
+                    <button className="btn btn-warning" onClick={create}>Confirm</button>
                     <button className="btn btn-danger" onClick={toggleHidden}>X</button>
                 </ModalFooter>
                 <form action=""></form>

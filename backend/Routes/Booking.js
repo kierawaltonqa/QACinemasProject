@@ -9,7 +9,7 @@ router.post("/create", (req,res,next) => {
     const book = new Booking(req.body);
     book.save()
         .then((result) => {
-            res.status(201).send(`${result._id} has been added successfuly!`)
+            res.status(201).send(`${result._id}`)
         })
         .catch((err) => next(err));
 });
