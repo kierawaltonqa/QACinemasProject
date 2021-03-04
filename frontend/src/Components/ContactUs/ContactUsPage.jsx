@@ -1,4 +1,5 @@
 import React from 'react'
+import OpeningPage from '../OpeningTimes/OpeningPage'
 import ContactForm from './ContactForm'
 
 const ContactUsPage = () => {
@@ -7,6 +8,7 @@ const ContactUsPage = () => {
           
 
             <ContactForm/>
+            <OpeningPage/>
         </div>
     )
 }
