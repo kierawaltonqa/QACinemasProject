@@ -12,8 +12,6 @@ import { useState } from "react";
 import Footer from "../FooterFolder/Footer";
 
 
-
-
 const Screenpage = () => {
 
     const [toggleOn, setToggleOn] = useState("")
@@ -26,8 +24,6 @@ const Screenpage = () => {
     const CardInfoDeluxe = () => {
         setToggleOn("deluxe");
     }
-
-
 
 
     return (

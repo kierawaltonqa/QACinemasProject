@@ -29,7 +29,7 @@ const WelcomePage = () => {
                     </center>
                     <center>
                         <br />
-                        <h3 id="star"><AiFillStar size={50} /> <AiFillStar size={50} /> <AiFillStar size={50} /> <AiFillStar size={50} /> <AiFillStar size={50} /></h3>
+                        <h3 id="star"><AiFillStar size={50} /> <AiFillStar size={50} /> <AiFillStar size={50} /> <AiFillStar size={50} /> </h3>
                     </center>
                 </div>
 

@@ -90,3 +90,6 @@
     padding: .2rem;
     margin-left:.1rem;
 }
+#sidebar{
+    min-height: 50vh; 
+}
