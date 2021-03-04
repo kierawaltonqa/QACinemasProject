@@ -5,6 +5,16 @@ const { Schema, model } = mongoose;
 const { DB_URL, DB_NAME } = require('./CONSTS.json');
 
 
+const commentSchema = new Schema({
+    name: { type: String, required: true },
+    comment: { type: String, required: true },
+    datePosted: { type: Date, default: Date.now }
+
+})
+
+const Comment = model(`Comment`, commentSchema);
+
+
 
 
 
@@ -52,6 +62,9 @@ mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-
     }
 })
 
-module.exports = { "Payment": Payment };
-module.exports = { "Booking": Booking };
-module.exports = { "Discuss": Discuss };
+module.exports = {
+    "Payment": Payment,
+    "Booking": Booking,
+    "Discuss": Discuss,
+    "Comment": Comment
+}
