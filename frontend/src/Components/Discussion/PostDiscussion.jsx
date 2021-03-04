@@ -56,9 +56,7 @@ const PostDiscussion = ({ trigger }) => {
                         <label>Select the Movie</label>
                         <select name="film" class="form-control" placeholder="Select film"
                             onChange={({ target }) => setMovie(target.value)}
-                            value={movie}
-                        // defaultValue={{ label: "Please Choose...", value: "reset" }}
-                        >
+                            value={movie}>
                             <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (

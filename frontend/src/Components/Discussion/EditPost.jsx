@@ -48,7 +48,8 @@ const EditPost = ({ item, trigger }) => {
                         <br />
                         <label>Film:</label>
                         <select name="film" class="form-control" placeholder="Select film"
-                            onChange={({ target }) => setUMovie(target.value)}>
+                            onChange={({ target }) => setUMovie(target.value)}
+                            value={movie}>
                             <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (
@@ -60,7 +61,6 @@ const EditPost = ({ item, trigger }) => {
                                 ))
                             }
                         </select>
-
                         <br />
                         <label>Topic:</label>
                         <input type="text"
