@@ -46,11 +46,7 @@ router.patch("/updateOne/:id", (req, res, next) => {
                 next(err);
             }
             res.status(202).send(`Successfully updated!`);
-<<<<<<< HEAD
         });
-=======
-        })
->>>>>>> BackTest
 });
 
 //  UPDATE ALL
