@@ -1,8 +1,15 @@
 body {
-    font-family: monospace, monospace!important;;
+    font-family: 'Staatliches', cursive!important;
     background-color: black!important;
     overflow-x: hidden;
+
 }
+
+p{
+    font-family: monospace!important;
+}
+
+
 
 hr{
 
@@ -10,6 +17,3 @@ hr{
 
 }
 
-
-
- 
