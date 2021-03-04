@@ -7,6 +7,7 @@ import WelcomePage from './WelcomePage';
 import Footer from '../FooterFolder/Footer';
 import WelcomePage2 from './WelcomePage2';
 import Connect from './Connect';
+import PlacesToGo from '../PlacesNearBy/PlacesToGo';
 
 const Home = () => {
     return (
@@ -28,6 +29,7 @@ const Home = () => {
                 <Connect />
                 <WelcomePage2 />
             </div>
+            <PlacesToGo/>
             <Footer />
         </>
     )
