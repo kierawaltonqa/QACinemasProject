@@ -21,14 +21,13 @@ const DeletePost = ({ item, trigger }) => {
     return (
         <>
             <CardLink className="btn btn-outline-danger" onClick={toggle}>X</CardLink>
-            <Modal isOpen={modal}>
-                <ModalHeader id="delete-header">Delete...</ModalHeader>
+            <Modal isOpen={modal} id="delete-modal">
                 <ModalBody>
                     <h4>Are you sure that you want to delete this post?</h4>
                 </ModalBody>
                 <ModalFooter id="delete-footer">
-                    <button onClick={toggle} className="btn btn-outline-dark">No, Go Back</button>
-                    <button onClick={deletePost} type="submit" className="btn btn-outline-danger">Yes, Delete</button>
+                    <button onClick={toggle} className="btn btn-outline-danger">No, Go Back</button>
+                    <button onClick={deletePost} type="submit" className="btn btn-outline-success">Yes, Delete</button>
                 </ModalFooter>
             </Modal>
         </>
