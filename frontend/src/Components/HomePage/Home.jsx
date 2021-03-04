@@ -7,6 +7,7 @@ import WelcomePage from './WelcomePage';
 import Footer from '../FooterFolder/Footer';
 import WelcomePage2 from './WelcomePage2';
 import Connect from './Connect';
+import Greating from './Greating';
 
 const Home = () => {
     return (
@@ -14,10 +15,10 @@ const Home = () => {
 
     
             <div className="container">
+
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 id="title">Welcome To QA Cinemas
-                        </h1>
+                        <h1 id="title">Welcome To QA Cinemas </h1>
                         <hr />
                     </div>
                 </div>

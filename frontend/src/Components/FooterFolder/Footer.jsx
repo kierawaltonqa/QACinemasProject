@@ -38,9 +38,15 @@ const Footer = () => {
 
 
           </row>
+          <div className="footerTimes">
+
+          <Times style={{color: 'red'}}/>
+
+          </div>
         </Card.Body>
+
       </Card>
-      <Times style={{color: 'red'}}/>
+
     </div>
   )
 }

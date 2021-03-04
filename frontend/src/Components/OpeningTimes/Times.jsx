@@ -6,9 +6,9 @@ const Times = () => {
 
 
   return (
-    <div>
+    <div className="beauty" >
     
-      <Table st striped bordered hover variant="dark">
+      <Table st striped bordered hover variant="dark" >
         <tr>
           <td>Monday</td>
           <td>08:00am - 22:00pm</td>
