@@ -50,13 +50,13 @@ const PostDiscussion = ({ trigger }) => {
                             onChange={({ target }) => setName(target.value)} />
                         <br />
                         <label>Select the Movie</label>
-                        <select name="film" id="film-post" class="form-control" placeholder="Select film"
+                        <select name="film" class="form-control" placeholder="Select film"
                             onChange={({ target }) => setMovie(target.value)}>
                             {
                                 data.map((film) => (
                                     <option
                                         value={film.title}
-                                        onSelect={({ target }) => setMovie(target.value)}>
+                                    >
                                         {film.title}
                                     </option>
                                 ))

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { useState } from 'react';
 import { DISCUSSION_URL } from './CONSTS.json';
+import data from '../../Resources/Movies.json';
 
 const EditPost = ({ item, trigger }) => {
 
@@ -44,11 +45,23 @@ const EditPost = ({ item, trigger }) => {
                             onChange={({ target }) => setUName(target.value)} /> */}
                         <br />
                         <label>Film:</label>
-                        <input type="text"
+                        <select name="film" class="form-control" placeholder="Select film"
+                            onChange={({ target }) => setUMovie(target.value)}>
+                            {
+                                data.map((film) => (
+                                    <option
+                                        value={film.title}
+                                    >
+                                        {film.title}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                        {/* <input type="text"
                             value={updateMovie}
                             className="form-control"
                             placeholder="movie title"
-                            onChange={({ target }) => setUMovie(target.value)} />
+                            onChange={({ target }) => setUMovie(target.value)} /> */}
                         <br />
                         <label>Topic:</label>
                         <input type="text"
