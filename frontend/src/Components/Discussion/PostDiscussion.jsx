@@ -28,8 +28,14 @@ const PostDiscussion = ({ trigger }) => {
             })
     }
 
+    function resetSelectElement(selectElement) {
+        selectElement.selectedIndex = -1;
+
+    }
+
     const clearForm = () => {
         setName('');
+        // setMovie(resetSelectElement(movie));
         setMovie('');
         setTopic('');
         setDiscussion('');
@@ -52,6 +58,7 @@ const PostDiscussion = ({ trigger }) => {
                         <label>Select the Movie</label>
                         <select name="film" class="form-control" placeholder="Select film"
                             onChange={({ target }) => setMovie(target.value)}>
+                            <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (
                                     <option
@@ -62,11 +69,6 @@ const PostDiscussion = ({ trigger }) => {
                                 ))
                             }
                         </select>
-                        {/* <input type="text"
-                            value={movie}
-                            className="form-control"
-                            placeholder="movie title"
-                            onChange={({ target }) => setMovie(target.value)} /> */}
                         <br />
                         <input type="text"
                             value={topic}

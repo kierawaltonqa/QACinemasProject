@@ -26,7 +26,6 @@ const EditPost = ({ item, trigger }) => {
             .then((response) => {
                 toggle();
                 trigger(`${response.data} about ${updateMovie} by ${name}`);
-
             })
             .catch((error) => {
                 trigger(error.data);
@@ -50,6 +49,7 @@ const EditPost = ({ item, trigger }) => {
                         <label>Film:</label>
                         <select name="film" class="form-control" placeholder="Select film"
                             onChange={({ target }) => setUMovie(target.value)}>
+                            <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (
                                     <option
