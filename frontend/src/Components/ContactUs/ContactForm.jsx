@@ -1,23 +1,25 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
 const ContactForm = () => {
-  const printToScreen = (e) => {
-    e.preventDefault();
+  //!warning 
+  //   const printToScreen = (e) => {
+  //     e.preventDefault();
 
-    console.log({ name, body, subject });
-  };
+  //     console.log({ body, subject });
+  //     // console.log({ name, body, subject });
+  //   };
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
+  //!
   const [body, setBody] = useState("");
   const [subject, setSubject] = useState("");
 
   return (
     <>
 
-    <h1 className="beauty"> Contact Us </h1>
-    <hr></hr>
+      <h1 className="beauty"> Contact Us </h1>
+      <hr></hr>
       <div className="formdiv">
         <form>
           <br />
