@@ -63,12 +63,12 @@ body {
 }
 
 .footer {
-    
-    background-color: #f8f9fa;
-    text-align: center;
-    color:black;
+ 
+    text-align: center!important;
+    align-items: center;
+    background: rgb(255,233,59)!;
+    background: linear-gradient(0deg, rgba(255,233,59,1) 0%, rgba(0,0,0,1) 65%)!important;
     width: 100;
-    
 
 
 }

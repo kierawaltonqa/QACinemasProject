@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Container, Image, Button } from "react-bootstrap/";
+import { Col, Image, Button } from "react-bootstrap/";
 import "../Css/AboutStyle.css";
 import lost from "../Resources/Logo/lost.jpg";
 import Footer from "./FooterFolder/Footer";

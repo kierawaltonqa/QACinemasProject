@@ -68,7 +68,7 @@
     background-color: white;
     color: black;
 }
-#edit-header, #edit-footer{
+#edit-header, #edit-footer, #delete-footer{
     background-color: black;
     font-family: monospace;
     text-transform: uppercase;
@@ -92,4 +92,10 @@
 }
 #sidebar{
     min-height: 50vh; 
+}
+#delete-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
 }

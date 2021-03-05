@@ -3,7 +3,7 @@ const express = require('express');
 const createError = require('http-errors');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { PAYMENT, BOOKING, DISCUSSION } = require('./config/CONSTS.json')
+const { PAYMENT, BOOKING, DISCUSSION, COMMENT } = require('./config/CONSTS.json');
 
 // INIT MY APP
 const app = express();
@@ -21,13 +21,23 @@ app.use(`${BOOKING}`, bookingRoute);
 //!Discussiondi
 const discssionRoute = require('./Routes/discussion');
 app.use(`${DISCUSSION}`, discssionRoute);
+//!Comment section
+const commentRoute = require('./Routes/Comment');
+app.use(`${COMMENT}`, commentRoute);
 
 // error handling
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found'));
 });
 
+app.use((err, req, res, next) => {
+    res.status(err.statusCode || 500).send(err.message || "something went wrong");
+})
+
 
 const server = app.listen(4500, () => {
     console.log(`server has started on port number:  ${server.address().port}`);
 });
+
+
+module.exports = server;

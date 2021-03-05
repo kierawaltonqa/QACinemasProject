@@ -16,6 +16,7 @@ import CantFindPage from './Components/CantFindPage';
 import ContactUsPage from './Components/ContactUs/ContactUsPage';
 
 import Home from './Components/HomePage/Home';
+import SearchPage from './Components/Search/SearchPage';
 
 
 
@@ -54,6 +55,10 @@ function App() {
 
           <Route path="/contact">
             <ContactUsPage />
+          </Route>
+
+          <Route path="/search">
+            <SearchPage />
           </Route>
           <CantFindPage />
 

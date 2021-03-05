@@ -2,6 +2,7 @@ import axios from 'axios';
 import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { useState } from 'react';
 import { DISCUSSION_URL } from './CONSTS.json';
+import data from '../../Resources/Movies.json';
 
 const EditPost = ({ item, trigger }) => {
 
@@ -15,14 +16,16 @@ const EditPost = ({ item, trigger }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
+    const Filter = require('bad-words')
+    const filter = new Filter();
+
     const updatePost = (e) => {
         e.preventDefault();
         axios.patch(`${DISCUSSION_URL}/updateById/${item._id}`,
-            { name, movie: updateMovie, topic: updateTopic, discussion: updateDiscussion, rating: updateRating })
+            { name, movie: updateMovie, topic: filter.clean(updateTopic), discussion: filter.clean(updateDiscussion), rating: updateRating })
             .then((response) => {
                 toggle();
                 trigger(`${response.data} about ${updateMovie} by ${name}`);
-
             })
             .catch((error) => {
                 trigger(error.data);
@@ -44,11 +47,20 @@ const EditPost = ({ item, trigger }) => {
                             onChange={({ target }) => setUName(target.value)} /> */}
                         <br />
                         <label>Film:</label>
-                        <input type="text"
-                            value={updateMovie}
-                            className="form-control"
-                            placeholder="movie title"
-                            onChange={({ target }) => setUMovie(target.value)} />
+                        <select name="film" class="form-control" placeholder="Select film"
+                            onChange={({ target }) => setUMovie(target.value)}
+                            value={updateMovie}>
+                            <option value="reset" disabled selected hidden>Please Choose...</option>
+                            {
+                                data.map((film) => (
+                                    <option
+                                        value={film.title}
+                                    >
+                                        {film.title}
+                                    </option>
+                                ))
+                            }
+                        </select>
                         <br />
                         <label>Topic:</label>
                         <input type="text"

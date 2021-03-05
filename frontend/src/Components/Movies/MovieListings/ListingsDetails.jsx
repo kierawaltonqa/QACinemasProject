@@ -20,7 +20,7 @@ const ListingsDetails = ({ id, title, runtime, rating, director, poster, actors 
                     <ModalBody id="modal-body">
                         <div class="row-md">
                             <div className="col-md-12" id="modalimage">
-                                <img src={poster} height="30%" width="30%" />
+                                <img src={poster} alt={title} height="30%" width="30%" />
                             </div>
                             <div className="col-md-12">
                                 <hr />

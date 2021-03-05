@@ -1,17 +1,32 @@
 import './Home.css';
 import CarouselPage from './Carousel';
-import image1 from '../../Resources/cinema1.jpg';
-import image2 from '../../Resources/cinema4.jpg';
-import image3 from '../../Resources/cinema5.jpg';
+import image1 from '../../Resources/image1.JPG';
+import image2 from '../../Resources/image2.jpg';
+import image3 from '../../Resources/image3.jpg';
 import WelcomePage from './WelcomePage';
 import Footer from '../FooterFolder/Footer';
 import WelcomePage2 from './WelcomePage2';
 import Connect from './Connect';
+
 import Greating from './Greating';
+
+import {Row, Col, Container} from 'react-bootstrap'
+import data from '../../Components/Movies/NewReleases/NewReleases.json';
+import NRFilms from '../../Components/Movies/NewReleases/NRFilms';
+import Map from '../About/Map';
+import QaCinemaInfo from '../About/QaCinemaInfo';
+import LatestScreening from '../Latest/LatestScreening';
+
+
+
+
+   
+
 
 const Home = () => {
     return (
         <>
+
 
     
             <div className="container">
@@ -21,17 +36,59 @@ const Home = () => {
                         <h1 id="title">Welcome To QA Cinemas </h1>
                         <hr />
                     </div>
+
+        <div>
+        <CarouselPage image1={image1} image2={image2} image3={image3} />
+
+        <div className="container">
+                <div className="row-md" id="newreleasesheader">
+                    <hr id="hr" />
+                    <h1 className="container" style={{color: 'gold'}}>Our New Releases</h1>
+                    <hr id="hr" />
+
                 </div>
-                <div className="row" style={{ height: "500px" }}>
-                    <div className="col-md-12 slider-container" id="carousel">
-                        <CarouselPage image1={image1} image2={image2} image3={image3} />
-                    </div>
+            
+                <div className="row">
+                    {
+                        data.map((film) => (
+                            <div className="col-md-3">
+                                <br />
+                                <NRFilms
+                                    key={film.id}
+                                    title={film.title}
+                                    runtime={film.runtime}
+                                    rating={film.rating}
+                                    poster={film.img}
+                                    director={film.director}
+                                    actors={film.actors} />
+                            </div>
+                        ))}
                 </div>
-                <WelcomePage />
-                <Connect />
-                <WelcomePage2 />
             </div>
-            <Footer />
+            <h1 className="title">QA Cinema Reviews</h1>
+            <Container className="beauty">
+            <WelcomePage />
+            <button style={{color: 'black', backgroundColor: 'gold'}}> Find Out More </button>
+            <hr/>
+  <LatestScreening/> 
+  <Row>
+
+
+    <Col>
+    
+    </Col>
+    
+  </Row>
+  <Row> 
+   
+  </Row>
+  
+</Container>
+
+
+
+<Footer />
+</div>
         </>
     )
 }
