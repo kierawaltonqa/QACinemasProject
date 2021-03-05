@@ -1,5 +1,6 @@
 import { Card, Nav } from 'react-bootstrap/'
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import Times from '../OpeningTimes/Times';
 import './Footer.css';
 
 const Footer = () => {
@@ -36,7 +37,13 @@ const Footer = () => {
 
 
           </row>
+          <div className="footerTimes">
+
+          <Times style={{color: 'red'}}/>
+
+          </div>
         </Card.Body>
+
       </Card>
 
     </div>

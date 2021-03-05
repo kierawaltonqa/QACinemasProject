@@ -7,6 +7,9 @@ import WelcomePage from './WelcomePage';
 import Footer from '../FooterFolder/Footer';
 import WelcomePage2 from './WelcomePage2';
 import Connect from './Connect';
+
+import Greating from './Greating';
+
 import {Row, Col, Container} from 'react-bootstrap'
 import data from '../../Components/Movies/NewReleases/NewReleases.json';
 import NRFilms from '../../Components/Movies/NewReleases/NRFilms';
@@ -19,9 +22,21 @@ import LatestScreening from '../Latest/LatestScreening';
 
    
 
+
 const Home = () => {
     return (
         <>
+
+
+    
+            <div className="container">
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <h1 id="title">Welcome To QA Cinemas </h1>
+                        <hr />
+                    </div>
+
         <div>
         <CarouselPage image1={image1} image2={image2} image3={image3} />
 
@@ -30,6 +45,7 @@ const Home = () => {
                     <hr id="hr" />
                     <h1 className="container" style={{color: 'gold'}}>Our New Releases</h1>
                     <hr id="hr" />
+
                 </div>
             
                 <div className="row">
