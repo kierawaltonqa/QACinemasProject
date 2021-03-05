@@ -1,4 +1,4 @@
-import { Card, Button, Nav } from 'react-bootstrap/'
+import { Card, Nav } from 'react-bootstrap/'
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 import './Footer.css';
 
