@@ -19,7 +19,7 @@ const PostDiscussion = ({ trigger }) => {
 
     const createDiscussion = async (e) => {
         e.preventDefault();
-        await axios.post(`${DISCUSSION_URL}/create`, { name, movie, topic: customFilter.clean(topic), discussion: customFilter.clean(discussion), rating })
+        await axios.post(`${DISCUSSION_URL}/create`, { name: customFilter.clean(name), movie, topic: customFilter.clean(topic), discussion: customFilter.clean(discussion), rating })
             .then((response) => {
                 clearForm();
                 trigger(response.data);
@@ -28,9 +28,6 @@ const PostDiscussion = ({ trigger }) => {
             })
     }
 
-    function resetSelectElement(selectElement) {
-        selectElement.selectedIndex = null; // or = null?
-    }
 
     const clearForm = () => {
         setName('');

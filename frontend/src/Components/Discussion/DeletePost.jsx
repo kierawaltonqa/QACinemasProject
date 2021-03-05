@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { CardLink, Modal, ModalBody, ModalFooter } from "reactstrap";
 import { DISCUSSION_URL } from './CONSTS.json';
 import { useState } from 'react';
 

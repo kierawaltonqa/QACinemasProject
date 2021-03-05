@@ -1,5 +1,4 @@
 import data from './NewReleases.json';
-import React, { useState } from 'react';
 import NRFilms from './NRFilms';
 import '../Movies.css'
 import Footer from '../../FooterFolder/Footer';

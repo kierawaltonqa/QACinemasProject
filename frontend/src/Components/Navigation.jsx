@@ -11,7 +11,8 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
-import { Form, FormControl, Button } from 'react-bootstrap';
+
+import SearchPage from './Search/SearchPage';
 
 
 const Navigation = (props) => {
@@ -22,6 +23,7 @@ const Navigation = (props) => {
     return (
         <div>
             <Navbar  style={{color: 'gold', backgroundColor: 'black', fontSize: '19px'}} bg="dark" expand="md" className="goldenHours" >
+
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
@@ -72,12 +74,19 @@ const Navigation = (props) => {
                         <NavItem>
                             <NavLink  style={{color: 'gold'}}  href='/contact' >Contact</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink href='/search' >Search</NavLink>
+                        </NavItem>
                     </Nav>
                 </Collapse>
+
                 <Form inline>
                     <FormControl  type="text" placeholder="Search" className="mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
                 </Form>
+
+                {/* <SearchPage /> */}
+
             </Navbar>
         </div>
     )

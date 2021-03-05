@@ -1,4 +1,3 @@
-import WelcomePage from "./WelcomePage"
 import penguin from '../../Resources/penguin-wave2.jpg';
 
 const WelcomePage2 = () => {
