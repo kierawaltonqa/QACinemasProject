@@ -14,7 +14,6 @@ const Details = ({ item }) => {
         return null;
     }
     else {
-
         return (
             <>
                 <button className="btn btn-outline-dark" onClick={toggle} style={{ marginLeft: "2rem" }} >Details</button>
