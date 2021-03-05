@@ -1,4 +1,4 @@
-import { NavItem } from "react-bootstrap";
+
 import { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -26,7 +26,7 @@ const Details = ({ item }) => {
                         <ModalBody id="modal-body">
                             <div class="row-md">
                                 <div className="col-md-12" id="modalimage">
-                                    <img src={item.img} height="30%" width="30%" />
+                                    <img src={item.img} alt={item.title} height="30%" width="30%" />
                                 </div>
                                 <div className="col-md-12">
                                     <hr />
