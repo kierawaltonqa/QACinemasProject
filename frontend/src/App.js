@@ -12,6 +12,7 @@ import NR from './Components/Movies/NewReleases/NR';
 import DiscussionBoard from './Components/Discussion/DiscussionBoard';
 import AboutPage from './Components/About/AboutPage';
 import CantFindPage from './Components/CantFindPage';
+import TicketBooking from './Components/TicketBooking/MainPage/TicketBooking';
 
 import ContactUsPage from './Components/ContactUs/ContactUsPage';
 
@@ -59,6 +60,9 @@ function App() {
 
           <Route path="/search">
             <SearchPage />
+          </Route>
+          <Route path="/bookings">
+            <TicketBooking />
           </Route>
           <CantFindPage />
 
