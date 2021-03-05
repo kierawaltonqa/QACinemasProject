@@ -26,7 +26,7 @@ router.get("/read", (req, res, next) => {
 });
 
 // GET ONE
-router.get("/read/:id", (req,res,next) => {
+router.get("/readOne/:id", (req,res,next) => {
     Booking.findById(req.params.id, (err,result) => {
         if(err){
             next(err);

@@ -16,7 +16,7 @@ const ToggleInput = ({ filmname, basketid }) => {
     const [childTic, setChildTic] = useState(0)
     const [deluxe, setDeluxe] = useState(false)
 
-    const [basketdata, setbasketdata] = useState("")
+    const [basketdata, setbasketdata] = useState(null)
 
     const [hidden, setHidden] = useState(false)
 
@@ -29,27 +29,34 @@ const ToggleInput = ({ filmname, basketid }) => {
 
     // CREATE METHOD
 
-    const create = (e) => {
-        e.preventDefault();
+    const create = () => {
         axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe })
-            .then((res) =>  {
-                setbasketdata(res.data)
-                getBasket();
+            .then(async (res) => {
+                await setbasketdata(res.data)
                 console.log(res.data);
-            }).catch((err) => {
+                toggleHidden(!hidden);
+            }).then(async () => {
+                await setTimeout(() => {
+                    getBasket();
+                }, 1000);
+
+            })
+            .catch((err) => {
                 console.log(err);
             })
     }
 
     // GET METHOD
 
-    const getBasket = async (e) => {
-        await axios.get(`${BOOKING_URL}/read/${basketdata}`)
+    const getBasket = async () => {
+        const id = basketdata;
+        console.log(id);
+        await axios.get(`${BOOKING_URL}/readOne/${id}`)
             .then((res) => {
                 basketid(res.data)
-                console.log(res);
+                console.log(res.data);
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err);
             })
     }
@@ -117,7 +124,7 @@ const ToggleInput = ({ filmname, basketid }) => {
 
                 </ModalBody>
                 <ModalFooter style={{ backgroundColor: "black" }}>
-                    <button className="btn btn-warning" onClick={create}>Confirm</button>
+                    <button className="btn btn-warning" onClick={() => create()}>Confirm</button>
                     <button className="btn btn-danger" onClick={toggleHidden}>X</button>
                 </ModalFooter>
                 <form action=""></form>

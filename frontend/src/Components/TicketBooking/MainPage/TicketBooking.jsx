@@ -5,7 +5,7 @@ import "../Resources/TicketBooking.css"
 
 const TicketBooking = () => {
 
-    const [basketid, setbasketid] = useState("");
+    const [basketid, setbasketid] = useState({});
 
 
 
@@ -27,8 +27,8 @@ const TicketBooking = () => {
                         <ReadAll basketid={setbasketid} />
                     </div>
                 </div>
-                <div className="col-3">
-                    <Sidebar basketid={basketid} />
+                <div className="col-3" style={{backgroundColor:"black"}}>
+                    <Sidebar basketid={basketid} style={{backgroundColor:"black"}} />
                 </div>
             </div>
         </>
