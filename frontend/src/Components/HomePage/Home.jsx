@@ -13,6 +13,7 @@ import NRFilms from '../../Components/Movies/NewReleases/NRFilms';
 import Map from '../About/Map';
 import QaCinemaInfo from '../About/QaCinemaInfo';
 import LatestScreening from '../Latest/LatestScreening';
+import Times from '../OpeningTimes/Times';
 
 
 
@@ -68,24 +69,15 @@ const Home = () => {
                     <button style={{ color: 'black', backgroundColor: 'gold' }}> Find Out More </button>
                     <hr />
                     <LatestScreening />
-                    <Row>
 
-
-                        <Col>
-
-                        </Col>
-
-                    </Row>
-                    <Row>
-
-                    </Row>
-
+                    <h1 className="title">Opening Times</h1>
+                <Times />
+                   
+            
                 </Container>
 
-
-
             </div>
-            
+
             <Footer />
         </>
     )

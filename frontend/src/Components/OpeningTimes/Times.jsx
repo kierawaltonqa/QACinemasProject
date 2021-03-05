@@ -6,7 +6,7 @@ const Times = () => {
 
 
   return (
-    <div className="beauty" >
+    <div className="beauty" style={{borderColor: "black"}} >
     
       <Table st striped bordered hover variant="dark" >
         <tr>
