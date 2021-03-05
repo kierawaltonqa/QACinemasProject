@@ -54,7 +54,7 @@ const CarouselPage = ({ image1, image2, image3 }) => {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} alt={item.altText} style={{ height: "400px", width: "100%" }} />
+                <img src={item.src} alt={item.altText} style={{ height: "600px", width: "100%" }} />
                 <CarouselCaption captionText={item.caption} />
                 {/* captionHeader={item.caption}*/}
             </CarouselItem>

@@ -33,12 +33,14 @@
 #modal-body{
     background: white;
     text-align: center;
+    
 }
 #cast{
     line-height: 0%;
 }
 
 #NR-img, #L-img{
+
     height: 350px;
     width:255px;
     padding: 1rem;

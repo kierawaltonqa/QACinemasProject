@@ -6,26 +6,25 @@ const Footer = () => {
 
 
   return (
-    <div>
+    <div className="footer">
 
       <br></br>
       <br></br>
-      <Card >
-
+      <Card style={{borderColor: 'black'}}>
         <Card.Body className="footer">
-          <Card.Title >QA Cinema</Card.Title>
-          <Card.Text > ©TeamSpell 2021    </Card.Text>
+          <Card.Title style={{color: 'gold'}} >QA Cinema</Card.Title>
+          <Card.Text style={{color: 'gold'}}> ©TeamSpell 2021    </Card.Text>
           <Card.Text>
           </Card.Text>
           <Nav defaultActiveKey="/home" as="ul" style={{ marginLeft: "42%" }}>
-            <Nav.Item as="li" className="footer">
-              <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Item as="li" >
+              <Nav.Link style={{color: 'white', marginLeft: '20px'}}  href="/home">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link eventKey="link-1">About</Nav.Link>
+              <Nav.Link style={{color: 'white'}}  eventKey="link-1">About</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link eventKey="link-2">Contact Us</Nav.Link>
+              <Nav.Link eventKey="link-2" style={{color: 'white'}} >Contact Us</Nav.Link>
             </Nav.Item>
           </Nav>
           <row>
