@@ -1,3 +1,5 @@
+import Details from "./Details";
+
 const List = ({ data, query }) => {
 
     if (data.length <= 16) {
@@ -16,37 +18,18 @@ const List = ({ data, query }) => {
     let filteredList = [];
     filteredList = data.filter(byQuery(query));
 
-
-
     return (
         <>
             <hr />
             {filteredList.map((item) => (
                 <div id="list-page">
-                    <a href={item.href}> {item.title}</a>
+                    <a style={{ fontSize: "200%" }} href={item.href}> {item.title}</a>
+                    <Details item={item} />
                     <hr />
-
                 </div>
             ))}
         </>
     )
-
-
-    // return (
-    //     <>
-    //         <ul>
-    //             {
-    //                 data.map((film) => (
-    //                     <li>
-    //                         <span>{film.title} </span>
-    //                         {/* <span>{film.director}, </span>
-    //                         <span>{film.actors}</span> */}
-    //                     </li>
-    //                 ))
-    //             }
-    //         </ul>
-    //     </>
-    // )
 }
 
 export default List;

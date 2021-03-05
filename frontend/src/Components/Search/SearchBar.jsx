@@ -16,10 +16,6 @@ const SearchBar = ({ updateQuery, stateQuery }) => {
                     {/* onSubmit={updateQuery}  */}
                 </Form>
                 <br />
-                {/* <form>
-                    <input type="text" placeholder="Search..." />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form> */}
             </div>
             <div className="col-md-9">
                 <img src={searchpenguin} alt="search-penguin" id="search-penguin" />
@@ -27,4 +23,4 @@ const SearchBar = ({ updateQuery, stateQuery }) => {
         </>
     )
 }
-export default SearchBar
+export default SearchBar;
