@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Form, FormControl, Button } from 'react-bootstrap';
-import ReadSearch from './ReadSearch';
 import data from '../../Resources/Movies.json';
 import SearchBar from './SearchBar';
 import List from './List';
 import './Search.css';
+import Header from './Header';
 
 const SearchPage = () => {
 
@@ -15,7 +14,8 @@ const SearchPage = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container" id="search-page">
+            <Header />
             <div className="row-md">
                 <SearchBar updateQuery={handleQuery} stateQuery={query} />
             </div>

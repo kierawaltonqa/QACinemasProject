@@ -12,7 +12,9 @@ const SearchBar = ({ updateQuery, stateQuery }) => {
                         onChange={updateQuery}
                         value={stateQuery} />
                     <Button type="submit" variant="outline-success">Search</Button>
+                    {/* onSubmit={updateQuery}  */}
                 </Form>
+                <br />
 
 
                 {/* <form>
