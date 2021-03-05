@@ -75,7 +75,7 @@ const Navigation = (props) => {
                             <NavLink style={{ color: 'gold' }} href='/contact' >Contact</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href='/search' >Search</NavLink>
+                            <NavLink style={{ color: 'gold' }} href='/search' >Search</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
