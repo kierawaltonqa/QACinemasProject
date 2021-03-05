@@ -25,6 +25,7 @@ const List = ({ data, query }) => {
                 <div id="list-page">
                     <a style={{ fontSize: "200%" }} href={item.href}> {item.title}</a>
                     <Details item={item} />
+
                     <hr />
                 </div>
             ))}

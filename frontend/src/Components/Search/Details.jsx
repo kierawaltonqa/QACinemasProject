@@ -27,12 +27,13 @@ const Details = ({ item }) => {
                             <div className="col-md-12">
                                 <hr />
                                 <p id="director">Directed by {item.director}</p>
-                                <h6>The main cast: </h6>
-                                {
+                                <h6>The main cast:</h6>
+                                <p>{item.actors}</p>
+                                {/* {
                                     actors.map((actor) => (
                                         <p id="cast">{actor}</p>
                                     ))
-                                }
+                                } */}
                                 <br />
                                 <p id="runtime">Runtime: {item.runtime}</p>
                                 <p id="card-rating">Rating: {item.rating}</p>
