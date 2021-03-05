@@ -2,16 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const ContactForm = () => {
-  //!warning 
-  //   const printToScreen = (e) => {
-  //     e.preventDefault();
 
-  //     console.log({ body, subject });
-  //     // console.log({ name, body, subject });
-  //   };
-
-  // const [name, setName] = useState("");
-  //!
   const [body, setBody] = useState("");
   const [subject, setSubject] = useState("");
 
