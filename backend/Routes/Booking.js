@@ -9,7 +9,7 @@ router.post("/create", (req, res, next) => {
     const book = new Booking(req.body);
     book.save()
         .then((result) => {
-            res.status(201).send(`${result._id} has been added successfuly!`)
+            res.status(201).send(`${result._id}`)
         })
         .catch((err) => next(err));
 });
@@ -26,9 +26,9 @@ router.get("/read", (req, res, next) => {
 });
 
 // GET ONE
-router.get("/read/:id", (req, res, next) => {
-    Booking.findById(req.params.id, (err, result) => {
-        if (err) {
+router.get("/readOne/:id", (req,res,next) => {
+    Booking.findById(req.params.id, (err,result) => {
+        if(err){
             next(err);
         }
         res.status(200).send(result);
