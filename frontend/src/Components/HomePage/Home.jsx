@@ -5,13 +5,9 @@ import image2 from '../../Resources/image2.jpg';
 import image3 from '../../Resources/image3.jpg';
 import WelcomePage from './WelcomePage';
 import Footer from '../FooterFolder/Footer';
-import WelcomePage2 from './WelcomePage2';
-import Connect from './Connect';
 import { Row, Col, Container } from 'react-bootstrap'
 import data from '../../Components/Movies/NewReleases/NewReleases.json';
 import NRFilms from '../../Components/Movies/NewReleases/NRFilms';
-import Map from '../About/Map';
-import QaCinemaInfo from '../About/QaCinemaInfo';
 import LatestScreening from '../Latest/LatestScreening';
 
 
@@ -25,16 +21,16 @@ const Home = () => {
         <>
 
 
-<CarouselPage image1={image1} image2={image2} image3={image3} />
+            <CarouselPage image1={image1} image2={image2} image3={image3} />
             <div className="container">
 
                 <div className="row">
                     <div className="col-md-12">
 
-                        
+
                     </div>
 
-             
+
 
                 </div>
                 <div className="container">
@@ -85,7 +81,7 @@ const Home = () => {
 
 
             </div>
-            
+
             <Footer />
         </>
     )
