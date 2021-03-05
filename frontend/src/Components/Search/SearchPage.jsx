@@ -16,7 +16,7 @@ const SearchPage = () => {
     return (
         <div className="container" id="search-page">
             <Header />
-            <div className="row-md">
+            <div className="row">
                 <SearchBar updateQuery={handleQuery} stateQuery={query} />
             </div>
             <div className="row-md">
