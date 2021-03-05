@@ -28,9 +28,6 @@ const PostDiscussion = ({ trigger }) => {
             })
     }
 
-    function resetSelectElement(selectElement) {
-        selectElement.selectedIndex = null; // or = null?
-    }
 
     const clearForm = () => {
         setName('');
