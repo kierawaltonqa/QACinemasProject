@@ -25,18 +25,18 @@ const Home = () => {
         <>
 
 
-
+<CarouselPage image1={image1} image2={image2} image3={image3} />
             <div className="container">
 
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 id="title">Welcome To QA Cinemas </h1>
-                        <hr />
+
+                        
                     </div>
 
-                </div>
-                <CarouselPage image1={image1} image2={image2} image3={image3} />
+             
 
+                </div>
                 <div className="container">
                     <div className="row-md" id="newreleasesheader">
                         <hr id="hr" />
