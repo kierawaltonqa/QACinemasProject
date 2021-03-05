@@ -16,8 +16,6 @@ const ToggleInput = ({ filmname, basketid }) => {
     const [childTic, setChildTic] = useState(0)
     const [deluxe, setDeluxe] = useState(false)
 
-    const [basketdata, setbasketdata] = useState(null)
-
     const [hidden, setHidden] = useState(false)
 
     const toggleHidden = () => {
@@ -32,24 +30,19 @@ const ToggleInput = ({ filmname, basketid }) => {
     const create = () => {
         axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe })
             .then(async (res) => {
-                await setbasketdata(res.data)
+                getBasket(res.data)
                 console.log(res.data);
                 toggleHidden(!hidden);
-            }).then(async () => {
-                await setTimeout(() => {
-                    getBasket();
-                }, 1000);
-
             })
             .catch((err) => {
                 console.log(err);
-            })
+            });
     }
 
     // GET METHOD
 
-    const getBasket = async () => {
-        const id = basketdata;
+    const getBasket = async (id) => {
+        // const id = basketdata;
         console.log(id);
         await axios.get(`${BOOKING_URL}/readOne/${id}`)
             .then((res) => {

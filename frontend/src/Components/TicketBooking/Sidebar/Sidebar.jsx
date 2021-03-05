@@ -12,7 +12,7 @@ const Sidebar = ({basketid}) => {
 
 
     return (
-        <div className="bg-light border-right" id="bookingside" style={{backgroundColor:"black"}}>
+        <div className=" border-right" id="bookingside" style={{backgroundColor:"black"}}>
         <Card style={{backgroundColor:"gold"}}>
             <CardBody style={{backgroundColor:"gold"}}>
                 <CardTitle>My Basket:</CardTitle>
