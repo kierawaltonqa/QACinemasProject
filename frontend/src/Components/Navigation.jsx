@@ -22,42 +22,42 @@ const Navigation = (props) => {
 
     return (
         <div>
-            <Navbar  style={{color: 'gold', backgroundColor: 'black', fontSize: '19px'}} bg="dark" expand="md" className="goldenHours" >
+            <Navbar style={{ color: 'gold', backgroundColor: 'black', fontSize: '19px' }} bg="dark" expand="md" className="goldenHours" >
 
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem >
-                            <NavLink style={{color: 'gold'}} href='/' >Home</NavLink>
+                            <NavLink style={{ color: 'gold' }} href='/' >Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink style={{color: 'gold'}}  href='/about' >About</NavLink>
+                            <NavLink style={{ color: 'gold' }} href='/about' >About</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar >
-                            <DropdownToggle style={{color: 'gold'}}  nav caret>
+                            <DropdownToggle style={{ color: 'gold' }} nav caret>
                                 Movies
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    <NavLink style={{color: 'black'}}  href="/listings">Film Listings</NavLink>
+                                    <NavLink style={{ color: 'black' }} href="/listings">Film Listings</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    <NavLink style={{color: 'black'}}   href="/newreleases">New Releases</NavLink>
+                                    <NavLink style={{ color: 'black' }} href="/newreleases">New Releases</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
 
-                                    <NavLink style={{color: 'black'}}   href="/FilmClass"> Film Classification</NavLink>
+                                    <NavLink style={{ color: 'black' }} href="/FilmClass"> Film Classification</NavLink>
 
 
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle style={{color: 'gold'}}   nav caret>
+                            <DropdownToggle style={{ color: 'gold' }} nav caret>
                                 Bookings
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem  href="/screens">
+                                <DropdownItem href="/screens">
                                     Screens
                                 </DropdownItem>
                                 <DropdownItem>
@@ -69,10 +69,10 @@ const Navigation = (props) => {
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         <NavItem>
-                            <NavLink style={{color: 'gold'}}  href='/discussion' >Discussion</NavLink>
+                            <NavLink style={{ color: 'gold' }} href='/discussion' >Discussion</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink  style={{color: 'gold'}}  href='/contact' >Contact</NavLink>
+                            <NavLink style={{ color: 'gold' }} href='/contact' >Contact</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href='/search' >Search</NavLink>
@@ -80,10 +80,10 @@ const Navigation = (props) => {
                     </Nav>
                 </Collapse>
 
-                <Form inline>
+                {/* <Form inline>
                     <FormControl  type="text" placeholder="Search" className="mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
-                </Form>
+                </Form> */}
 
                 {/* <SearchPage /> */}
 
