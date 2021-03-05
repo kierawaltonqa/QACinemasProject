@@ -15,7 +15,7 @@ const Sidebar = ({basketid}) => {
         <div className=" border-right" id="bookingside" style={{backgroundColor:"black"}}>
         <Card style={{backgroundColor:"gold"}}>
             <CardBody style={{backgroundColor:"gold"}}>
-                <CardTitle><h2 style={{font}}>My Basket:</h2></CardTitle>
+                <CardTitle><h2>My Basket:</h2></CardTitle>
                 <hr/>
                 <div>
                 <h6 style={{backgroundColor:""}}><b>Ticket Holder Name</b>  {basketid.bookername}</h6>
