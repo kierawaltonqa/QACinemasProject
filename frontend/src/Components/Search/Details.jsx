@@ -8,7 +8,7 @@ const Details = ({ item }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    const actors = item.actors;
+    // const actors = item.actors;
 
     return (
         <>
@@ -43,7 +43,7 @@ const Details = ({ item }) => {
                     </ModalBody>
                     <ModalFooter id="modalfooter">
                         <button onClick={toggle} className="btn btn-outline-danger">Go Back</button>
-                        <button className="btn btw-outline-primary">View Listings Page</button>
+                        <a href="../listings"><button className="btn btn-outline-primary" >View Listings Page</button></a>
                     </ModalFooter>
                 </Modal>
             </div>
