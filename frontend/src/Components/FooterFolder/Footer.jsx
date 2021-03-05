@@ -37,11 +37,11 @@ const Footer = () => {
 
 
           </row>
-          <div className="footerTimes">
+          {/* <div className="footerTimes"> */}
+{/* 
+          <Times style={{color: 'red'}}/> */}
 
-          <Times style={{color: 'red'}}/>
-
-          </div>
+          {/* </div> */}
         </Card.Body>
 
       </Card>
