@@ -10,7 +10,26 @@ const { Discuss } = require('../config/db');
 
 
 
+// const prePopulate = () => {
+//     chai.request(app)
+//         .post(`${DISCUSSION}/create`)
+//         .send({
+//             "_id": 1,
+//             "name": "Tony",
+//             "movie": "Iron Man",
+//             "topic": "Super Hero",
+//             "discussion": "i love the avengers",
+//             "rating": 9
+
+//         })
+// }
+
+
+
+
 describe(`Discussion Routes`, () => {
+
+    // beforeEach(prePopulate())
 
     it(`Test /create route`, (done) => {
 
@@ -54,9 +73,9 @@ describe(`Discussion Routes`, () => {
 
     it(`Test /updateById/:id`, (done) => {
         chai.request(app)
-            .patch(`${DISCUSSION}/updateById/603e54de4dc74637041d5a1b`)
+            .patch(`${DISCUSSION}/updateById/6040fea181fc201b747303b0`)
             .send({
-                "name": "Fred"
+                name: "Fred"
             })
             .end((err, response) => {
                 if (err) done(err);
@@ -95,7 +114,7 @@ describe(`Discussion Routes`, () => {
 
 
     after(() => {
-        Discuss.deleteMany({}, (err) => console.log(err));
+        // Discuss.deleteMany({}, (err) => console.log(err));
         app.close();
     });
 });

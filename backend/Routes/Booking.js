@@ -62,7 +62,7 @@ router.put("/update/:id", (req, res, next) => {
             adultseats,
             childseats
         },
-        { new: true }, (err) => {
+        { new: true, runValidators: true }, (err, doc) => {
             if (err) {
                 next(err);
             }

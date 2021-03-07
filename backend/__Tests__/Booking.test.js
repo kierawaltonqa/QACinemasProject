@@ -11,6 +11,8 @@ const { response } = require('express');
 
 describe(`Booking routes`, () => {
 
+
+
     it(`Test create booking route`, (done) => {
         chai.request(app)
             .post(`${BOOKING}/create`)
@@ -25,7 +27,6 @@ describe(`Booking routes`, () => {
             })
             .end((err, response) => {
                 if (err) done(err);
-                expect(err).to.be.null;
                 expect(response).to.have.status(201);
                 done();
             });
@@ -147,15 +148,17 @@ describe(`Booking routes`, () => {
     });
 
 
+
+
     // //!46
     // it(`Test update by ID failure`, (done) => {
     //     chai.request(app)
-    //         .patch(`${BOOKING}/updateOne/603cf45e69fcfa243083da0f`)
+    //         .patch(`${BOOKING}/updateOne/1`)
     //         .send({
     //             movienam: 1
     //         })
     //         .end((err, response) => {
-    //             if (err) done(err);
+    //             if (err) return done(err);
     //             expect(response).to.have.status(500);
     //             done();
     //         })
@@ -196,7 +199,7 @@ describe(`Booking routes`, () => {
 
 
     after(() => {
-        Booking.deleteMany({}, (err) => console.log(err));
+        // Booking.deleteMany({}, (err) => console.log(err));
         app.close();
     });
 });
