@@ -9,7 +9,7 @@ const { COMMENT } = require('../config/CONSTS.json');
 
 
 
-describe.only(`Comment Routes`, () => {
+describe(`Comment Routes`, () => {
 
 
     it(`Test the create Comment route`, (done) => {
@@ -21,7 +21,7 @@ describe.only(`Comment Routes`, () => {
 
             })
             .end((err, response) => {
-                if (err) return done(err);
+                if (err) done(err);
                 expect(err).to.be.null;
                 expect(response).to.have.status(201);
                 done();
@@ -32,7 +32,7 @@ describe.only(`Comment Routes`, () => {
         chai.request(app)
             .get(`${COMMENT}/getAll`)
             .end((err, response) => {
-                if (err) return done(err);
+                if (err) done(err);
                 expect(response).to.have.status(200);
                 expect(response.body).to.not.be.null;
                 done();
@@ -42,7 +42,40 @@ describe.only(`Comment Routes`, () => {
 
     it(`Test the get by id method`, (done) => {
         chai.request(app)
-            .get
-        //!this is where i finished for the day
+            .get(`${COMMENT}/getOne/60410966ae41ea37202ef56a`)
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(200);
+                done();
+            })
+
     })
+
+    it(`Test update by ID`, (done) => {
+        chai.request(app)
+            .patch(`${COMMENT}/updateOne/60410966ae41ea37202ef56a`)
+            .send({
+                name: "sammy"
+            })
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(202);
+                done();
+            })
+    })
+
+    it(`Test the delete method`, (done) => {
+        chai.request(app)
+            .delete(`${COMMENT}/delete/60410966ae41ea37202ef56a`)
+            .end((err, response) => {
+                if (err) done(err);
+                expect(response).to.have.status(204);
+                done();
+            })
+    })
+
+
+    after(() => {
+        app.close();
+    });
 });

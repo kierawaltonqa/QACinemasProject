@@ -27,7 +27,6 @@ describe(`Booking routes`, () => {
             })
             .end((err, response) => {
                 if (err) done(err);
-                expect(err).to.be.null;
                 expect(response).to.have.status(201);
                 done();
             });
