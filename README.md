@@ -78,6 +78,8 @@ java -jar
 
 ## Testing
 
+1. In the terminal, run npm test to run the tests once CD'd into backend/frontend
+
 
 
 
