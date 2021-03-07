@@ -66,7 +66,7 @@ const Home = () => {
                 <h1 className="title">QA Cinema Reviews</h1>
                 <Container className="beauty">
                     <WelcomePage />
-                    <button style={{ color: 'black', backgroundColor: 'gold' }}> Find Out More </button>
+                    <button className="cssStyle"> Find Out More </button>
                     <hr />
                     <LatestScreening />
 

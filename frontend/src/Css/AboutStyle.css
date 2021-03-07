@@ -44,9 +44,39 @@ body {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+
   border-radius: 4px;
   box-sizing: border-box;
+
+}
+
+.cssStyle{
+/* light / pill / selected */
+
+/* Auto Layout */
+
+
+/* Light / Black */
+background: #373F41;
+
+
+/* Label */
+
+
+/* Subtitle 1 - semibold 16 (22, 0.1px) */
+font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 137% */
+text-align: center;
+letter-spacing: 0.1px;
+
+/* Light / White */
+color: gold;
+
+
 
 }
 
