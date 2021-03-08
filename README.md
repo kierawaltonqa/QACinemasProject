@@ -1,5 +1,9 @@
+<!-- ![QAC-Logo](QACinemasDocumentsFolder\qa%20cinema%20logo.jpg) -->
+
+<img src="QACinemasDocumentsFolder\qa%20cinema%20logo.jpg" alt="Logo" width="300"/>  
+
 Coverage: 88.28% - backend  
-![image](QACinemasDocumentsFolder\FinalCoverage.png)  
+![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
 
 # Team Spell QACinema Project 
 
