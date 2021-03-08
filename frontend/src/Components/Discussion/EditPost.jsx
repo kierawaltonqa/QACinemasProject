@@ -38,7 +38,7 @@ const EditPost = ({ item, trigger }) => {
             <Modal isOpen={modal}>
                 <ModalHeader id="edit-header">Post By: {item.name}</ModalHeader>
                 <form id="edit-form" onSubmit={updatePost}>
-                    <ModalBody>
+                    <ModalBody id="edit-modal-body">
                         {/* <label>Posted by:</label>
                         <input type="text"
                             value={updateName}
