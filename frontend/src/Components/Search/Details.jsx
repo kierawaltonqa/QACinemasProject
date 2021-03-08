@@ -25,7 +25,7 @@ const Details = ({ item }) => {
                         <ModalBody id="modal-body">
                             <div class="row-md">
                                 <div className="col-md-12" id="modalimage">
-                                    <img src={item.img} height="30%" width="30%" />
+                                    <img alt={item.title} src={item.img} height="30%" width="30%" />
                                 </div>
                                 <div className="col-md-12">
                                     <hr />
