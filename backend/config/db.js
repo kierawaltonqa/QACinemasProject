@@ -38,7 +38,7 @@ const BookingSchema = new Schema({
     bookername: { type: String, required: true },
     adultseats: { type: String, required: true },
     childseats: { type: String, required: true },
-    deluxe : {type: Boolean, required: true}
+    deluxe : {type: String, required: true}
 
 })
 const Booking = model('Booking', BookingSchema);

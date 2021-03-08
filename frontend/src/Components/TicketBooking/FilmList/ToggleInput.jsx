@@ -28,10 +28,16 @@ const ToggleInput = ({ filmname, basketid }) => {
     // CREATE METHOD
 
     const create = () => {
-        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe })
+        var deluxeAnswer = "No";
+        if(deluxe == true){
+            deluxeAnswer = "Yes"
+        }
+        else{
+            deluxeAnswer = "No"
+        }
+        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe : deluxeAnswer})
             .then(async (res) => {
                 getBasket(res.data)
-                console.log(res.data);
                 toggleHidden(!hidden);
             })
             .catch((err) => {
@@ -47,7 +53,6 @@ const ToggleInput = ({ filmname, basketid }) => {
         await axios.get(`${BOOKING_URL}/readOne/${id}`)
             .then((res) => {
                 basketid(res.data)
-                console.log(res.data);
             })
             .catch((err) => {
                 console.log(err);
