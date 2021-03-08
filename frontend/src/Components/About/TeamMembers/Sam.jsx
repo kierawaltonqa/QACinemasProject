@@ -1,5 +1,6 @@
 import Media from "react-bootstrap/Media";
 import logo from "../../../Resources/Logo/logo.jpg"
+import './Sam.css'
 
 const Sam = () => {
 
@@ -16,7 +17,7 @@ const Sam = () => {
                     src={logo}
                     alt="Generic placeholder"
                 />
-                <h3>Sam Costello</h3>
+                <h3 id="samHeading">Sam Costello</h3>
                 <p>
                     Hi! :-) I'm Sam and I am 25.
                 </p>
@@ -27,7 +28,7 @@ const Sam = () => {
                     I first started coding at the start of december 2020 - and this is the first team software development project that I have been involved with.
                 </p>
 
-                <p>Below is where you will find all of my experiments:</p><a href="https://github.com/scostello-hubQA" target="_blank">Sam's GitHub</a>
+                <p>Below is where you will find all of my experiments:</p><a id="GitHubLink" href="https://github.com/scostello-hubQA" target="_blank">Sam's GitHub</a>
 
 
                 <hr />
