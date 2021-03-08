@@ -31,9 +31,9 @@ const RestaurantsModal = () => {
                                     <img src={pizzaexpress} alt="turtlebay" height="100%" width="75%" />
                                 </center>
                                 <br />
-                                <p>Turtle Bay is a Carribean restaurant/bar that serves a selection of great food and cocktails.
-                                They have happy hour every day, offering 2 for 1 on drinks!
-                                    This is located a five minute walk away from QA Cinemas.</p>
+                                <p>Pizza Express is the perfect place to eat with friends and family before going to enjoy a movie of your choice at QA Cinemas.
+                                This restaurant regularly offers excellent discounts and vouchers, such as 2 for 1 on Pizza's on Wednesday's.
+                                </p>
                             </div>
                         </Tab>
                         <Tab eventKey="profile" title="Carluccio's">
@@ -43,8 +43,8 @@ const RestaurantsModal = () => {
                                     <img src={carluccios} alt="allbarone" id="allbarone" height="90%" width="75%" />
                                 </center>
                                 <br />
-                                <p>All Bar One is a stylish wine bar/pub that offers an extensive range of drinks at reasonable prices.
-                                    This is located just a few doors down from us and is the perfect place for a post-movie drink.</p>
+                                <p>Carluccio's provide relaxed all-day dining, serving authentic Italian cuisine.
+                                    The food is delicious and fresh and the restaurant is located right next door to the QA Cinema building!</p>
                             </div>
                         </Tab>
                     </Tabs>
