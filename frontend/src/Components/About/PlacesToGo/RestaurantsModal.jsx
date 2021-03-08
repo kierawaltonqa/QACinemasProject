@@ -34,6 +34,7 @@ const RestaurantsModal = () => {
                                 <p>Pizza Express is the perfect place to eat with friends and family before going to enjoy a movie of your choice at QA Cinemas.
                                 This restaurant regularly offers excellent discounts and vouchers, such as 2 for 1 on Pizza's on Wednesday's.
                                 </p>
+                                <p>Contact: 01306 888236</p>
                             </div>
                         </Tab>
                         <Tab eventKey="profile" title="Carluccio's">
@@ -45,6 +46,7 @@ const RestaurantsModal = () => {
                                 <br />
                                 <p>Carluccio's provide relaxed all-day dining, serving authentic Italian cuisine.
                                     The food is delicious and fresh and the restaurant is located right next door to the QA Cinema building!</p>
+                                <p>Contact: 01923 927267</p>
                             </div>
                         </Tab>
                     </Tabs>
