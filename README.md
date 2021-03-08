@@ -18,7 +18,6 @@ The objective for this project was to, as a team, using the tech listed below, c
 * [Prerequisite](#Prerequisite)
 * [Installing](#Installing)
 * [Testing](#Testing)
-* [Creating JAR file](#Creating_JAR_file)
 * [Deployment](#Deployment)
 * [Built With](#Built_With)
 * [Versioning](#Versioning)
@@ -87,7 +86,6 @@ Coverage: 88.28% - backend
 
 
 
-#### Creating JAR file:
 
 
 ## Deployment
