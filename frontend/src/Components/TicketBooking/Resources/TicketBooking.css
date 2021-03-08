@@ -23,3 +23,16 @@
     border-radius: 0;
 
 }
+
+.shoppingPara {
+    color: black;
+    font-size: 14px;
+    font-weight: 1000;
+}
+
+.basketHr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-width: 1px;
+    border-color: black;
+}
