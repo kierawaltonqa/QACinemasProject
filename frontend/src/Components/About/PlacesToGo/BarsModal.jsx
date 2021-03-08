@@ -13,7 +13,7 @@ const BarsModal = () => {
 
     return (
         <>
-            <button size={30} className="btn btn-outline-dark" onClick={toggle}>View Details</button>
+            <button size={30} className="btn btn-outline-dark" onClick={toggle} id="bar-button">View Details</button>
             <Modal isOpen={modal}>
                 <ModalHeader id="modal-header">
                     <h4>Bars</h4>

@@ -8,9 +8,13 @@ const PlacesToGoPage = () => {
             <hr />
             <h3>Local Venues Nearby...</h3>
             <hr />
-            <p>Bars: Turtle Bay, All Bar One <BarsModal /> </p>
-            <p>Restaurants: Pizza Express, Carluccio's <RestaurantsModal /> </p>
-            <p>Other Entertainment:</p>
+            <center>
+                <h5>Bars: Turtle Bay, All Bar One </h5>
+                <BarsModal />
+                <h5>Restaurants: Pizza Express, Carluccio's </h5>
+                <RestaurantsModal />
+                <p>Other Entertainment:</p>
+            </center>
         </>
     )
 }
