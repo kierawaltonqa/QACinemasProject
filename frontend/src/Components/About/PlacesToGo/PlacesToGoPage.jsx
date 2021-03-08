@@ -1,5 +1,6 @@
 import "./Places.css"
-import TBModal from "./TBModal";
+import BarsModal from "./BarsModal";
+import RestaurantsModal from "./RestaurantsModal";
 
 const PlacesToGoPage = () => {
     return (
@@ -7,8 +8,8 @@ const PlacesToGoPage = () => {
             <hr />
             <h3>Local Venues Nearby...</h3>
             <hr />
-            <p>Bars: Turtle Bay, All Bar One <TBModal /> </p>
-            <p>Restaurants: Pizza Express, Carluccio's (right next door!)</p>
+            <p>Bars: Turtle Bay, All Bar One <BarsModal /> </p>
+            <p>Restaurants: Pizza Express, Carluccio's <RestaurantsModal /> </p>
             <p>Other Entertainment:</p>
         </>
     )

@@ -5,7 +5,7 @@ import allbarone from "../../../Resources/allbar1.jpg";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 
-const TBModal = () => {
+const BarsModal = () => {
 
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -25,7 +25,7 @@ const TBModal = () => {
                         onSelect={(k) => setKey(k)}
                     >
                         <Tab eventKey="home" title="Turtle Bay">
-                            <div className="row">
+                            <div className="row-md">
                                 <br />
                                 <center>
                                     <img src={turtlebay} alt="turtlebay" height="100%" width="75%" />
@@ -37,11 +37,12 @@ const TBModal = () => {
                             </div>
                         </Tab>
                         <Tab eventKey="profile" title="All Bar One">
-                            <div className="row">
+                            <div className="row-md">
                                 <br />
                                 <center>
-                                    <img src={allbarone} alt="allbarone" id="allbarone" height="75%" width="75%" />
+                                    <img src={allbarone} alt="allbarone" id="allbarone" height="90%" width="75%" />
                                 </center>
+                                <br />
                                 <p>All Bar One is a stylish wine bar/pub that offers an extensive range of drinks at reasonable prices.
                                     This is located just a few doors down from us and is the perfect place for a post-movie drink.</p>
                             </div>
@@ -56,4 +57,4 @@ const TBModal = () => {
         </>
     )
 }
-export default TBModal;
+export default BarsModal;
