@@ -1,19 +1,21 @@
 import "./Places.css"
 import BarsModal from "./BarsModal";
 import RestaurantsModal from "./RestaurantsModal";
+import { FaCocktail } from 'react-icons/fa';
+import { IoRestaurantSharp } from 'react-icons/io5';
 
 const PlacesToGoPage = () => {
     return (
         <>
-            <hr />
-            <h3>Local Venues Nearby...</h3>
+
+            <h1>Local Venues Nearby...</h1>
             <hr />
             <center>
-                <h5>Bars: Turtle Bay, All Bar One... </h5>
+                <br />
+                <h5>Bars <FaCocktail size={50} /></h5>
                 <BarsModal />
-                <h5>Restaurants: Pizza Express, Carluccio's... </h5>
+                <h5>Restaurants <IoRestaurantSharp size={40} /></h5>
                 <RestaurantsModal />
-                <p>Other Entertainment:</p>
             </center>
         </>
     )

@@ -2,8 +2,9 @@ body{
     color: white!important;
     font-family: monospace!important;
 }
-#modal-header{
+#modal-header, #modalfooter{
     background-color: black;
+
 }
 #modal-body{
     color: black;
