@@ -1,4 +1,8 @@
-Coverage: %  
+<!-- ![QAC-Logo](QACinemasDocumentsFolder\qa%20cinema%20logo.jpg) -->
+
+<img src="QACinemasDocumentsFolder\qa%20cinema%20logo.jpg" alt="Logo" width="300"/>  
+
+
 
 # Team Spell QACinema Project 
 
@@ -47,13 +51,13 @@ These instructions will get you a copy of the project up and running on your loc
 * [Java 14.1](https://www.eclipse.org/downloads/)
 * [Git](https://git-scm.com/downloads)
 * [Spring Boot](https://spring.io/guides/gs/spring-boot/)
-* [MySQL](https://www.mysql.com/downloads/)
+* [MongoDBAtlas](https://www.mongodb.com/cloud/atlas)
 * [Maven](http://maven.apache.org/download.cgi)
 
 
 ### Installing
 
-1. You will need to clone down the repo, here is a link to the repo (add git hub link here)
+1. You will need to clone down the repo  
 * To do this, Git Bash in the desired folder you'd like to clone to.
 * Once Git opens, you will need to initialise git, do this with the following command;
 ```
@@ -63,22 +67,23 @@ Git init
 ```
 Git clone
 ```
-and copy and paste the link you wanted to clone, here it is again - (add git hub link here )
-3. Navigate to the /targer folder. Right click and select
+and copy and paste the link you wanted to clone  
+3. You will need two terminals open, one in the backend folder and one in the front end folder,
+in both of these terminals run the command
 
 ```
-GIT BASH 	
-```
-```
-java -jar 
-```
+npm start
+```  
 
 
 
 
 ## Testing
 
-1. In the terminal, run npm test to run the tests once CD'd into backend/frontend
+1. In the terminal, run npm test to run the tests once CD'd into backend/frontend  
+
+Coverage: 88.28% - backend  
+![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
 
 
 

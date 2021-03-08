@@ -17,12 +17,13 @@ describe(`Booking routes`, () => {
         chai.request(app)
             .post(`${BOOKING}/create`)
             .send({
-                'moviename': 'jumanji',
-                'date': '10/10/2020',
-                'time': '10.50',
-                'bookername': 'sally',
-                'adultseats': '2',
-                'childseats': '6'
+                moviename: "jumanji",
+                date: "10/10/2020",
+                time: "10.50",
+                bookername: "sally",
+                adultseats: "2",
+                childseats: "6",
+                deluxe: true
 
             })
             .end((err, response) => {
@@ -71,7 +72,7 @@ describe(`Booking routes`, () => {
 
     it(`Test read by the id `, (done) => {
         chai.request(app)
-            .get(`${BOOKING}/read/603ce47fb4acdc09bcccbb2d`)
+            .get(`${BOOKING}/readOne/603ce47fb4acdc09bcccbb2d`)
             .end((err, response) => {
                 if (err) done(err);
                 expect(response).to.have.status(200);

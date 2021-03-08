@@ -56,14 +56,12 @@ const Navigation = (props) => {
                                 Bookings
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem href="/screens">
-                                    Screens
-                                </DropdownItem>
-                                <DropdownItem href="/bookings">
-                                    Tickets
+                                <DropdownItem>
+                                    <NavLink style={{ color: 'black' }} href="/screens">Screens</NavLink>
+
                                 </DropdownItem>
                                 <DropdownItem>
-                                    Payment
+                                    <NavLink style={{ color: 'black' }} href="/bookings">Tickets</NavLink>
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
