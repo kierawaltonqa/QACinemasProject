@@ -2,3 +2,6 @@ body{
     color: white!important;
     font-family: monospace!important;
 }
+#modal-header{
+    background-color: black;
+}

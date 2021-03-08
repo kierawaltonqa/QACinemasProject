@@ -7,7 +7,7 @@ const PlacesToGoPage = () => {
             <hr />
             <h3>Local Venues Nearby...</h3>
             <hr />
-            <p>Bars: <TBModal /> (just a few doors down the road)</p>
+            <p>Bars: Turtle Bay <TBModal /> (just a few doors down the road)</p>
             <p>Restaurants: <a href="">Pizza Express</a>, <a></a> (right next door!)</p>
             <p>Other Entertainment:</p>
         </>
