@@ -7,6 +7,7 @@ import MeetTheTeam from "./MeetTheTeam";
 import QaCinemaInfo from "./QaCinemaInfo";
 import Footer from "../FooterFolder/Footer";
 import Map from "./Map";
+import PlacesToGoPage from "./PlacesToGo/PlacesToGoPage";
 
 const AboutPage = () => {
   return (
@@ -35,6 +36,15 @@ const AboutPage = () => {
                 <Map></Map>
               </Col>
             </Col>
+          </div>
+          <div className="row">
+            <hr />
+            <div className="col-md-6">
+              <h2>Image here</h2>
+            </div>
+            <div className="col-md-6">
+              <PlacesToGoPage />
+            </div>
           </div>
 
           <div></div>
