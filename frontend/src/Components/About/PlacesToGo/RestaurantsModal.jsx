@@ -13,7 +13,7 @@ const RestaurantsModal = () => {
 
     return (
         <>
-            <button size={30} className="btn btn-outline-dark" onClick={toggle} id="res-button">View Details</button>
+            <button size={30} className="btn btn-outline-primary" onClick={toggle} id="res-button">View Details</button>
             <Modal isOpen={modal}>
                 <ModalHeader id="modal-header">
                     <h4>Restaurants</h4>

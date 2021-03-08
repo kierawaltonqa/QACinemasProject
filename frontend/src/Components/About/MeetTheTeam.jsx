@@ -11,7 +11,7 @@ const MeetTheTeam = () => {
 
 
         <>
-          <h1 className="br"> Meet The Team</h1>
+          <h1 > Meet The Team</h1>
           <hr />
 
           <br></br>

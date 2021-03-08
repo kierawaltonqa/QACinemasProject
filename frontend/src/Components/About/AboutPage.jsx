@@ -37,18 +37,9 @@ const AboutPage = () => {
               </Col>
             </Col>
           </div>
-          <div className="row">
-            <hr />
-            {/* <div className="col-md-6">
-              <h2>Image here</h2>
-            </div> */}
-            <div className="col-md-12">
-              <br />
-              <PlacesToGoPage />
-            </div>
-          </div>
 
-          <div></div>
+          <PlacesToGoPage />
+
         </Container>
 
         <MeetTheTeam></MeetTheTeam>
