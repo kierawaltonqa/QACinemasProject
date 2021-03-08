@@ -1,4 +1,5 @@
-Coverage: %  
+Coverage: 88.28% - backend  
+![image](QACinemasDocumentsFolder\FinalCoverage.png)  
 
 # Team Spell QACinema Project 
 
