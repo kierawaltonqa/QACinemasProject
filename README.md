@@ -2,8 +2,7 @@
 
 <img src="QACinemasDocumentsFolder\qa%20cinema%20logo.jpg" alt="Logo" width="300"/>  
 
-Coverage: 88.28% - backend  
-![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
+
 
 # Team Spell QACinema Project 
 
@@ -83,7 +82,10 @@ java -jar
 
 ## Testing
 
-1. In the terminal, run npm test to run the tests once CD'd into backend/frontend
+1. In the terminal, run npm test to run the tests once CD'd into backend/frontend  
+
+Coverage: 88.28% - backend  
+![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
 
 
 
