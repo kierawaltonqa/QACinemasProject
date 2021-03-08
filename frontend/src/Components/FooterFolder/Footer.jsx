@@ -13,7 +13,7 @@ const Footer = () => {
       <Card style={{ borderColor: 'black' }}>
         <Card.Body className="footer">
           <Card.Title style={{ color: 'gold' }} >QA Cinema</Card.Title>
-          <Card.Text style={{ color: 'gold' }}> ©TeamSpell 2021    </Card.Text>
+          <Card.Text style={{ color: 'gold' }}> &copy;TeamSpell 2021    </Card.Text>
           <Card.Text>
           </Card.Text>
           <Nav defaultActiveKey="/home" as="ul" style={{ marginLeft: "42%" }}>
