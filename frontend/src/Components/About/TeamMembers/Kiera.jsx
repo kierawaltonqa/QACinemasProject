@@ -20,17 +20,14 @@ const Kiera = () => {
                 />
                 <h3>Kiera Walton</h3>
                 <p>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                    scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-                    in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                    nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    Hi, I'm Kiera! I have loved collaborating with Team Spell to complete this project; using our individual strengths, we learned from and helped each other, working together to build this website and all the functionality it has to offer.
+                    For the most part, I worked on the front end development; designing and implementing the discussion board, the movie listings and new releases, as well as the search bar, and various other aspects of design and styling.
+                    I also took on the role of scrum master for this project, meaning I was in charge of running the daily stand ups.
         </p>
 
                 <p className="mb-0">
-                    Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel
-                    eu leo. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus.
-        </p>
+
+                </p>
                 <hr />
             </Media.Body>
         </Media>
