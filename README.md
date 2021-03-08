@@ -1,4 +1,3 @@
-<!-- ![QAC-Logo](QACinemasDocumentsFolder\qa%20cinema%20logo.jpg) -->
 
 <img src="QACinemasDocumentsFolder\qa%20cinema%20logo.jpg" alt="Logo" width="300"/>  
 
