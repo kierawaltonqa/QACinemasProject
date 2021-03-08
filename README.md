@@ -67,16 +67,13 @@ Git init
 ```
 Git clone
 ```
-and copy and paste the link you wanted to clone 
+and copy and paste the link you wanted to clone  
 3. You will need two terminals open, one in the backend folder and one in the front end folder,
 in both of these terminals run the command
 
 ```
 npm start
-```
-```
-java -jar 
-```
+```  
 
 
 
