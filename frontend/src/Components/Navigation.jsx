@@ -12,7 +12,6 @@ import {
     DropdownItem
 } from 'reactstrap';
 
-import SearchPage from './Search/SearchPage';
 
 
 const Navigation = (props) => {
