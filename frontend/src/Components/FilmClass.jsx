@@ -104,7 +104,7 @@ const FilmClass = () => {
 
       </div>
 
-      <Footer />
+
     </>
 
   )

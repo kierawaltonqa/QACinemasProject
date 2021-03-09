@@ -30,7 +30,7 @@ const NR = () => {
                         ))}
                 </div>
             </div>
-            <Footer />
+
         </>
     )
 }

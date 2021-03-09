@@ -44,7 +44,7 @@ const DiscussionBoard = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </>
     )
 

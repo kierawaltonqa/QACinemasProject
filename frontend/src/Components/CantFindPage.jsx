@@ -44,7 +44,7 @@ const CantFindPage = () => {
         </Col>
       </div>
 
-      <Footer></Footer>
+
     </>
   );
 };

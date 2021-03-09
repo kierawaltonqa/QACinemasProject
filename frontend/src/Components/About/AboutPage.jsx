@@ -43,9 +43,7 @@ const AboutPage = () => {
         <MeetTheTeam></MeetTheTeam>
       </Container>
 
-      <div>
-        <Footer></Footer>
-      </div>
+
     </>
   );
 };

@@ -70,7 +70,7 @@ const Screenpage = () => {
 
             <br />
             <ReadMoreText toggleOn={toggleOn} />
-            <Footer />
+
         </>
     )
 

@@ -33,7 +33,7 @@ const Listings = () => {
 
                 </div>
             </div>
-            <Footer />
+
         </>
     )
 }
