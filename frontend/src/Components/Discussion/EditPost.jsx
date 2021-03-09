@@ -39,12 +39,6 @@ const EditPost = ({ item, trigger }) => {
                 <ModalHeader id="edit-header">Post By: {item.name}</ModalHeader>
                 <form id="edit-form" onSubmit={updatePost}>
                     <ModalBody id="edit-modal-body">
-                        {/* <label>Posted by:</label>
-                        <input type="text"
-                            value={updateName}
-                            className="form-control"
-                            placeholder="enter your name"
-                            onChange={({ target }) => setUName(target.value)} /> */}
                         <br />
                         <label>Film:</label>
                         <select name="film" class="form-control" placeholder="Select film"

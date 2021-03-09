@@ -7,18 +7,16 @@ const WelcomePage = () => {
         <hr />
       </div>
       <div className="row" id="welcomepage2">
-        <div className="col-md-6">
+        <div className="col-md-6" id="welcome-div">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae velit sequi architecto deserunt corporis quod officiis,
-            debitis ipsum atque reprehenderit? Dignissimos ut hic accusamus.
-            Laborum voluptatibus unde sint harum? Expedita?{" "}
+            QA Cinemas have received some excellent reviews from our customers,
+            and a variety of famous figures (including Eddie Murphy and Meryl Streep)
+            who took the time to visit our cinema.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-            corrupti velit nulla. Quos voluptatum quo amet adipisci consectetur
-            iste odit officia, dolor, deserunt voluptatibus veniam excepturi sed
-            assumenda dolores. Quibusdam.
+            We have received an average rating of 4 stars, reflecting the quality of the
+            experience that we provide.  We believe this rating is a testement to our success
+            as an independent cinema company...
           </p>
         </div>
         <div className="col-md-6">
