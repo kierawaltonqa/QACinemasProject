@@ -9,7 +9,7 @@ const NRFilms = (props) => {
 
     return (
         <Card id="NR-card">
-            <a id="clickcard" onClick={toggle} >
+            <a id="clickcard" onClick={toggle} href={toggle}>
 
             </a>
             <CardImg src={props.poster} id="NR-img" />
