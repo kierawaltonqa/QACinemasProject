@@ -3,7 +3,7 @@ import { Card, CardBody, CardTitle, CardFooter } from "reactstrap"
 import "../Resources/TicketBooking.css"
 import PaymentModal from './PaymentModal';
 
-const Sidebar = ({ basketid }) => {
+const Sidebar = ({ basketid, ticketalert }) => {
 
     const toggleHidden = () => {
 
@@ -12,6 +12,22 @@ const Sidebar = ({ basketid }) => {
 
 
     const [payModal, setPayModal] = useState(false);  
+
+    const purchaseTickets = () => {
+        if (basketid.moviename == null) {
+            ticketalert(true);
+            ticketAlertOff();
+        }else {
+            toggleHidden();
+            console.log(basketid);
+        }
+    }
+
+    const ticketAlertOff = () => {
+        setTimeout( () => {
+            ticketalert(false);
+        }, 4000);
+    }
     
 
 
@@ -82,7 +98,7 @@ const Sidebar = ({ basketid }) => {
                 <CardFooter className="text-muted">
                     <div className="row">
                         <div className="offset-md-8">
-                            <button className="btn btn-warning" onClick={toggleHidden} style={{ borderColor: "black", display: "flex", justifyContent: "flex-end", }}>Payment
+                            <button className="btn btn-warning" onClick={purchaseTickets} style={{ borderColor: "black", display: "flex", justifyContent: "flex-end", }}>Purchase
                     </button>
                         </div>
                     </div>
