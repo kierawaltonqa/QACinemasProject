@@ -92,7 +92,7 @@ const ToggleInput = ({ filmname, basketid }) => {
                 <ModalBody style={{ backgroundColor: "gold" }} >
 
                     <div className="form-mb position-relative">
-                        <div >
+                        <div className="mb-3" >
                             <label htmlFor="" style={{ fontSize: "17px" }}>Ticket Holder Name:</label>
                             <br />
                             <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" onChange={({ target }) => setBookName(target.value)} />
@@ -108,15 +108,15 @@ const ToggleInput = ({ filmname, basketid }) => {
                         </div>
                         <label htmlFor="" style={{ fontSize: "17px" }}>Tickets:</label>
 
-                        <div>
-                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="Adult" onChange={({ target }) => setAdultTic(target.value)} />
+                        <div className="row" style={{marginLeft:"0px"}}>
+                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
-                        <input style={{ width: "90px", }} type="number" placeholder="Child" onChange={({ target }) => setChildTic(target.value)} />
+                        <input style={{ width: "90px", }} type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
 
                         <hr />
                         <div className="form-check form-switch">
                             <input className="form-check-input" type="checkbox" value={deluxe} onChange={() => setDeluxe(!deluxe)} />
-                            <label className="form-check-label" style={{ color: "black" }}>Deluxe?</label>
+                            <label className="form-check-label" style={{ color: "black" }}>Deluxe?  +£5 Per ticket</label>
                         </div>
 
 
