@@ -1,6 +1,7 @@
 #bookingside {
     /* min-height: 50vh;  */
-    box-shadow: 1px 1px 25px gold;
+    box-shadow: 1px 1px 10px gold;
+    color: black;
 }
 
 #ticketform {

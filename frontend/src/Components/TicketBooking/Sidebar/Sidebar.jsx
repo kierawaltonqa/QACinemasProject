@@ -12,7 +12,6 @@ const Sidebar = ({ basketid, ticketalert }) => {
 
 
     const [payModal, setPayModal] = useState(false);
-    const [cost, setCost] = useState(0.00);  
 
     const purchaseTickets = () => {
         if (basketid.moviename == null) {
@@ -29,9 +28,6 @@ const Sidebar = ({ basketid, ticketalert }) => {
             ticketalert(false);
         }, 4000);
     } 
-
-    let total = basketid.deluxe ? (basketid.adultseats * 10) + (basketid.childseats * 10) 
-    : (basketid.adultseats * 5) + (basketid.childseats * 5);
     
 
 

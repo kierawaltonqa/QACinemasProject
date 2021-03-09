@@ -89,25 +89,13 @@ const ToggleInput = ({ filmname, basketid }) => {
     }
 
 
-    //! TEST
-    const testing = () => {
-        console.log(movieName);
-        console.log(date);
-        console.log(time);
-        console.log(bookName);
-        console.log(adultTic);
-        console.log(childTic);
-        console.log(deluxe);
-    }
-
-
 
 
     return (
 
         <>
             <div>
-                <button id="pressButton" className="btn btn-secondary" style={{ marginLeft: "10px" }} onClick={toggleHidden}>Press</button>
+                <button id="pressButton" className="btn btn-dark" style={{ marginLeft: "10px" }} onClick={toggleHidden}>Press</button>
             </div>
 
             <Modal isOpen={hidden} className="modal-container modal-dialog modal-dialog-centered ">
