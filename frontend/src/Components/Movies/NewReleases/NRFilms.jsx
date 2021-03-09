@@ -1,11 +1,15 @@
 import { Card, CardBody, CardTitle, CardSubtitle, CardImg } from 'reactstrap';
 import NRDetails from './NRDetails';
+import { useState } from 'react';
 
 const NRFilms = (props) => {
 
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
     return (
         <Card id="NR-card">
-            <a id="clickcard" href=" http://localhost:3000/listings" >
+            <a id="clickcard" onClick={toggle} >
 
             </a>
             <CardImg src={props.poster} id="NR-img" />
@@ -22,7 +26,11 @@ const NRFilms = (props) => {
 
                 <hr />
                 <div className="col-md-12">
-                    <NRDetails id={props.id}
+                    <NRDetails
+                        modal={modal}
+                        setModal={setModal}
+                        toggle={toggle}
+                        id={props.id}
                         title={props.title}
                         runtime={props.runtime}
                         rating={props.rating}
