@@ -24,6 +24,10 @@ const Twelve = ({ toggleShow12 }) => {
             <p>No promotion of potentially dangerous behaviour which children are likely to copy. No glamorisation of realistic or easily accessible weapons such as knives. No endorsement of anti-social behaviour.</p>
             <strong>Discrimination</strong>
             <p>Discriminatory language or behaviour must not be endorsed by the work as a whole. Aggressive discriminatory language or behaviour is unlikely to be acceptable unless clearly condemned.</p>
+            <strong>Drugs</strong>
+            <p>Misuse of drugs must be infrequent and should not be glamorised or give detailed instruction.</p>
+            <strong>Language</strong>
+            <p>There may be moderate bad language. Strong language may be permitted, depending on the manner in which it is used, who is using the language, its frequency within the work as a whole and any special contextual justification.</p>
             <a style={{ color: 'red' }}
               href="https://www.bbfc.co.uk/rating/12"
               rel="noreferrer"

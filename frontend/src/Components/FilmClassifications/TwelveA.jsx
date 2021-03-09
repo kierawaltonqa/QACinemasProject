@@ -33,6 +33,8 @@ const TwelveA = ({ toggleShow12A }) => {
             <p>Discriminatory language or behaviour must not be endorsed by the work as a whole. Aggressive discriminatory language or behaviour is unlikely to be acceptable unless clearly condemned.</p>
             <strong>Drugs</strong>
             <p>Misuse of drugs must be infrequent and should not be glamorised or give detailed instruction.</p>
+            <strong>Language</strong>
+            <p>There may be moderate bad language. Strong language may be permitted, depending on the manner in which it is used, who is using the language, its frequency within the work as a whole and any special contextual justification.</p>
             <a style={{ color: 'red' }}
               href="https://www.bbfc.co.uk/rating/12a"
               rel="noreferrer"
