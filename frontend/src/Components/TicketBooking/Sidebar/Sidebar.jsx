@@ -90,7 +90,7 @@ const Sidebar = ({ basketid }) => {
                 </CardFooter>
             </Card>
         </div>
-        <PaymentModal hidden={payModal}/>
+        <PaymentModal hidden={payModal} sethidden={setPayModal}/>
         </>
     )
 }

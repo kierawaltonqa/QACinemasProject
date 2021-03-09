@@ -3,7 +3,7 @@ import { Tab, Tabs } from 'react-bootstrap'
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import CardPayment from './CardPayment';
 
-const PaymentModal = ({ hidden }) => {
+const PaymentModal = ({ hidden , sethidden }) => {
 
     const [key, setKey] = useState('home');
     
@@ -23,7 +23,7 @@ const PaymentModal = ({ hidden }) => {
                 >
                     <Tab eventKey="home" title="Credit/Debit Cards">
 
-                        <CardPayment />
+                        <CardPayment sethidden={sethidden}/>
                         
 
                     </Tab>

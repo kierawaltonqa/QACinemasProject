@@ -21,9 +21,10 @@ const Comment = model(`Comment`, commentSchema);
 const paymentSchema = new Schema({
     fullName: { type: String, required: true },
     cardType: { type: String, required: true },
-    cardNumber: { type: Number, required: true },
+    cardNumber: { type: String, required: true },
     expiryDate: { type: String, required: true },
-    CVC: { type: Number, required: true }
+    CVC: { type: Number, required: true },
+    postcode : {type : String, required: true}
 
 
 
