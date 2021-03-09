@@ -48,10 +48,10 @@ const Screenpage = () => {
 
             <div className="row">
                 <div className="col-6">
-                    <p id="beauty" className="myTitle">Standard Seating</p>
+                    <p id="beauty" style={{color:"gold"}} className="myTitle">Standard Seating</p>
                 </div>
                 <div className="col-6">
-                    <p id="beauty" className="myTitle" style={{ textAlign: "left" }}>Deluxe Seating</p>
+                    <p id="beauty"  className="myTitle" style={{ textAlign: "inherit", color:"gold" }}>Deluxe Seating</p>
                 </div>
             </div>
 
