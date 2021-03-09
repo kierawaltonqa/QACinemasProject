@@ -22,7 +22,7 @@ const DeletePost = ({ item, trigger }) => {
         <>
             <CardLink className="btn btn-outline-danger" onClick={toggle}>X</CardLink>
             <Modal isOpen={modal} id="delete-modal">
-                <ModalBody>
+                <ModalBody id="delete-modal-body">
                     <h4>Are you sure that you want to delete this post?</h4>
                 </ModalBody>
                 <ModalFooter id="delete-footer">

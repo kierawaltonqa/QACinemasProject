@@ -99,6 +99,6 @@
     left: 50%;
     transform: translate(-50%, -25%);
 }
-#edit-modal-body{
+#edit-modal-body, #delete-modal-body{
     color: black;
 }
