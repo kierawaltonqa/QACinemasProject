@@ -11,7 +11,8 @@ const Sidebar = ({ basketid, ticketalert }) => {
     }
 
 
-    const [payModal, setPayModal] = useState(false);  
+    const [payModal, setPayModal] = useState(false);
+    const [cost, setCost] = useState(0.00);  
 
     const purchaseTickets = () => {
         if (basketid.moviename == null) {
@@ -27,7 +28,10 @@ const Sidebar = ({ basketid, ticketalert }) => {
         setTimeout( () => {
             ticketalert(false);
         }, 4000);
-    }
+    } 
+
+    let total = basketid.deluxe ? (basketid.adultseats * 10) + (basketid.childseats * 10) 
+    : (basketid.adultseats * 5) + (basketid.childseats * 5);
     
 
 
@@ -93,6 +97,14 @@ const Sidebar = ({ basketid, ticketalert }) => {
                             </div>
                         </div>
                         <hr className="basketHr" />
+                        <div className="row">
+                            <div className="col-6">
+                                <h6 style={{ backgroundColor: "" }}><b>Total cost:</b></h6>
+                            </div>
+                            <div className="col-6">
+                                <p className="shoppingPara">£{basketid.totalCost}</p>
+                            </div>
+                        </div>
                     </div>
                 </CardBody>
                 <CardFooter className="text-muted">

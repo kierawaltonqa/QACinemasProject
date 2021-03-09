@@ -35,13 +35,16 @@ const ToggleInput = ({ filmname, basketid }) => {
         else{
             deluxeAnswer = "No"
         }
-        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe : deluxeAnswer})
+        let totalCost = (deluxe ? (adultTic * 14) + (childTic * 10) 
+        : (adultTic * 8) + (childTic * 4));
+        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe : deluxeAnswer, totalCost})
             .then(async (res) => {
                 getBasket(res.data)
                 toggleHidden(!hidden);
             })
             .catch((err) => {
                 console.log(err);
+                console.log(totalCost);
             });
     }
 
