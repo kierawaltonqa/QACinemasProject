@@ -17,10 +17,9 @@
 }
 
 #myButton {
-    font-family: monospace;
-    font-weight: 300;
-    color: white;
-    font-size: 2vmin;
+    font-weight: 600;
+    color: black;
+    font-size: 4vmin;
 
 }
 
@@ -34,8 +33,8 @@
 
 #myInfo {
         font-family: monospace;
-        font-weight: 300;
-        color: white;
+        font-weight: 600;
+        color: gold;
         font-size: 3vmin;
 
     }

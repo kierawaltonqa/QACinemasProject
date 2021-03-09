@@ -1,4 +1,4 @@
-import Carousel from "./CarouselComp";
+import CarouselComp from "./CarouselComp";
 import pic1 from "./ScreenPics/StandardSeatingPlanBlack.png"
 import pic2 from "./ScreenPics/standard-seating-in-screen.png"
 import pic3 from "./ScreenPics/StandardSeatPic3.png"
@@ -31,13 +31,14 @@ const Screenpage = () => {
         // Carousel
 
         <>
+        {/* <div className="container-xxl" style={{backgroundColor:"gold"}}> */}
             <br />
             <div className="row" style={{ height: "400px" }} >
                 <div className="slider-container ">
-                    <Carousel image1={pic2} image2={pic3} image3={pic1} />
+                    <CarouselComp image1={pic2} image2={pic3} image3={pic1} />
                 </div>
                 <div className="slider-container">
-                    <Carousel image1={pic4} image2={pic5} image3={pic6} style={{ height: "400px" }} />
+                    <CarouselComp image1={pic4} image2={pic5} image3={pic6} style={{ height: "400px" }} />
                 </div>
             </div>
             <br />
@@ -65,11 +66,11 @@ const Screenpage = () => {
                 </div>
             </div>
 
-            {/* TEST */}
+            {/* Info on screen type */}
 
             <br />
             <ReadMoreText toggleOn={toggleOn} />
-
+            {/* </div> */}
         </>
     )
 
