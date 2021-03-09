@@ -1,5 +1,5 @@
 import Media from "react-bootstrap/Media";
-import logo from "../../../Resources/Logo/logo.jpg"
+import rob from '../../../Resources/rob.png';
 
 const Rob = () => {
 
@@ -18,14 +18,15 @@ const Rob = () => {
                     to then focus on collaborating with my team to ensure the styling was consistent for the website design. </p>
             </div>
             <div className="col-md-3">
+                <br />
                 <center>
                     <img
                         width={120}
-                        height={120}
+                        height={150}
                         padding={20}
                         className="align-self-start mr-3"
-                        src={logo}
-                        alt="Generic placeholder"
+                        src={rob}
+                        alt="rob-img"
                     />
                 </center>
             </div>

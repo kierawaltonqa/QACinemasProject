@@ -1,5 +1,7 @@
-import Media from "react-bootstrap/Media";
-import kiera from "../../../Resources/kiera.JPG"
+import { FaRegKissWinkHeart } from 'react-icons/fa';
+import { GiCoffeeCup } from 'react-icons/gi';
+import kiera from "../../../Resources/kieraimg.JPG";
+import './Kiera.css';
 
 const Kiera = () => {
 
@@ -18,17 +20,22 @@ const Kiera = () => {
                     <p>
                         I am really proud of what we have achieved, none of it could have been done without all of our hard work (and of course coffee).
                     </p>
+                    <a href="https://github.com/kierawaltonqa" target="_blank"> <p>Here's my GitHub!
+                        <FaRegKissWinkHeart id="icon" size={30} />
+                        <GiCoffeeCup id="icon" size={30} />
+                    </p></a>
                 </div>
                 <div className="col-md-3">
                     <br />
                     <center>
                         <img
-                            width={120}
+                            width={175}
                             padding={20}
-                            height={120}
+                            height={175}
                             className="align-self-end mr-8"
                             src={kiera}
-                            alt="Generic placeholder"
+                            alt="Kiera img"
+                            id="kiera-img"
                         />
                     </center>
                 </div>
