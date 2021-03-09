@@ -21,9 +21,10 @@ const Comment = model(`Comment`, commentSchema);
 const paymentSchema = new Schema({
     fullName: { type: String, required: true },
     cardType: { type: String, required: true },
-    cardNumber: { type: Number, required: true },
+    cardNumber: { type: String, required: true },
     expiryDate: { type: String, required: true },
-    CVC: { type: Number, required: true }
+    CVC: { type: Number, required: true },
+    postcode : {type : String, required: true}
 
 
 
@@ -38,7 +39,8 @@ const BookingSchema = new Schema({
     bookername: { type: String, required: true },
     adultseats: { type: String, required: true },
     childseats: { type: String, required: true },
-    deluxe : {type: Boolean, required: true}
+    deluxe : {type: String, required: true},
+    totalCost : {type: String, required: true}
 
 })
 const Booking = model('Booking', BookingSchema);

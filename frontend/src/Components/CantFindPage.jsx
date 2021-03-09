@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Image, Button } from "react-bootstrap/";
 import "../Css/AboutStyle.css";
 import lost from "../Resources/Logo/lost.jpg";
-import Footer from "./FooterFolder/Footer";
 import { Link } from 'react-router-dom';
 
 
@@ -44,7 +43,7 @@ const CantFindPage = () => {
         </Col>
       </div>
 
-      <Footer></Footer>
+
     </>
   );
 };

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import ReadDiscussion from "./ReadDiscussion";
 import './Discussion.css';
 import penguin from '../../Resources/penguin2.jpg'
-import Footer from "../FooterFolder/Footer";
 
 
 const DiscussionBoard = () => {
@@ -44,7 +43,7 @@ const DiscussionBoard = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </>
     )
 

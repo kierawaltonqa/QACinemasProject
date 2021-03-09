@@ -16,15 +16,15 @@ const Footer = () => {
           <Card.Text style={{ color: 'gold' }}> &copy;TeamSpell 2021    </Card.Text>
           <Card.Text>
           </Card.Text>
-          <Nav defaultActiveKey="/home" as="ul" style={{ marginLeft: "42%" }}>
+          <Nav defaultActiveKey="/" as="ul" style={{ marginLeft: "42%" }}>
             <Nav.Item as="li" >
-              <Nav.Link style={{ color: 'white', marginLeft: '20px' }} href="/home">Home</Nav.Link>
+              <Nav.Link style={{ color: 'white', marginLeft: '20px' }} href="/">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link style={{ color: 'white' }} eventKey="link-1">About</Nav.Link>
+              <Nav.Link style={{ color: 'white' }} eventKey="link-1" href="/about">About</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link eventKey="link-2" style={{ color: 'white' }} >Contact Us</Nav.Link>
+              <Nav.Link eventKey="link-2" style={{ color: 'white' }} href="/contact" >Contact Us</Nav.Link>
             </Nav.Item>
           </Nav>
           <row>

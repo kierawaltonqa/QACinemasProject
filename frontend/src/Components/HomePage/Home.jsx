@@ -4,7 +4,6 @@ import image1 from '../../Resources/image1.JPG';
 import image2 from '../../Resources/image2.jpg';
 import image3 from '../../Resources/image3.jpg';
 import WelcomePage from './WelcomePage';
-import Footer from '../FooterFolder/Footer';
 import { Container } from 'react-bootstrap'
 import data from '../../Components/Movies/NewReleases/NewReleases.json';
 import NRFilms from '../../Components/Movies/NewReleases/NRFilms';
@@ -48,6 +47,7 @@ const Home = () => {
                                 <div className="col-md-3">
                                     <br />
                                     <NRFilms
+
                                         key={film.id}
                                         title={film.title}
                                         runtime={film.runtime}
@@ -74,7 +74,7 @@ const Home = () => {
 
             </div>
 
-            <Footer />
+
         </>
     )
 }

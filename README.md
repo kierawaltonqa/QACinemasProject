@@ -1,4 +1,3 @@
-<!-- ![QAC-Logo](QACinemasDocumentsFolder\qa%20cinema%20logo.jpg) -->
 
 <img src="QACinemasDocumentsFolder\qa%20cinema%20logo.jpg" alt="Logo" width="300"/>  
 
@@ -14,18 +13,20 @@ The objective for this project was to, as a team, using the tech listed below, c
 
 
 
-## Table of contents
+
+## Table of contents 
 * [Technologies](#Technologies)
 * [Prerequisite](#Prerequisite)
 * [Installing](#Installing)
 * [Testing](#Testing)
-* [Creating JAR file](#Creating_JAR_file)
 * [Deployment](#Deployment)
 * [Built With](#Built_With)
 * [Versioning](#Versioning)
 * [Authors](#Authors)
 * [License](#License)
 * [Acknowledgments](#Acknowledgments)
+
+
 
 
 
@@ -52,35 +53,25 @@ These instructions will get you a copy of the project up and running on your loc
 * [Git](https://git-scm.com/downloads)
 * [Spring Boot](https://spring.io/guides/gs/spring-boot/)
 * [MongoDBAtlas](https://www.mongodb.com/cloud/atlas)
-* [Maven](http://maven.apache.org/download.cgi)
+* [Postman](https://www.postman.com/downloads/)
+* [Node.js](https://nodejs.org/en/download/)
 
 
 ### Installing
 
 1. You will need to clone down the repo  
-* To do this, Git Bash in the desired folder you'd like to clone to.
-* Once Git opens, you will need to initialise git, do this with the following command;
-```
-Git init
-```
-2. After this, write 
-```
-Git clone
-```
-and copy and paste the link you wanted to clone  
-3. You will need two terminals open, one in the backend folder and one in the front end folder,
-in both of these terminals run the command
-
-```
-npm start
-```  
-
-
-
+2. Open the folder in your IDE/VS code 
 
 ## Testing
 
 1. In the terminal, run npm test to run the tests once CD'd into backend/frontend  
+```
+npm test
+```
+2. In the back end if you wish to get the coverage 
+```
+npm run coverage
+```
 
 Coverage: 88.28% - backend  
 ![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
@@ -88,25 +79,49 @@ Coverage: 88.28% - backend
 
 
 
-#### Creating JAR file:
 
 
 ## Deployment
+
+1. Starting off with the back end  
+This is written in Node.js and uses Express for API development with a connection string to Mongo, this connection string is currently private,
+so you will need to import your own connection string.  
+Make sure you are in the back end directory in terminal 1.  
+Run =>  
+```
+npm install
+npm start
+```
+You should see the message ```connection has worked``` in your terminal, this means that your DB is now connected and if you wish to test this you can load up Postman and test your URL's and the API's functionality there.   
+
+
+2. Secondly the front end  
+When ready to run the front end - open a second terminal and make sure you are in the front end directory folder.  
+Similar to the back end we will need to install the dependencies before being able to run the server.  
+Run => 
+```
+npm install
+npm start
+```
+*This will then spin up a liver server for the project on http://localhost:3000/*  
+
+
+![](https://placehold.it/350x90/009955/fff?text=SUCCESS!)  
+You should now have a fully working MERN stack application!
+
 
 
 ## Built With
 
 * [Jira](https://code.visualstudio.com/download)
-* [Visual Studio Code](https://code.visualstudio.com/download)
-* [Spring Boot](https://spring.io/guides/gs/spring-boot/)
+* [Visual Studio Code](https://code.visualstudio.com/download)  
+
 
 ## Versioning
 
 * Version Control System: Git
 * Source Code Management: GitHub
-* Database Management System: MongoDB
-
-[Maven Versioning](http://maven.apache.org/download.cgi)  incremental, Minor & Major was used to update the version.
+* Database Management System: MongoDB  
 
 
 ## Authors
@@ -121,3 +136,13 @@ Roberty Tolley - Developer - [Roberty Tolley](https://github.com/RobertTolleyQA)
 
 
 ## Acknowledgments
+
+* [Vinesh Ghela](https://github.com/vineshghela) & [Aswene Sivaraj](https://github.com/Asivaraj-QA) - Java, databases
+* [Nicholas Johnson](https://github.com/nickrstewarttds) - Github
+* [Savannah Vaithilingam](https://github.com/savannahvaith) - JavaScript, HTML, CSS, MERN  
+* [Alan Davis](https://github.com/MorickClive) - Springboot and overall API development    
+
+
+
+
+

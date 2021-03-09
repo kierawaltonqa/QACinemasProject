@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const NRDetails = ({ title, runtime, rating, director, poster, actors }) => {
+const NRDetails = ({ title, runtime, rating, director, poster, actors, modal, toggle, setModal }) => {
 
-    const [modal, setModal] = useState(false);
-    const toggle = () => setModal(!modal);
+    // const [modal, setModal] = useState(false);
+    // const toggle = () => setModal(!modal);
 
     return (
         <>
-            <CardLink className="btn btn-outline-dark" onClick={toggle}>Details</CardLink>
+            {/* <CardLink className="btn btn-outline-dark" onClick={toggle}>Details</CardLink> */}
             <Modal className="modal-container custom-map-modal"
                 id="listingmodal"
                 dialogClassName="modal-dialog"

@@ -9,7 +9,6 @@ import pic6 from "./ScreenPics/DeluxeSeatingPlan.png"
 import ScreensReadMore from "./ScreensReadMore";
 import ReadMoreText from "./ReadMoreText";
 import { useState } from "react";
-import Footer from "../FooterFolder/Footer";
 
 
 const Screenpage = () => {
@@ -70,7 +69,7 @@ const Screenpage = () => {
 
             <br />
             <ReadMoreText toggleOn={toggleOn} />
-            <Footer />
+
         </>
     )
 

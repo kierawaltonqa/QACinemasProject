@@ -1,7 +1,6 @@
 import data from '../../../Resources/Movies.json';
 import ListingsFilm from './ListingsFilm';
 import '../Movies.css';
-import Footer from '../../FooterFolder/Footer';
 
 const Listings = () => {
     return (
@@ -33,7 +32,7 @@ const Listings = () => {
 
                 </div>
             </div>
-            <Footer />
+
         </>
     )
 }
