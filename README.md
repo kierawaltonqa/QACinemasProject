@@ -93,7 +93,7 @@ npm install
 npm start
 ```
 You should see the message ```connection has worked``` in your terminal, this means that your DB is now connected and if you wish to test this you can load up Postman and test your URL's and the API's functionality there.   
-<hr/>
+
 
 2. Secondly the front end  
 When ready to run the front end - open a second terminal and make sure you are in the front end directory folder.  
