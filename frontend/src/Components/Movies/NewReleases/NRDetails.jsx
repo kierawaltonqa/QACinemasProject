@@ -8,7 +8,7 @@ const NRDetails = ({ title, runtime, rating, director, poster, actors, modal, to
 
     return (
         <>
-            <CardLink className="btn btn-outline-dark" onClick={toggle}>Details</CardLink>
+            {/* <CardLink className="btn btn-outline-dark" onClick={toggle}>Details</CardLink> */}
             <Modal className="modal-container custom-map-modal"
                 id="listingmodal"
                 dialogClassName="modal-dialog"
