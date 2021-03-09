@@ -31,6 +31,12 @@ const CardPayment = ({sethidden}) => {
     },3000);
     } 
 
+    const successAlertFadeAway = () => {
+        setTimeout( () => {
+            sethidden(false);
+        }, 4000);
+    }
+
     const create = () => {
         if(cardType == "Select..." || cardName == "" || cardNumber == "" || cvv == 0 
             || expiry == "" || postcode == "" || toC == false ) {
@@ -41,7 +47,8 @@ const CardPayment = ({sethidden}) => {
                 axios.post(`${PAYMENT_URL}/create`, {fullName:cardName, cardType, cardNumber, expiryDate:expiry,CVC:cvv ,postcode  })
                 .then((res) => {
                     console.log(res);
-                    closeModal();
+                    setsuccessAlert(true);
+                    successAlertFadeAway();
                 }).catch((err) => {
                     console.log(err);
                 } )
@@ -53,10 +60,8 @@ const CardPayment = ({sethidden}) => {
         <>
         <br/>
             <Alert color="danger" isOpen={hideAlert}>Please fill in all payment details!
-            <button className="close">X</button>
             </Alert>
             <Alert color="success" isOpen={successAlert}>Congrats on your purchase!
-            <button className="close">X</button>
             </Alert>
             <div style={{ borderLeft: "20px" }} className="form-mb position-relative">
                 <div className="mb-3">
