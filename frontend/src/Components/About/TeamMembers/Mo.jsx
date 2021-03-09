@@ -1,4 +1,3 @@
-import Media from "react-bootstrap/Media";
 import logo from "../../../Resources/Logo/logo.jpg"
 
 const Mo = () => {
@@ -35,4 +34,4 @@ const Mo = () => {
     )
 }
 
-export default Mo; 
+export default Mo;
