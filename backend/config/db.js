@@ -24,10 +24,24 @@ const paymentSchema = new Schema({
     cardNumber: { type: Number, required: true },
     expiryDate: { type: String, required: true },
     CVC: { type: Number, required: true }
+});
 
 
+//minimal blog setup
+const blogSchema = new Schema({
+
+    lastUpdated: { type: date, required:true},
+    title: { type: String, required: true},
+    blogTest: { type: String, required: true },
+    author: { type: String, required: true}
 
 });
+
+const Blog = model(`Blog`, blogSchema);
+
+
+
+
 const Payment = model(`Payment`, paymentSchema);
 
 const BookingSchema = new Schema({
@@ -77,4 +91,5 @@ module.exports = {
     "Booking": Booking,
     "Discuss": Discuss,
     "Comment": Comment
+    "Blog"
 }
