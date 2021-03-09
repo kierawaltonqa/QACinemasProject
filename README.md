@@ -106,20 +106,22 @@ npm start
 *This will then spin up a liver server for the project on http://localhost:3000/*  
 
 
+![](https://placehold.it/350x90/009955/fff?text=SUCCESS!)  
+You should now have a fully working MERN stack application!
+
+
 
 ## Built With
 
 * [Jira](https://code.visualstudio.com/download)
-* [Visual Studio Code](https://code.visualstudio.com/download)
-* [Spring Boot](https://spring.io/guides/gs/spring-boot/)
+* [Visual Studio Code](https://code.visualstudio.com/download)  
+
 
 ## Versioning
 
 * Version Control System: Git
 * Source Code Management: GitHub
-* Database Management System: MongoDB
-
-[Maven Versioning](http://maven.apache.org/download.cgi)  incremental, Minor & Major was used to update the version.
+* Database Management System: MongoDB  
 
 
 ## Authors
@@ -139,3 +141,8 @@ Roberty Tolley - Developer - [Roberty Tolley](https://github.com/RobertTolleyQA)
 * [Nicholas Johnson](https://github.com/nickrstewarttds) - Github
 * [Savannah Vaithilingam](https://github.com/savannahvaith) - JavaScript, HTML, CSS, MERN  
 * [Alan Davis](https://github.com/MorickClive) - Springboot and overall API development    
+
+
+
+
+
