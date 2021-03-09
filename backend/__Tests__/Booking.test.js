@@ -23,7 +23,8 @@ describe(`Booking routes`, () => {
                 bookername: "sally",
                 adultseats: "2",
                 childseats: "6",
-                deluxe: true
+                deluxe: true,
+                totalCost: '10'
 
             })
             .end((err, response) => {

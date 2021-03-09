@@ -19,9 +19,10 @@ describe(`Payment Routes`, () => {
 
                 'fullName': 'Darius Brown',
                 'cardType': 'visa',
-                'cardNumber': 1234567890,
+                'cardNumber': '1234567890',
                 'expiryDate': '31/09/2022',
-                'CVC': 123
+                'CVC': 123,
+                'postcode': 'gh67yht'
 
             })
             .end((err, response) => {
