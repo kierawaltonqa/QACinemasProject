@@ -38,8 +38,8 @@ const CardPayment = ({ sethidden }) => {
     }
 
     const create = () => {
-        if (cardType == "Select..." || cardName == "" || cardNumber == "" || cvv == 0
-            || expiry == "" || postcode == "" || toC == false) {
+        if (cardType === "Select..." || cardName === "" || cardNumber === "" || cvv === 0
+            || expiry === "" || postcode === "" || toC === false) {
             sethideAlert(true);
             dangerAlertFadeAway();
         }
