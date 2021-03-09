@@ -1,4 +1,4 @@
-import { Button, Form, FormControl } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap';
 import searchpenguin from '../../Resources/penguin-search.jpg';
 
 const SearchBar = ({ updateQuery, stateQuery }) => {
