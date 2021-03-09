@@ -5,6 +5,9 @@ const NRFilms = (props) => {
 
     return (
         <Card id="NR-card">
+            <a id="clickcard" href=" http://localhost:3000/listings" >
+
+            </a>
             <CardImg src={props.poster} id="NR-img" />
             <CardBody>
                 <CardTitle id="NR-title">
@@ -16,6 +19,7 @@ const NRFilms = (props) => {
                     <p>Runtime: {props.runtime}</p>
                     <p>Rating: {props.rating}</p>
                 </CardSubtitle>
+
                 <hr />
                 <div className="col-md-12">
                     <NRDetails id={props.id}
@@ -27,7 +31,7 @@ const NRFilms = (props) => {
                         actors={props.actors} />
                 </div>
             </CardBody>
-        </Card>
+        </Card >
     )
 }
 export default NRFilms;

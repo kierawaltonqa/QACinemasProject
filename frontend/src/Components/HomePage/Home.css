@@ -55,3 +55,15 @@
     background-color: #4CAF50;
 
 }
+
+#NR-card:hover{
+    transform: scale(1.1);
+    
+    
+}
+
+#clickcard {
+    position: absolute;
+top: 0; left: 0;
+height: 100%; width: 100%;
+}

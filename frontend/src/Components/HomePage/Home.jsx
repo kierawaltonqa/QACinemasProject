@@ -47,6 +47,7 @@ const Home = () => {
                                 <div className="col-md-3">
                                     <br />
                                     <NRFilms
+
                                         key={film.id}
                                         title={film.title}
                                         runtime={film.runtime}
