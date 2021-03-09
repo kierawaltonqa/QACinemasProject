@@ -20,7 +20,7 @@ const Kiera = () => {
                     <p>
                         I am really proud of what we have achieved, none of it could have been done without all of our hard work (and of course coffee).
                     </p>
-                    <a href="https://github.com/kierawaltonqa" target="_blank"> <p>Here's my GitHub!
+                    <a href="https://github.com/kierawaltonqa" target="_blank" rel="noreferrer"> <p>Here's my GitHub!
                         <FaRegKissWinkHeart id="icon" size={30} />
                         <GiCoffeeCup id="icon" size={30} />
                     </p></a>
@@ -48,4 +48,4 @@ const Kiera = () => {
     )
 }
 
-export default Kiera; 
+export default Kiera;
