@@ -32,6 +32,7 @@ const blogSchema = new Schema({
 
     lastUpdated: { type: Date, required: true },
     title: { type: String, required: true },
+    lilInfo: { type: String, required: true },
     blogText: { type: String, required: true },
     author: { type: String, required: true }
 

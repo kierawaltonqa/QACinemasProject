@@ -57,6 +57,7 @@ router.put("/update/:id", (req, res, next) => {
         {
             lastUpdated,
             title,
+            lilInfo,
             blogText,
             author
         },

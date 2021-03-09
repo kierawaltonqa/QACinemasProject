@@ -19,6 +19,7 @@ import ContactUsPage from './Components/ContactUs/ContactUsPage';
 import Home from './Components/HomePage/Home';
 import SearchPage from './Components/Search/SearchPage';
 import Footer from './Components/FooterFolder/Footer';
+import ReadBlog from './Components/Blog/ReadBlog';
 
 
 
@@ -64,6 +65,9 @@ function App() {
           </Route>
           <Route path="/bookings">
             <TicketBooking />
+          </Route>
+          <Route path="/blog">
+            <ReadBlog />
           </Route>
           <CantFindPage />
 
