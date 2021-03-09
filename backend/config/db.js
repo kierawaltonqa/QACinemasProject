@@ -38,7 +38,7 @@ const BookingSchema = new Schema({
     bookername: { type: String, required: true },
     adultseats: { type: String, required: true },
     childseats: { type: String, required: true },
-    deluxe : {type: Boolean, required: true}
+    deluxe: { type: Boolean, required: true }
 
 })
 const Booking = model('Booking', BookingSchema);
@@ -54,6 +54,12 @@ const discussionSchema = new Schema({
 })
 
 const Discuss = model('Discuss', discussionSchema);
+
+
+const blogSchema = new Schema({
+    datePosted: { type: String, required: true }
+})
+const Blog = model('Blog', blogSchema);
 
 mongoose.connect(`${DB_URL}/${DB_NAME}?authSource=admin&replicaSet=atlas-nzfvt5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
@@ -76,5 +82,6 @@ module.exports = {
     "Payment": Payment,
     "Booking": Booking,
     "Discuss": Discuss,
-    "Comment": Comment
+    "Comment": Comment,
+    "Blog": Blog
 }

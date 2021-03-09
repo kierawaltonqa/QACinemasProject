@@ -3,7 +3,7 @@ const express = require('express');
 const createError = require('http-errors');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { PAYMENT, BOOKING, DISCUSSION, COMMENT } = require('./config/CONSTS.json');
+const { PAYMENT, BOOKING, DISCUSSION, COMMENT, BLOG } = require('./config/CONSTS.json');
 
 // INIT MY APP
 const app = express();
@@ -24,6 +24,10 @@ app.use(`${DISCUSSION}`, discssionRoute);
 //!Comment section
 const commentRoute = require('./Routes/Comment');
 app.use(`${COMMENT}`, commentRoute);
+
+//!blog 
+const blogRoute = require('./Routes/blog');
+app.use(`${BLOG}`, blogRoute);
 
 // error handling
 app.use((req, res, next) => {
