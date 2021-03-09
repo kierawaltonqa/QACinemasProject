@@ -17,9 +17,13 @@ const MeetTheTeam = () => {
           <br></br>
 
           <Mo />
+          <hr />
           <Rob />
+          <hr />
           <Sam />
           <Kiera />
+          <hr />
+
 
         </>
       </div>

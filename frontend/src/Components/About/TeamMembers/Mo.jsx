@@ -6,34 +6,32 @@ const Mo = () => {
 
 
     return (
+        <>
+            <div className="row">
 
-        <Media>
-            <Media.Body>
-                <img
-                    width={64}
-                    height={64}
-                    className="align-self-start mr-3"
-                    src={logo}
-                    alt="Generic placeholder"
-                />
-                <h3>Mohamud Mussa</h3>
-                <p>
-                    Cras sit amet nib h libero, in gravida nulla. Nulla vel metus
-                    scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-                    in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                    nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </p>
-
-                <p>
-                    Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel
-                    eu leo. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus.
-          </p>
+                <div className="col-md-9">
+                    <h3>Mohamud Mussa</h3>
+                    <p>
+                        Hi there! My name is Mo and the love I have for React is unmatched. I spend most days daydreaming about how the world is full of components and unidirectional communication.
+                </p>
+                    <p>Anywhoo, I was mainly involved in the frontend of this website, I did also design our custom images in Photoshop. Css is also a newfound joy of mine. Since we completed this website fairly quickly because our team is amazing,  I thought of the idea to create a blog page, setting up the backend, and linking it to a custom page that allows the admin staff to create blog posts!</p>
+                    <p>Here is my Github :)</p>
+                </div>
+                <div className="col-md-3">
+                    <center>
+                        <img
+                            width={120}
+                            height={120}
+                            padding={20}
+                            className="align-self-start mr-3"
+                            src={logo}
+                            alt="Generic placeholder"
+                        />
+                    </center>
+                </div>
                 <hr />
-            </Media.Body>
-        </Media>
-
-
+            </div>
+        </>
     )
 }
 

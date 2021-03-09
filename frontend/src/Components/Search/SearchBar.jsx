@@ -4,16 +4,15 @@ import searchpenguin from '../../Resources/penguin-search.jpg';
 const SearchBar = ({ updateQuery, stateQuery }) => {
     return (
         <>
-            <div className="col-md-3">
+            <div className="col-3">
                 <br />
                 <Form inline>
                     <FormControl type="text"
                         placeholder="Search"
                         className="mr-sm-2"
                         onChange={updateQuery}
-                        value={stateQuery} />
-                    <Button type="submit" variant="outline-success">Search</Button>
-                    {/* onSubmit={updateQuery}  */}
+                        value={stateQuery}
+                    />
                 </Form>
                 <br />
             </div>

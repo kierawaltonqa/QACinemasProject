@@ -15,14 +15,14 @@ const Eighteen = () => {
             rounded
           />
           <hr />
-
+          <strong style={{ color: "red" }}>18 – Suitable only for adults</strong>
           <p style={{ color: "red" }}>
             No one younger than 18 may see an 18 film in a cinema. No one
             younger than 18 may rent or buy an 18 rated video work. Adults
             should be free to choose their own entertainment.
           </p>
 
-          
+
           <strong> Exceptions are most likely in the following areas:</strong>
           <br />
           <br />
