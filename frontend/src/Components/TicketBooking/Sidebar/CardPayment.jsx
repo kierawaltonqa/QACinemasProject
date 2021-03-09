@@ -67,7 +67,7 @@ const CardPayment = ({ sethidden }) => {
                 <div className="mb-3">
                     <div className="row">
                         <div className="col-6">
-                            <label for="exampleInputEmail1" className="form-label" htmlFor="">Card Type:</label>
+                            <label for="exampleInputEmail1" style={{color:"black"}} className="form-label" htmlFor="">Card Type:</label>
                             <select onChange={({ target }) => setcardType(target.value)} className="form-control" direction="end" isOpen={dropHidden} toggle={() => hiddenState()}>
                                 <option>Select...</option>
                                 <option>Visa</option>
@@ -80,11 +80,11 @@ const CardPayment = ({ sethidden }) => {
                 <div className="mb-3">
                     <div className="row">
                         <div className="col-6">
-                            <label className="form-label" htmlFor="">Card Holder</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">Card Holder</label>
                             <input onChange={({ target }) => setcardName(target.value)} className="form-control" type="text" />
                         </div>
                         <div className="col-6">
-                            <label className="form-label" htmlFor="">Card Number</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">Card Number</label>
                             <input onChange={({ target }) => setcardNumber(target.value)} className="form-control" type="number" placeholder="0000-0000-0000-0000" />
                         </div>
                     </div>
@@ -92,22 +92,22 @@ const CardPayment = ({ sethidden }) => {
                 <div className="mb-3">
                     <div className="row">
                         <div className="col-4">
-                            <label className="form-label" htmlFor="">CVV</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">CVV</label>
                             <input onChange={({ target }) => setcvv(target.value)} className="form-control" type="number" placeholder="000" />
                         </div>
                         <div className="col-4">
-                            <label className="form-label" htmlFor="">Expiary date</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">Expiary date</label>
                             <input onChange={({ target }) => setexpiary(target.value)} className="form-control" type="date" />
                         </div>
                         <div className="col-4">
-                            <label className="form-label" htmlFor="">Post Code</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">Post Code</label>
                             <input onChange={({ target }) => setpostcode(target.value)} className="form-control" type="text" />
                         </div>
                     </div>
                 </div>
                 <div className="mb-3">
                     <div style={{ marginLeft: "20px" }} className="row">
-                        <label className="col-auto form-check-label" for="flexCheckDefault">I agree to the terms and conditions:</label>
+                        <label style={{color:"black"}} className="col-auto form-check-label" for="flexCheckDefault">I agree to the terms and conditions:</label>
                         <input onChange={() => settoC(!toC)} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     </div>
                 </div>

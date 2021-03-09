@@ -98,8 +98,8 @@ const ToggleInput = ({ filmname, basketid }) => {
                 <button id="pressButton" className="btn btn-dark" style={{ marginLeft: "10px" }} onClick={toggleHidden}>Press</button>
             </div>
 
-            <Modal isOpen={hidden} className="modal-container modal-dialog modal-dialog-centered ">
-                <ModalHeader style={{ backgroundColor: "black", color: "white" }}>
+            <Modal isOpen={hidden} className="modal-lg modal-dialog modal-dialog-centered ">
+                <ModalHeader style={{ backgroundColor: "black", color: "gold" }}>
                     Purchase Tickets: {filmname}
 
                 </ModalHeader>
@@ -109,20 +109,20 @@ const ToggleInput = ({ filmname, basketid }) => {
 
                     <div className="form-mb position-relative">
                         <div className="mb-3" >
-                            <label htmlFor="" style={{ fontSize: "17px" }}>Ticket Holder Name:</label>
+                            <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Ticket Holder Name:</label>
                             <br />
                             <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" onChange={({ target }) => setBookName(target.value)} />
                         </div>
                         <hr style={{ backgroundColor: "black" }} />
                         <div>
-                            <label htmlFor="" style={{ fontSize: "17px" }}>Screen Time:</label>
+                            <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Screen Time:</label>
                             <br />
                             <input style={{ width: "90px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
                         </div>
                         <br />
                         <div>
                         </div>
-                        <label htmlFor="" style={{ fontSize: "17px" }}>Tickets:</label>
+                        <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Tickets:</label>
 
                         <div className="row" style={{marginLeft:"0px"}}>
                             <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
