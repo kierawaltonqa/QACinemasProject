@@ -8,9 +8,9 @@ const FindUs = () => {
         <Container maxWidth="md" className="beauty  ">
             <h1> How To Find Us </h1>
             <hr></hr>
-            <p> The region is well served by motorways, good pubpc transport and Manchester International Airport is just 10 miles (16km) south of the city centre, with fast and frequent rail travel to Manchester.
+            <p> The region is well served by motorways, good public transport and Manchester International Airport is just 10 miles (16km) south of the city centre, with fast and frequent rail travel to Manchester.
 
-Our campus is situated close to Manchester's city centre and the routes most commonly travelled by students are well served by pubpc transport. There's a free hop-on/hop-off city centre shuttle service that covers the main city centre areas, pnking the main city centre railway stations, main NCP car parks and many bus and Metropnk tram stops.</p>
+Our building is situated close to Manchester's city centre and the routes most commonly travelled by students are well served by public transport. There's a free hop-on/hop-off city centre shuttle service that covers the main city centre areas, parking the main city centre railway stations, main NCP car parks and many bus and Metropark tram stops.</p>
             <br></br>
             {/* <br></br>
             <br></br> */}
