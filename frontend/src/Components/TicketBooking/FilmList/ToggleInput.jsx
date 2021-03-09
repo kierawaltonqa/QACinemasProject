@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Alert, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import "../Resources/TicketBooking.css"
 import axios from "axios";
 import { BOOKING_URL } from "../Resources/CONST.json"
@@ -7,6 +7,8 @@ import { BOOKING_URL } from "../Resources/CONST.json"
 
 const ToggleInput = ({ filmname, basketid }) => {
 
+
+    //* States for database
     const date1 = new Date();
     const [movieName, setMovieName] = useState(filmname)
     const [date, setDate] = useState(date1.toLocaleDateString())
@@ -16,11 +18,30 @@ const ToggleInput = ({ filmname, basketid }) => {
     const [childTic, setChildTic] = useState(0)
     const [deluxe, setDeluxe] = useState(false)
 
+    //* Modal state
     const [hidden, setHidden] = useState(false)
+    // if no name or screentime chosen
+    const [alertHidden, setalertHidden] = useState(false)
+    // if no ticket is chosen
+    const [noTicket, setnoTicket] = useState(false)
 
     const toggleHidden = () => {
 
         setHidden(!hidden);
+    }
+
+    // Alert for no name or time
+    const toggleAlert = () => {
+        setTimeout( () => {
+            setalertHidden(false);
+        }, 3000);
+    }
+
+    // Alert for no ticket chosen
+    const toggleTicketAlert = () => {
+        setTimeout( () => {
+            setnoTicket(false);
+        }, 3000);
     }
 
 
@@ -28,6 +49,10 @@ const ToggleInput = ({ filmname, basketid }) => {
     // CREATE METHOD
 
     const create = () => {
+        if(adultTic + childTic == 0) {
+            setnoTicket(true);
+            toggleTicketAlert();
+        }else{ 
         var deluxeAnswer = "No";
         if(deluxe == true){
             deluxeAnswer = "Yes"
@@ -44,9 +69,10 @@ const ToggleInput = ({ filmname, basketid }) => {
             })
             .catch((err) => {
                 console.log(err);
-                console.log(totalCost);
+                setalertHidden(true);
+                toggleAlert();
             });
-    }
+    }}
 
     // GET METHOD
 
@@ -90,6 +116,8 @@ const ToggleInput = ({ filmname, basketid }) => {
 
                 </ModalHeader>
                 <ModalBody style={{ backgroundColor: "gold" }} >
+                    <Alert isOpen={alertHidden} color="danger" style={{textAlign:"center"}}>Please enter your name and chosen screen time!</Alert>
+                    <Alert isOpen={noTicket} color="danger" style={{textAlign:"center"}}>Please select at least one ticket!</Alert>
 
                     <div className="form-mb position-relative">
                         <div className="mb-3" >
