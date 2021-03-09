@@ -1,7 +1,6 @@
 import data from './NewReleases.json';
 import NRFilms from './NRFilms';
 import '../Movies.css'
-import Footer from '../../FooterFolder/Footer';
 
 const NR = () => {
     return (

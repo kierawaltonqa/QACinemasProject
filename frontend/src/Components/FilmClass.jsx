@@ -7,7 +7,6 @@ import U from './FilmClassifications/U';
 import { Nav, Col, Tab, Row } from 'react-bootstrap'
 import "../Css/FilmClass.css";
 import Info from './FilmClassifications/Info';
-import Footer from './FooterFolder/Footer';
 
 
 
