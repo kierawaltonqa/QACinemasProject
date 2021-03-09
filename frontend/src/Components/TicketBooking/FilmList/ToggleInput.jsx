@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Alert, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import "../Resources/TicketBooking.css"
 import axios from "axios";
 import { BOOKING_URL } from "../Resources/CONST.json"
@@ -7,6 +7,8 @@ import { BOOKING_URL } from "../Resources/CONST.json"
 
 const ToggleInput = ({ filmname, basketid }) => {
 
+
+    //* States for database
     const date1 = new Date();
     const [movieName, setMovieName] = useState(filmname)
     const [date, setDate] = useState(date1.toLocaleDateString())
@@ -16,11 +18,30 @@ const ToggleInput = ({ filmname, basketid }) => {
     const [childTic, setChildTic] = useState(0)
     const [deluxe, setDeluxe] = useState(false)
 
+    //* Modal state
     const [hidden, setHidden] = useState(false)
+    // if no name or screentime chosen
+    const [alertHidden, setalertHidden] = useState(false)
+    // if no ticket is chosen
+    const [noTicket, setnoTicket] = useState(false)
 
     const toggleHidden = () => {
 
         setHidden(!hidden);
+    }
+
+    // Alert for no name or time
+    const toggleAlert = () => {
+        setTimeout( () => {
+            setalertHidden(false);
+        }, 3000);
+    }
+
+    // Alert for no ticket chosen
+    const toggleTicketAlert = () => {
+        setTimeout( () => {
+            setnoTicket(false);
+        }, 3000);
     }
 
 
@@ -28,16 +49,30 @@ const ToggleInput = ({ filmname, basketid }) => {
     // CREATE METHOD
 
     const create = () => {
-        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe })
+        if(adultTic + childTic == 0) {
+            setnoTicket(true);
+            toggleTicketAlert();
+        }else{ 
+        var deluxeAnswer = "No";
+        if(deluxe == true){
+            deluxeAnswer = "Yes"
+        }
+        else{
+            deluxeAnswer = "No"
+        }
+        let totalCost = (deluxe ? (adultTic * 14) + (childTic * 10) 
+        : (adultTic * 8) + (childTic * 4));
+        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe : deluxeAnswer, totalCost})
             .then(async (res) => {
                 getBasket(res.data)
-                console.log(res.data);
                 toggleHidden(!hidden);
             })
             .catch((err) => {
                 console.log(err);
+                setalertHidden(true);
+                toggleAlert();
             });
-    }
+    }}
 
     // GET METHOD
 
@@ -47,7 +82,6 @@ const ToggleInput = ({ filmname, basketid }) => {
         await axios.get(`${BOOKING_URL}/readOne/${id}`)
             .then((res) => {
                 basketid(res.data)
-                console.log(res.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -82,9 +116,11 @@ const ToggleInput = ({ filmname, basketid }) => {
 
                 </ModalHeader>
                 <ModalBody style={{ backgroundColor: "gold" }} >
+                    <Alert isOpen={alertHidden} color="danger" style={{textAlign:"center"}}>Please enter your name and chosen screen time!</Alert>
+                    <Alert isOpen={noTicket} color="danger" style={{textAlign:"center"}}>Please select at least one ticket!</Alert>
 
                     <div className="form-mb position-relative">
-                        <div >
+                        <div className="mb-3" >
                             <label htmlFor="" style={{ fontSize: "17px" }}>Ticket Holder Name:</label>
                             <br />
                             <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" onChange={({ target }) => setBookName(target.value)} />
@@ -100,15 +136,15 @@ const ToggleInput = ({ filmname, basketid }) => {
                         </div>
                         <label htmlFor="" style={{ fontSize: "17px" }}>Tickets:</label>
 
-                        <div>
-                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="Adult" onChange={({ target }) => setAdultTic(target.value)} />
+                        <div className="row" style={{marginLeft:"0px"}}>
+                            <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
-                        <input style={{ width: "90px", }} type="number" placeholder="Child" onChange={({ target }) => setChildTic(target.value)} />
+                        <input style={{ width: "90px", }} type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
 
                         <hr />
                         <div className="form-check form-switch">
                             <input className="form-check-input" type="checkbox" value={deluxe} onChange={() => setDeluxe(!deluxe)} />
-                            <label className="form-check-label" style={{ color: "black" }}>Deluxe?</label>
+                            <label className="form-check-label" style={{ color: "black" }}>Deluxe?  +£5 Per ticket</label>
                         </div>
 
 
