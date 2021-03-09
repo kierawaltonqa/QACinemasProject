@@ -30,10 +30,10 @@ const paymentSchema = new Schema({
 //minimal blog setup
 const blogSchema = new Schema({
 
-    lastUpdated: { type: date, required:true},
-    title: { type: String, required: true},
-    blogTest: { type: String, required: true },
-    author: { type: String, required: true}
+    lastUpdated: { type: Date, required: true },
+    title: { type: String, required: true },
+    blogText: { type: String, required: true },
+    author: { type: String, required: true }
 
 });
 
@@ -52,7 +52,7 @@ const BookingSchema = new Schema({
     bookername: { type: String, required: true },
     adultseats: { type: String, required: true },
     childseats: { type: String, required: true },
-    deluxe : {type: Boolean, required: true}
+    deluxe: { type: Boolean, required: true }
 
 })
 const Booking = model('Booking', BookingSchema);
@@ -90,6 +90,6 @@ module.exports = {
     "Payment": Payment,
     "Booking": Booking,
     "Discuss": Discuss,
-    "Comment": Comment
-    "Blog"
+    "Comment": Comment,
+    "Blog": Blog
 }
