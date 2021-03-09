@@ -3,8 +3,7 @@ import Details from "./Details";
 const List = ({ data, query }) => {
 
     if (data.length <= 16) {
-        data.push({ "title": "Tickets", "href": "../TicketBooking" });
-        data.push({ "title": "Booking", "href": "../TicketBooking" });
+        data.push({ "title": "Tickets", "href": "../bookings" });
         data.push({ "title": "Classification", "href": "../FilmClass" });
         data.push({ "title": "About", "href": "../about" });
         data.push({ "title": "Contact Us", "href": "../contact" });

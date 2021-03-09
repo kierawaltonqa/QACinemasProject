@@ -12,9 +12,12 @@ const Kiera = () => {
                     <h3>Kiera Walton</h3>
                     <p>
                         Hi, I'm Kiera! I have loved collaborating with Team Spell to complete this project.
-                        For the most part, I worked on the front end development; designing and implementing the discussion board, the movie listings and new releases, as well as the search bar, and various aspects of the home page and about page.
+                        For the most part, I worked on the front end development; designing and implementing the discussion board, the movie listings and new releases pages, as well as the search bar, and various aspects of the home page and about page.
                         I also took on the role of scrum master for this project, meaning I was in charge of running the daily stand ups and ensuring the successful completion of tasks and sprints.
-                </p>
+                    </p>
+                    <p>
+                        I am really proud of what we have achieved, none of it could have been done without all of our hard work (and of course coffee).
+                    </p>
                 </div>
                 <div className="col-md-3">
                     <br />
