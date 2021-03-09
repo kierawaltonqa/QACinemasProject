@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle, ModalFooter } from 'reactstrap';
+import { Alert, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, ModalFooter } from 'reactstrap';
 import {PAYMENT_URL} from "../Resources/CONST.json"
 
 const CardPayment = ({sethidden}) => {
@@ -13,7 +13,9 @@ const CardPayment = ({sethidden}) => {
     const [expiry, setexpiary] = useState('');
     const [postcode, setpostcode] = useState('');
     const [toC, settoC] = useState(false);
-    const [hideAlert, sethideAlert] = useState("");
+    const [hideAlert, sethideAlert] = useState(false);
+    const [successAlert, setsuccessAlert] = useState(false);
+
 
     const hiddenState = () => {
         setDropHidden(!dropHidden);
@@ -23,10 +25,17 @@ const CardPayment = ({sethidden}) => {
         sethidden(false);
     }
 
+    const dangerAlertFadeAway = () => {
+        setTimeout( () => {
+            sethideAlert(false);
+    },3000);
+    } 
+
     const create = () => {
         if(cardType == "Select..." || cardName == "" || cardNumber == "" || cvv == 0 
             || expiry == "" || postcode == "" || toC == false ) {
-                sethideAlert("Please Fill in all payment details!")
+                sethideAlert(true);
+                dangerAlertFadeAway();
             }
             else{
                 axios.post(`${PAYMENT_URL}/create`, {fullName:cardName, cardType, cardNumber, expiryDate:expiry,CVC:cvv ,postcode  })
@@ -43,9 +52,13 @@ const CardPayment = ({sethidden}) => {
     return (
         <>
         <br/>
-            <div className="alert alert-danger" dismissible role="alert">{hideAlert}</div>
+            <Alert color="danger" isOpen={hideAlert}>Please fill in all payment details!
+            <button className="close">X</button>
+            </Alert>
+            <Alert color="success" isOpen={successAlert}>Congrats on your purchase!
+            <button className="close">X</button>
+            </Alert>
             <div style={{ borderLeft: "20px" }} className="form-mb position-relative">
-                <br />
                 <div className="mb-3">
                     <div className="row">
                         <div className="col-6">
