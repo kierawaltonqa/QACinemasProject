@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Alert, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, ModalFooter } from 'reactstrap';
-import {PAYMENT_URL} from "../Resources/CONST.json"
+import { Alert, ModalFooter } from 'reactstrap';
+import { PAYMENT_URL } from "../Resources/CONST.json"
 
-const CardPayment = ({sethidden}) => {
+const CardPayment = ({ sethidden }) => {
 
     const [dropHidden, setDropHidden] = useState(false);
     const [cardType, setcardType] = useState('Select...');
@@ -26,39 +26,39 @@ const CardPayment = ({sethidden}) => {
     }
 
     const dangerAlertFadeAway = () => {
-        setTimeout( () => {
+        setTimeout(() => {
             sethideAlert(false);
-    },3000);
-    } 
+        }, 3000);
+    }
 
     const successAlertFadeAway = () => {
-        setTimeout( () => {
+        setTimeout(() => {
             sethidden(false);
         }, 4000);
     }
 
     const create = () => {
-        if(cardType == "Select..." || cardName == "" || cardNumber == "" || cvv == 0 
-            || expiry == "" || postcode == "" || toC == false ) {
-                sethideAlert(true);
-                dangerAlertFadeAway();
-            }
-            else{
-                axios.post(`${PAYMENT_URL}/create`, {fullName:cardName, cardType, cardNumber, expiryDate:expiry,CVC:cvv ,postcode  })
+        if (cardType == "Select..." || cardName == "" || cardNumber == "" || cvv == 0
+            || expiry == "" || postcode == "" || toC == false) {
+            sethideAlert(true);
+            dangerAlertFadeAway();
+        }
+        else {
+            axios.post(`${PAYMENT_URL}/create`, { fullName: cardName, cardType, cardNumber, expiryDate: expiry, CVC: cvv, postcode })
                 .then((res) => {
                     console.log(res);
                     setsuccessAlert(true);
                     successAlertFadeAway();
                 }).catch((err) => {
                     console.log(err);
-                } )
-            }
+                })
+        }
     }
 
 
     return (
         <>
-        <br/>
+            <br />
             <Alert color="danger" isOpen={hideAlert}>Please fill in all payment details!
             </Alert>
             <Alert color="success" isOpen={successAlert}>Congrats on your purchase!

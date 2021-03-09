@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Tab, Tabs } from 'react-bootstrap'
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
+import { Modal, ModalBody, ModalHeader } from 'reactstrap'
 import CardPayment from './CardPayment';
 
-const PaymentModal = ({ hidden , sethidden }) => {
+const PaymentModal = ({ hidden, sethidden }) => {
 
     const [key, setKey] = useState('home');
-    
+
 
     return (
         <Modal isOpen={hidden} className="modal-container modal-dialog modal-dialog-centered ">
@@ -23,8 +23,8 @@ const PaymentModal = ({ hidden , sethidden }) => {
                 >
                     <Tab eventKey="home" title="Credit/Debit Cards">
 
-                        <CardPayment sethidden={sethidden}/>
-                        
+                        <CardPayment sethidden={sethidden} />
+
 
                     </Tab>
                     <Tab eventKey="profile" title="PayPal">
