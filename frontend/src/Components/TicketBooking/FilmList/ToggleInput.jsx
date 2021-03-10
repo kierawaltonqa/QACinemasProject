@@ -95,7 +95,7 @@ const ToggleInput = ({ filmname, basketid }) => {
 
         <>
             <div>
-                <button id="pressButton" className="btn btn-dark" style={{ marginLeft: "10px" }} onClick={toggleHidden}>Press</button>
+                <button id="pressButton" className="btn btn-dark" style={{ marginLeft: "10px" }} onClick={toggleHidden}>+</button>
             </div>
 
             <Modal isOpen={hidden} className="modal-lg modal-dialog modal-dialog-centered ">
