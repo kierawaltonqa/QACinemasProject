@@ -10,8 +10,10 @@ const ToggleInput = ({ filmname, basketid }) => {
 
     //* States for database
     const date1 = new Date();
-    const [movieName, setMovieName] = useState(filmname)
-    const [date, setDate] = useState(date1.toLocaleDateString())
+    const movieName = filmname;
+    // const [movieName, setMovieName] = useState(filmname)
+    const date = date1.toLocaleDateString();
+    // const [date, setDate] = useState(date1.toLocaleDateString())
     const [time, setTime] = useState("")
     const [bookName, setBookName] = useState("")
     const [adultTic, setAdultTic] = useState(0)
@@ -32,14 +34,14 @@ const ToggleInput = ({ filmname, basketid }) => {
 
     // Alert for no name or time
     const toggleAlert = () => {
-        setTimeout( () => {
+        setTimeout(() => {
             setalertHidden(false);
         }, 3000);
     }
 
     // Alert for no ticket chosen
     const toggleTicketAlert = () => {
-        setTimeout( () => {
+        setTimeout(() => {
             setnoTicket(false);
         }, 3000);
     }
@@ -49,30 +51,31 @@ const ToggleInput = ({ filmname, basketid }) => {
     // CREATE METHOD
 
     const create = () => {
-        if(adultTic + childTic == 0) {
+        if (adultTic + childTic === 0) {
             setnoTicket(true);
             toggleTicketAlert();
-        }else{ 
-        var deluxeAnswer = "No";
-        if(deluxe == true){
-            deluxeAnswer = "Yes"
+        } else {
+            var deluxeAnswer = "No";
+            if (deluxe === true) {
+                deluxeAnswer = "Yes"
+            }
+            else {
+                deluxeAnswer = "No"
+            }
+            let totalCost = (deluxe ? (adultTic * 14) + (childTic * 10)
+                : (adultTic * 8) + (childTic * 4));
+            axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe: deluxeAnswer, totalCost })
+                .then(async (res) => {
+                    getBasket(res.data)
+                    toggleHidden(!hidden);
+                })
+                .catch((err) => {
+                    console.log(err);
+                    setalertHidden(true);
+                    toggleAlert();
+                });
         }
-        else{
-            deluxeAnswer = "No"
-        }
-        let totalCost = (deluxe ? (adultTic * 14) + (childTic * 10) 
-        : (adultTic * 8) + (childTic * 4));
-        axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe : deluxeAnswer, totalCost})
-            .then(async (res) => {
-                getBasket(res.data)
-                toggleHidden(!hidden);
-            })
-            .catch((err) => {
-                console.log(err);
-                setalertHidden(true);
-                toggleAlert();
-            });
-    }}
+    }
 
     // GET METHOD
 
@@ -89,54 +92,42 @@ const ToggleInput = ({ filmname, basketid }) => {
     }
 
 
-    //! TEST
-    const testing = () => {
-        console.log(movieName);
-        console.log(date);
-        console.log(time);
-        console.log(bookName);
-        console.log(adultTic);
-        console.log(childTic);
-        console.log(deluxe);
-    }
-
-
 
 
     return (
 
         <>
             <div>
-                <button id="pressButton" className="btn btn-secondary" style={{ marginLeft: "10px" }} onClick={toggleHidden}>Press</button>
+                <button id="pressButton" className="btn btn-dark" style={{ marginLeft: "10px" }} onClick={toggleHidden}>+</button>
             </div>
 
-            <Modal isOpen={hidden} className="modal-container modal-dialog modal-dialog-centered ">
-                <ModalHeader style={{ backgroundColor: "black", color: "white" }}>
+            <Modal isOpen={hidden} className="modal-lg modal-dialog modal-dialog-centered ">
+                <ModalHeader style={{ backgroundColor: "black", color: "gold" }}>
                     Purchase Tickets: {filmname}
 
                 </ModalHeader>
                 <ModalBody style={{ backgroundColor: "gold" }} >
-                    <Alert isOpen={alertHidden} color="danger" style={{textAlign:"center"}}>Please enter your name and chosen screen time!</Alert>
-                    <Alert isOpen={noTicket} color="danger" style={{textAlign:"center"}}>Please select at least one ticket!</Alert>
+                    <Alert isOpen={alertHidden} color="danger" style={{ textAlign: "center" }}>Please enter your name and chosen screen time!</Alert>
+                    <Alert isOpen={noTicket} color="danger" style={{ textAlign: "center" }}>Please select at least one ticket!</Alert>
 
                     <div className="form-mb position-relative">
                         <div className="mb-3" >
-                            <label htmlFor="" style={{ fontSize: "17px" }}>Ticket Holder Name:</label>
+                            <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Ticket Holder Name:</label>
                             <br />
                             <input style={{ width: "180px" }} type="text" placeholder="Enter Name:" onChange={({ target }) => setBookName(target.value)} />
                         </div>
                         <hr style={{ backgroundColor: "black" }} />
                         <div>
-                            <label htmlFor="" style={{ fontSize: "17px" }}>Screen Time:</label>
+                            <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Screen Time:</label>
                             <br />
                             <input style={{ width: "90px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
                         </div>
                         <br />
                         <div>
                         </div>
-                        <label htmlFor="" style={{ fontSize: "17px" }}>Tickets:</label>
+                        <label htmlFor="" style={{ fontSize: "17px", color:"black" }}>Tickets:</label>
 
-                        <div className="row" style={{marginLeft:"0px"}}>
+                        <div className="row" style={{ marginLeft: "0px" }}>
                             <input style={{ width: "90px", marginRight: "4px" }} type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
                         <input style={{ width: "90px", }} type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />

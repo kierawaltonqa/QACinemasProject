@@ -126,10 +126,10 @@ You should now have a fully working MERN stack application!
 
 ## Authors
 
-Sam Costello - Developer - [Sam Constello ](https://github.com/scostello-hubQA)  
+Sam Costello - Developer - [Sam Costello ](https://github.com/scostello-hubQA)  
 Mohamud Mussa - Developer - [Mohamud Mussa](https://github.com/MohamudMussa)  
 Kiera Walton - Developer - [Kiera Walton](https://github.com/kierawaltonqa)  
-Roberty Tolley - Developer - [Roberty Tolley](https://github.com/RobertTolleyQA)  
+Robert Tolley - Developer - [Robert Tolley](https://github.com/RobertTolleyQA)  
 
 ## License
 

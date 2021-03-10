@@ -51,5 +51,10 @@ describe(`Post Discussion Testing`, () => {
         expect(p6.children[1]).toContain([item.rating]);
     })
 
+    it(`should match the snapshot`, () => {
+        const instance = create(<EachPost item={item} />).toJSON();
+        expect(instance).toMatchSnapshot();
+    })
+
 
 })

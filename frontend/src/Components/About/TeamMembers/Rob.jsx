@@ -1,4 +1,3 @@
-import Media from "react-bootstrap/Media";
 import rob from '../../../Resources/rob.png';
 
 const Rob = () => {
@@ -38,4 +37,4 @@ const Rob = () => {
     )
 }
 
-export default Rob; 
+export default Rob;

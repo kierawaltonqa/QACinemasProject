@@ -1,10 +1,8 @@
-import { useState } from 'react';
-import { CardLink, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const NRDetails = ({ title, runtime, rating, director, poster, actors, modal, toggle, setModal }) => {
 
-    // const [modal, setModal] = useState(false);
-    // const toggle = () => setModal(!modal);
+
 
     return (
         <>

@@ -3,11 +3,17 @@ import ReadAll from '../FilmList/ReadAll'
 import Sidebar from '../Sidebar/Sidebar'
 import "../Resources/TicketBooking.css"
 import { Alert } from 'reactstrap'
+import SearchBar from './SearchBar'
 
 const TicketBooking = () => {
 
     const [basketid, setbasketid] = useState({});
     const [ticketAlert, setticketAlert] = useState(false);
+    const [query, setquery] = useState("")
+
+    const handleQuery = (e) => {
+        setquery(e.target.value);
+    }
 
 
 
@@ -18,15 +24,17 @@ const TicketBooking = () => {
     return (
 
         <>
+        <hr/>
             <div className="row">
                 <div className="col-9">
                     <br />
-                    <h2 style={{ color: "white", backgroundColor: "grey", marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
+                    <h2 style={{ color: "gold",  marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
                     <Alert isOpen={ticketAlert} style={{marginLeft:"25px", textAlign:"center"}} color="danger">Please select a movie and seats before purchasing!</Alert>
+                    <SearchBar query={query} setquery={handleQuery} />
                     <br />
                     <br />
                     <div className="">
-                        <ReadAll basketid={setbasketid} />
+                        <ReadAll basketid={setbasketid} query={query} />
                     </div>
                 </div>
                 <div className="col-3" style={{backgroundColor:"black"}}>
