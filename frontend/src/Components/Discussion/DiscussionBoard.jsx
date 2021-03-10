@@ -2,8 +2,7 @@ import PostDiscussion from "./PostDiscussion";
 import { useState } from 'react';
 import ReadDiscussion from "./ReadDiscussion";
 import './Discussion.css';
-import penguin from '../../Resources/penguin2.jpg'
-
+import penguin from '../../Resources/penguin2.jpg';
 
 const DiscussionBoard = () => {
 
