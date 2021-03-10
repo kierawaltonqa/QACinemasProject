@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import films from "../../../Resources/Movies.json"
+import SearchBar from '../MainPage/SearchBar'
 import ToggleInput from './ToggleInput'
 
-const ReadAll = ({basketid, query}) => {
+const ReadAll = ({basketid}) => {
+
+    const [query, setquery] = useState("")
 
     const byQuery = (query) => (films) => films.title.toLowerCase().includes(query.toLowerCase());
 
     let filteredList = [];
     filteredList = films.filter(byQuery(query));
+
+
+    const handleQuery = (e) => {
+        setquery(e.target.value);
+    }
 
 
 
@@ -16,6 +24,7 @@ const ReadAll = ({basketid, query}) => {
 
         <>
             <div className="container">
+            <SearchBar query={query} setquery={handleQuery} />
                 {filteredList.map((film) => (
                     <div key={film.id} >
                         <hr />

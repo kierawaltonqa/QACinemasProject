@@ -9,11 +9,6 @@ const TicketBooking = () => {
 
     const [basketid, setbasketid] = useState({});
     const [ticketAlert, setticketAlert] = useState(false);
-    const [query, setquery] = useState("")
-
-    const handleQuery = (e) => {
-        setquery(e.target.value);
-    }
 
 
 
@@ -30,11 +25,10 @@ const TicketBooking = () => {
                     <br />
                     <h2 style={{ color: "gold",  marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
                     <Alert isOpen={ticketAlert} style={{marginLeft:"25px", textAlign:"center"}} color="danger">Please select a movie and seats before purchasing!</Alert>
-                    <SearchBar query={query} setquery={handleQuery} />
                     <br />
                     <br />
                     <div className="">
-                        <ReadAll basketid={setbasketid} query={query} />
+                        <ReadAll basketid={setbasketid} />
                     </div>
                 </div>
                 <div className="col-3" style={{backgroundColor:"black"}}>

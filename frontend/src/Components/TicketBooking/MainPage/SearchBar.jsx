@@ -4,8 +4,8 @@ import { Form } from 'reactstrap'
 
 const SearchBar = ({ query, setquery }) => {
     return (
-        <div style={{marginLeft:"30px", }}>
-            <Form inline >
+        <div >
+            <Form inline  >
                 <FormControl type="text"
                     placeholder="Search"
                     className="mr-sm-2"
