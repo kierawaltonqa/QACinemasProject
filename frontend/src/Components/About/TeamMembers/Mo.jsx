@@ -1,4 +1,4 @@
-import Media from "react-bootstrap/Media";
+
 import mo from "../../../Resources/avatar2.png";
 
 const Mo = () => {
