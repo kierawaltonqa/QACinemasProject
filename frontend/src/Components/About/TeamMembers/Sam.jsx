@@ -31,7 +31,7 @@ const Sam = () => {
 
                 <p>Below is where you will find all of my experiments:</p>
                 <a id="GitHubLink" href="https://github.com/scostello-hubQA" target="_blank" rel="noreferrer">Sam's GitHub</a>
-                <GoGitBranch size={20} />
+                <GoGitBranch size={30} />
 
 
 
