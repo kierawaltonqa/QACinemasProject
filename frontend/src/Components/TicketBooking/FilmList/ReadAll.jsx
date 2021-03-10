@@ -2,7 +2,12 @@ import React from 'react'
 import films from "../../../Resources/Movies.json"
 import ToggleInput from './ToggleInput'
 
-const ReadAll = ({basketid}) => {
+const ReadAll = ({basketid, query}) => {
+
+    const byQuery = (query) => (films) => films.title.toLowerCase().includes(query.toLowerCase());
+
+    let filteredList = [];
+    filteredList = films.filter(byQuery(query));
 
 
 
@@ -11,7 +16,7 @@ const ReadAll = ({basketid}) => {
 
         <>
             <div className="container">
-                {films.map((film) => (
+                {filteredList.map((film) => (
                     <div key={film.id} >
                         <hr />
                         <div className="row" style={{marginLeft:"20px"}}>
