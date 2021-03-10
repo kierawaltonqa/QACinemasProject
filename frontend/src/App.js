@@ -2,7 +2,6 @@ import './Resources/App.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation';
-import Screenpage from './Components/Screens/Screenpage';
 
 import FilmClass from './Components/FilmClass';
 import './Resources/Sidebar.css';
@@ -17,8 +16,9 @@ import TicketBooking from './Components/TicketBooking/MainPage/TicketBooking';
 import ContactUsPage from './Components/ContactUs/ContactUsPage';
 
 import Home from './Components/HomePage/Home';
-import SearchPage from './Components/Search/SearchPage';
 import Footer from './Components/FooterFolder/Footer';
+import Screenpage from './Components/Screens/MainScreen/Screenpage';
+import SearchPage from './Components/Search/SearchPage';
 
 
 
@@ -52,7 +52,7 @@ function App() {
           </Route>
 
           <Route path="/screens">
-            <Screenpage />
+            <Screenpage/>
           </Route>
 
           <Route path="/contact">
@@ -60,7 +60,7 @@ function App() {
           </Route>
 
           <Route path="/search">
-            <SearchPage />
+            <SearchPage/>
           </Route>
           <Route path="/bookings">
             <TicketBooking />

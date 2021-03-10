@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Screen.css"
+import "../Resources/Screen.css"
 
 const ScreensReadMore = ({screen, toggleState}) => {
 

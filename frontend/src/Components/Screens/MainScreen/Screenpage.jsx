@@ -1,13 +1,13 @@
-import CarouselComp from "./CarouselComp";
-import pic1 from "./ScreenPics/StandardSeatingPlanBlack.png"
-import pic2 from "./ScreenPics/standard-seating-in-screen.png"
-import pic3 from "./ScreenPics/StandardSeatPic3.png"
-import "./Screen.css"
-import pic4 from "./ScreenPics/deluxeSeating1.png"
-import pic5 from "./ScreenPics/deluxeSeating2.png"
-import pic6 from "./ScreenPics/DeluxeSeatingPlan.png"
-import ScreensReadMore from "./ScreensReadMore";
-import ReadMoreText from "./ReadMoreText";
+import CarouselComp from "../CarouselComp";
+import pic1 from "../ScreenPics/StandardSeatingPlanBlack.png"
+import pic2 from "../ScreenPics/standard-seating-in-screen.png"
+import pic3 from "../ScreenPics/StandardSeatPic3.png"
+import "../Resources/Screen.css"
+import pic4 from "../ScreenPics/deluxeSeating1.png"
+import pic5 from "../ScreenPics/deluxeSeating2.png"
+import pic6 from "../ScreenPics/DeluxeSeatingPlan.png"
+import ScreensReadMore from "../ScreenInfo/ScreensReadMore";
+import ReadMoreText from "../ScreenInfo/ReadMoreText";
 import { useState } from "react";
 
 
@@ -51,7 +51,7 @@ const Screenpage = () => {
                     <p id="beauty" style={{color:"gold"}} className="myTitle">Standard Seating</p>
                 </div>
                 <div className="col-6">
-                    <p id="beauty"  className="myTitle" style={{ textAlign: "inherit", color:"gold" }}>Deluxe Seating</p>
+                    <p id="beauty"  className="myTitle" style={{color:"gold" }}>Deluxe Seating</p>
                 </div>
             </div>
 

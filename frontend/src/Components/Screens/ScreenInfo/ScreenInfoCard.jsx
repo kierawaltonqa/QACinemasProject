@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Screen.css"
+import "../Resources/Screen.css"
 const ScreenInfoCard = ({title,cost,desc}) => {
 
     return (
