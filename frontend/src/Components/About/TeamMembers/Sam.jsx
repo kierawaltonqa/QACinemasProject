@@ -23,6 +23,7 @@ const Sam = () => {
                         I first started coding at the start of december 2020 - and this is the first team software development project that I have been involved with.
                 </p>
                     <p>Below is where you will find all of my experiments:</p><a id="GitHubLink" href="https://github.com/scostello-hubQA" target="_blank" rel="noreferrer">Sam's GitHub</a>
+                    <GoGitBranch size={30} />
 
                 </div>
                 <div className="col-md-3">
