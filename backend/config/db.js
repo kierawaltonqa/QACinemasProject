@@ -41,6 +41,15 @@ const blogSchema = new Schema({
 const Blog = model(`Blog`, blogSchema);
 
 
+//minimal login setup
+const loginSchema = new Schema({
+
+    userName: { type: String, required: true },
+    password: { type: String, required: true },
+
+});
+
+const Login = model(`Login`, loginSchema);
 
 
 const Payment = model(`Payment`, paymentSchema);
@@ -92,5 +101,6 @@ module.exports = {
     "Booking": Booking,
     "Discuss": Discuss,
     "Comment": Comment,
-    "Blog": Blog
+    "Blog": Blog,
+    "Login": Login
 }
