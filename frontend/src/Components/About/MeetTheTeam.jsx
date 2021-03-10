@@ -21,6 +21,7 @@ const MeetTheTeam = () => {
           <Rob />
           <hr />
           <Sam />
+          <hr />
           <Kiera />
           <hr />
 

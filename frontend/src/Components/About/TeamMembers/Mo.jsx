@@ -1,4 +1,5 @@
-import logo from "../../../Resources/Logo/logo.jpg"
+
+import mo from "../../../Resources/avatar2.png";
 
 const Mo = () => {
 
@@ -19,11 +20,11 @@ const Mo = () => {
                 <div className="col-md-3">
                     <center>
                         <img
-                            width={120}
-                            height={120}
+                            width={175}
+                            height={175}
                             padding={20}
                             className="align-self-start mr-3"
-                            src={logo}
+                            src={mo}
                             alt="Generic placeholder"
                         />
                     </center>

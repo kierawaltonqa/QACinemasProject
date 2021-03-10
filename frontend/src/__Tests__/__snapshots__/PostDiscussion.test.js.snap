@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Discussion Testing should match the snapshot 1`] = `
+<div
+  className="p-6 my-2 rounded"
+>
+  <div
+    className="toast fade"
+    id="toast"
+    role="alert"
+  >
+    <div
+      className="toast-header"
+      id="toastheader"
+    >
+      <strong
+        className="mr-auto"
+      >
+        <h5>
+          frank
+          's post about 
+          RED
+        </h5>
+      </strong>
+    </div>
+    <div
+      className="toast-body"
+      style={
+        Object {
+          "height": "auto",
+        }
+      }
+    >
+      <p
+        id="film-header"
+      >
+        Film:
+      </p>
+      <p
+        id="film-point"
+      >
+        RED
+      </p>
+      <p
+        id="topic-header"
+      >
+        Topic:
+      </p>
+      <p
+        id="topic-point"
+      >
+        Old
+      </p>
+      <p
+        id="discussion-header"
+      >
+        Discussion point:
+      </p>
+      <p
+        id="discussion-point"
+      >
+        This is an older film, but it is still really good
+      </p>
+      <p
+        id="rating"
+      >
+        Rating: 
+        7
+      </p>
+      <hr />
+      <a
+        className="btn btn-outline-danger card-link"
+        onClick={[Function]}
+      >
+        X
+      </a>
+      <a
+        className="btn btn-outline-dark card-link"
+        onClick={[Function]}
+      >
+        Edit
+      </a>
+      <a
+        className="btn btn-outline-primary card-link"
+      >
+        Comment
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -61,6 +61,7 @@ const EditPost = ({ item, trigger }) => {
                             value={updateTopic}
                             className="form-control"
                             placeholder="topic"
+                            required
                             onChange={({ target }) => setUTopic(target.value)} />
                         <br />
                         <label>Discussion point:</label>
@@ -68,10 +69,13 @@ const EditPost = ({ item, trigger }) => {
                             value={updateDiscussion}
                             className="form-control"
                             placeholder="discussion point"
+                            required
                             onChange={({ target }) => setUDiscussion(target.value)} />
                         <br />
                         <label>Rating:</label>
                         <input type="number"
+                            max="10"
+                            min="1"
                             value={updateRating}
                             className="form-control"
                             placeholder="rating"

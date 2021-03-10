@@ -48,6 +48,7 @@ const PostDiscussion = ({ trigger }) => {
                             value={name}
                             className="form-control"
                             placeholder="enter your name"
+                            required
                             onChange={({ target }) => setName(target.value)} />
                         <br />
                         <label>Select the Movie</label>
@@ -70,17 +71,20 @@ const PostDiscussion = ({ trigger }) => {
                             value={topic}
                             className="form-control"
                             placeholder="topic"
+                            required
                             onChange={({ target }) => setTopic(target.value)} />
                         <br />
                         <input type="text"
                             value={discussion}
                             className="form-control"
                             placeholder="discussion point"
+                            required
                             onChange={({ target }) => setDiscussion(target.value)} />
                         <br />
                         <label>Rating (/10):</label>
                         <input type="number"
                             max="10"
+                            min="1"
                             value={rating}
                             className="form-control"
                             placeholder="rating"

@@ -6,9 +6,7 @@
 # Team Spell QACinema Project 
 
 
-Weclome to out full stack cinema project 
-
-The objective for this project was to, as a team, using the tech listed below, create a full-stack web application that encapsulates all of our training materials to date. 
+Welcome to team Spell's full stack cinema application. The objective for this project was to create a full-stack web application using the MERN stack. The data layer was created using MongoDb, a non-relational database. The back end, built using Node (a cross-platform javascript runtime compiler) and Express (a web application framework for node), constructs an API. The front was built using React - a front end javascript framework used to create a reactive user interface. This web application was developed and implemented with the goal of... (will finish tomorrow - Kiera)
 
 
 
