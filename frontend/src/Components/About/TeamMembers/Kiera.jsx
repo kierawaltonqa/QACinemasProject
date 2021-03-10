@@ -21,7 +21,7 @@ const Kiera = () => {
                         I am really proud of what we have achieved, none of it could have been done without all of our hard work (and of course coffee).
                     </p>
                     <a href="https://github.com/kierawaltonqa" target="_blank" rel="noreferrer"> <p>Here's my GitHub!
-                        <FaRegKissWinkHeart id="icon" size={30} />
+                        {/* <FaRegKissWinkHeart id="icon" size={30} /> */}
                         <GiCoffeeCup id="icon" size={30} />
                     </p></a>
                 </div>
