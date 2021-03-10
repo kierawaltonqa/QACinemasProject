@@ -81,6 +81,7 @@ const PostDiscussion = ({ trigger }) => {
                         <label>Rating (/10):</label>
                         <input type="number"
                             max="10"
+                            min="1"
                             value={rating}
                             className="form-control"
                             placeholder="rating"

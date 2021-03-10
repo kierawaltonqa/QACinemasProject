@@ -72,6 +72,8 @@ const EditPost = ({ item, trigger }) => {
                         <br />
                         <label>Rating:</label>
                         <input type="number"
+                            max="10"
+                            min="1"
                             value={updateRating}
                             className="form-control"
                             placeholder="rating"
