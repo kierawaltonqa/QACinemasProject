@@ -1,4 +1,4 @@
-import { FaRegKissWinkHeart } from 'react-icons/fa';
+
 import { GiCoffeeCup } from 'react-icons/gi';
 import kiera from "../../../Resources/kieraimg.JPG";
 import './Kiera.css';
