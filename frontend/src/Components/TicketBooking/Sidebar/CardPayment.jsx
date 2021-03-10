@@ -96,7 +96,7 @@ const CardPayment = ({ sethidden }) => {
                             <input onChange={({ target }) => setcvv(target.value)} className="form-control" type="number" placeholder="000" />
                         </div>
                         <div className="col-4">
-                            <label className="form-label" style={{color:"black"}} htmlFor="">Expiary date</label>
+                            <label className="form-label" style={{color:"black"}} htmlFor="">Expiry date</label>
                             <input onChange={({ target }) => setexpiary(target.value)} className="form-control" type="date" />
                         </div>
                         <div className="col-4">

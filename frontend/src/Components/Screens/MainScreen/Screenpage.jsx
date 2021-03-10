@@ -1,4 +1,4 @@
-import CarouselComp from "../CarouselComp";
+import CarouselComp from "../MainScreen/CarouselComp";
 import pic1 from "../ScreenPics/StandardSeatingPlanBlack.png"
 import pic2 from "../ScreenPics/standard-seating-in-screen.png"
 import pic3 from "../ScreenPics/StandardSeatPic3.png"

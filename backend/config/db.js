@@ -37,8 +37,8 @@ const BookingSchema = new Schema({
     date: { type: String, required: true },
     time: { type: String, required: true },
     bookername: { type: String, required: true },
-    adultseats: { type: String, required: true },
-    childseats: { type: String, required: true },
+    adultseats: { type: Number, required: true, min: 0 },
+    childseats: { type: Number, required: true, min: 0 },
     deluxe : {type: String, required: true},
     totalCost : {type: String, required: true}
 
