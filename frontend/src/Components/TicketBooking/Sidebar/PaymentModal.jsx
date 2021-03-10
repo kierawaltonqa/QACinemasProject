@@ -28,6 +28,9 @@ const PaymentModal = ({ hidden, sethidden }) => {
 
                     </Tab>
                     <Tab eventKey="profile" title="PayPal">
+                        <hr style={{ borderColor: "black" }} />
+                        <h2 style={{ color: "black", textAlign: "center" }}>Coming soon..</h2>
+                        <hr style={{ borderColor: "black" }} />
 
                     </Tab>
                 </Tabs>
@@ -35,7 +38,7 @@ const PaymentModal = ({ hidden, sethidden }) => {
 
             </ModalBody>
 
-        </Modal>
+        </Modal >
     )
 }
 
