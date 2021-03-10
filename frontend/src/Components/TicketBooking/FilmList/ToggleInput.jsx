@@ -140,7 +140,7 @@ const ToggleInput = ({ filmname, basketid }) => {
                         <div>
                             <label htmlFor="" style={{ fontSize: "17px", color: "black" }}>Screen Time:</label>
                             <br />
-                            <input style={{ width: "90px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
+                            <input  style={{ width: "110px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
                         </div>
                         <br />
                         <div>
@@ -148,9 +148,9 @@ const ToggleInput = ({ filmname, basketid }) => {
                         <label htmlFor="" style={{ fontSize: "17px", color: "black" }}>Tickets:</label>
 
                         <div className="row" style={{ marginLeft: "0px" }}>
-                            <input style={{ width: "90px", marginRight: "4px" }} className="form-control" min="0" type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
+                            <input  style={{ width: "90px", marginRight: "4px" }}  min="0" type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
-                        <input style={{ width: "90px", }} className="form-control" min="0" type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
+                        <input  style={{ width: "90px", }}  min="0" type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
 
                         <hr />
                         <div className="form-check form-switch">
