@@ -56,8 +56,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-1. You will need to clone down the repo  
+1. Clone this repo  
 2. Open the folder in your IDE/VS code 
+3. Run 'npm start' in the terminal in the back end folder
+4. Run 'npm start' in the terminal in the front end folder
+5. Once you have started both servers, you will have access to the webpage and it's functionality
 
 ## Testing
 
