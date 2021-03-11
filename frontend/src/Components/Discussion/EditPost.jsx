@@ -7,7 +7,6 @@ import data from '../../Resources/Movies.json';
 const EditPost = ({ item, trigger }) => {
 
     const { name, movie, topic, discussion, rating } = item;
-    // const [updateName, setUName] = useState(name);
     const [updateMovie, setUMovie] = useState(movie);
     const [updateTopic, setUTopic] = useState(topic);
     const [updateDiscussion, setUDiscussion] = useState(discussion);

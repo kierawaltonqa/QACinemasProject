@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import axios from 'axios';
 import { DISCUSSION_URL } from './CONSTS.json';
-// import penguinimg from '../../Resources/penguinwtf2.png';
 import data from '../../Resources/Movies.json';
 
 const PostDiscussion = ({ trigger }) => {
@@ -13,8 +12,7 @@ const PostDiscussion = ({ trigger }) => {
     const [discussion, setDiscussion] = useState('');
     const [rating, setRating] = useState(0);
 
-    const Filter = require('bad-words')
-    // const filter = new Filter();
+    const Filter = require('bad-words');
     var customFilter = new Filter({ placeHolder: '*' });
 
     const createDiscussion = async (e) => {
@@ -49,12 +47,14 @@ const PostDiscussion = ({ trigger }) => {
                             className="form-control"
                             placeholder="enter your name"
                             required
+
                             onChange={({ target }) => setName(target.value)} />
                         <br />
                         <label>Select the Movie</label>
                         <select name="film" class="form-control" placeholder="Select film"
                             onChange={({ target }) => setMovie(target.value)}
-                            value={movie}>
+                            value={movie}
+                        >
                             <option value="reset" disabled selected hidden>Please Choose...</option>
                             {
                                 data.map((film) => (
@@ -72,6 +72,7 @@ const PostDiscussion = ({ trigger }) => {
                             className="form-control"
                             placeholder="topic"
                             required
+
                             onChange={({ target }) => setTopic(target.value)} />
                         <br />
                         <input type="text"
@@ -79,6 +80,7 @@ const PostDiscussion = ({ trigger }) => {
                             className="form-control"
                             placeholder="discussion point"
                             required
+
                             onChange={({ target }) => setDiscussion(target.value)} />
                         <br />
                         <label>Rating (/10):</label>

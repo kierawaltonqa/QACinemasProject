@@ -7,8 +7,6 @@ const Details = ({ item }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    // const actors = item.actors;
-
     if (item.img == null) {
         return null;
     }
