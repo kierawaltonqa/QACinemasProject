@@ -44,7 +44,7 @@ These instructions will get you a copy of the project up and running on your loc
     * Coverage - NYC 
 
 
-### Prerequisite
+### Prerequisites
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Java 14.1](https://www.eclipse.org/downloads/)
 * [Git](https://git-scm.com/downloads)
