@@ -15,6 +15,8 @@ const Rob = () => {
                 I lead the development on the screens page, followed by the ticket booking and payment webpage.
                 My main focus was on ensuring all functionality behind the pages worked as effectively as possible,
                     to then focus on collaborating with my team to ensure the styling was consistent for the website design. </p>
+                    <a href="https://github.com/RobertTolleyQA" target="_blank" rel="noreferrer"> <p>Here be my github!                        
+                    </p></a>
             </div>
             <div className="col-md-3">
                 <br />
