@@ -1,0 +1,17 @@
+body{
+    color: white!important;
+    font-family: monospace!important;
+}
+#modal-header, #modalfooter{
+    background-color: black;
+
+}
+#modal-body{
+    color: black;
+}
+#allbarone{
+    margin-bottom: 0rem;
+}
+#res-button, #bar-button{
+    margin-bottom: 1rem;
+}

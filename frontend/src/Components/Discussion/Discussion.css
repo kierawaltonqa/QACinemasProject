@@ -1,0 +1,104 @@
+#toast{
+    background-color: gold;
+    color: black;
+    font-family: monospace;
+    height: 380px;
+    width: 550px
+}
+#toastheader{
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+
+#discussionboard-title{
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #000;
+    text-align: center;
+    font-family: monospace;
+}
+#discussionboard-subtitle{
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    text-align: center;
+    font-family: monospace;
+}
+#rating{
+    text-align: right;
+    font-size: small;
+    padding-right: 2rem;
+    padding-top: .3rem;
+}
+#film-header {
+    text-align: center;
+    line-height: 0%;
+    font-size: small;
+    padding-top: .6rem;
+}
+#topic-header, #discussion-header {
+    text-align: center;
+    line-height: 0%;
+    font-size: small;
+}
+#topic-point, #film-point, #discussion-point{
+    text-align: center;
+    font-size: medium;
+    padding-bottom: .6rem;
+}
+#discussion-body{
+    background-color: gold;
+}
+#discussion-card-title{
+    font-family: monospace;
+    font-size: 120%;
+
+}
+#form {
+    font-family: monospace;
+    background-color: gold;
+    color: black;
+}
+#hr {
+    border: 1.5px solid black;
+}
+#alert{
+    font-family: monospace;
+    width: 760px;
+    background-color: white;
+    color: black;
+}
+#edit-header, #edit-footer, #delete-footer{
+    background-color: black;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+#edit-form{
+    font-family: monospace;
+    
+}
+#discussionpenguins{
+    height: 100px;
+    width: 100px;
+    padding-top: 1rem;
+}
+#penguin{
+    height: 180px;
+    width: 250px;
+    padding: .2rem;
+    margin-left:.1rem;
+}
+#sidebar{
+    min-height: 50vh; 
+}
+#delete-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+#edit-modal-body, #delete-modal-body{
+    color: black;
+}

@@ -1,0 +1,44 @@
+#bookingside {
+    box-shadow: 1px 1px 10px gold;
+    color: black;
+}
+
+#ticketform {
+    text-align: center;
+  }
+
+#monotext {
+    font-family: monospace;
+}
+
+#customFullModal {
+
+
+    min-height: 100vh;
+    border-radius: 0;
+}
+
+#customModalContent {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+
+}
+
+#pressButton:hover{
+    color: gold;
+}
+
+
+.shoppingPara {
+    color: black;
+    font-size: 14px;
+    font-weight: 1000;
+}
+
+.basketHr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-width: 1px;
+    border-color: black;
+}

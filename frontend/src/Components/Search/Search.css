@@ -1,0 +1,11 @@
+#search-page{
+    color: white!important;
+    text-shadow: 2px 2px 10px #000 
+}
+#list-page{
+    font-family: monospace;
+}
+#search-penguin{
+    width: 120px;
+    height: 90px;
+}

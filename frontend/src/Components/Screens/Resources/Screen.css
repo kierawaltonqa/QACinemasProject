@@ -1,0 +1,45 @@
+#bodyIndex {
+    background-color: black;
+}
+
+#beauty {
+    font-family: monospace;
+    font-weight: 300;
+    color: white;
+    font-style: italic;
+}
+
+.myTitle {
+    font-family: monospace;
+    font-size: 6vmin;
+    font-weight: 300;
+    color: white;
+    padding-left: 20%;
+}
+
+#myButton {
+    font-weight: 600;
+    color: black;
+    font-size: 4vmin;
+
+}
+
+.slider-container {
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+
+    
+    }
+
+#myInfo {
+        font-family: monospace;
+        font-weight: 600;
+        color: gold;
+        font-size: 3vmin;
+
+    }
+
+#myInfoTitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

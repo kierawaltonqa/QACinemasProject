@@ -1,0 +1,161 @@
+
+body {
+    font-family: monospace;
+    background: black;
+    font-size: 19px;
+}
+.formdiv{
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color:gold;
+  padding: 20px;
+}
+
+.middle{
+  padding-top: 30vmin;
+}
+
+.footerTimes{
+  margin: 18px;
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color:gold;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.send{
+
+  width: 10%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+
+}
+
+.form{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.cssStyle{
+/* light / pill / selected */
+
+/* Auto Layout */
+
+
+/* Light / Black */
+background: #373F41;
+
+
+/* Label */
+
+
+/* Subtitle 1 - semibold 16 (22, 0.1px) */
+font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 137% */
+text-align: center;
+letter-spacing: 0.1px;
+
+/* Light / White */
+color: gold;
+
+
+
+}
+
+.formDetails{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 300px;
+
+}
+
+.footer {
+ 
+    text-align: center!important;
+    align-items: center;
+    background: rgb(255,233,59)!;
+    background: linear-gradient(0deg, rgba(255,233,59,1) 0%, rgba(0,0,0,1) 65%)!important;
+    width: 100;
+
+
+}
+
+.mailto{
+
+    display:block;
+    width:100px;
+    height:20px;
+    background-color: gold;
+
+}
+
+.br {
+    padding-top: 6vmin;
+    text-align: center;
+}
+
+.title {
+padding-top: 10vmin;
+padding-bottom:15vmin;
+  height: 10vmin;
+  text-align: center;
+  
+}
+
+.mid{
+    padding-top: 30vmin;
+    text-align: center;
+    padding-right: 30vmin;
+    color:gold;
+
+}
+
+
+
+.img {
+  padding-top: 10vmin;
+  padding-left: 10vmin;
+
+
+}
+
+.beauty {
+
+  position: inherit;
+  position: relative;
+  color: white!important; 
+}
+
+
+.footerinfo{
+    text-align: left;
+    
+}
+
+.Button{
+  color: gold!important;
+  padding-left: 10vmin;
+}

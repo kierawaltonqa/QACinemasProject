@@ -1,22 +1,28 @@
 {
   "name": "backend",
-  "version": "1.0.0",
+  "version": "1.4.2",
   "description": "QA cinemas project team spell",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "mocha __Tests__/",
+    "start": "nodemon server.js",
+    "coverage": "nyc npm test"
   },
   "author": "Kiera Walton, Rob Tolley, Mohamud Mussa, Sam Costello",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "chai": "^4.3.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-errors": "^1.8.0",
+    "mongodb": "^3.6.4",
     "mongoose": "^5.11.18"
   }
 }
