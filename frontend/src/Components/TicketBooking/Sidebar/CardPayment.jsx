@@ -15,8 +15,10 @@ const CardPayment = ({ sethidden }) => {
     const [expiry, setexpiary] = useState('');
     const [postcode, setpostcode] = useState('');
     const [toC, settoC] = useState(false);
+    // Alerts
     const [hideAlert, sethideAlert] = useState(false);
     const [successAlert, setsuccessAlert] = useState(false);
+    const [tocAlert, settocAlert] = useState(false);
 
 
     const hiddenState = () => {
@@ -39,31 +41,46 @@ const CardPayment = ({ sethidden }) => {
         }, 4000);
     }
 
+    const tocAlertFadeAway = () => {
+        setTimeout(() => {
+            settocAlert(false);
+        }, 4000);
+    }
+
     // Database method
 
     const create = () => {
         if (cardType === "Select..." || cardName === "" || cardNumber === "" || cvv === 0
-            || expiry === "" || postcode === "" || toC === false) {
+            || expiry === "" || postcode === "") {
             sethideAlert(true);
             dangerAlertFadeAway();
-        }
-        else {
-            axios.post(`${PAYMENT_URL}/create`, { fullName: cardName, cardType, cardNumber, expiryDate: expiry, CVC: cvv, postcode })
-                .then((res) => {
-                    console.log(res);
-                    setsuccessAlert(true);
-                    successAlertFadeAway();
-                }).catch((err) => {
-                    console.log(err);
-                })
+        } else {
+
+            if (toC === false) {
+                settocAlert(true);
+                tocAlertFadeAway();
+            }
+            else {
+                axios.post(`${PAYMENT_URL}/create`, { fullName: cardName, cardType, cardNumber, expiryDate: expiry, CVC: cvv, postcode })
+                    .then((res) => {
+                        console.log(res);
+                        setsuccessAlert(true);
+                        successAlertFadeAway();
+                    }).catch((err) => {
+                        console.log(err);
+                    })
+            }
         }
     }
+
 
 
     return (
         <>
             <br />
             <Alert color="danger" isOpen={hideAlert}>Please fill in all payment details!
+            </Alert>
+            <Alert color="danger" isOpen={tocAlert}>Please accept terms and conditions!
             </Alert>
             <Alert color="success" isOpen={successAlert}>Congrats on your purchase!
             </Alert>
