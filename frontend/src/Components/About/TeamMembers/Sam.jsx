@@ -2,6 +2,7 @@
 import logo from "../../../Resources/Logo/logo.jpg"
 import './Sam.css'
 import { GoGitBranch } from "react-icons/go"
+import sam from '../../../Resources/samQAC.jpg'
 
 const Sam = () => {
 
@@ -27,13 +28,17 @@ const Sam = () => {
 
                 </div>
                 <div className="col-md-3">
-                    <img
-                        width={64}
-                        height={64}
-                        className="align-self-end mr-3"
-                        src={logo}
-                        alt="Generic placeholder"
-                    />
+                    <br />
+                    <center>
+                        <img
+                            width={120}
+                            height={150}
+                            padding={20}
+                            className="align-self-start mr-3"
+                            src={sam}
+                            alt="sam-img"
+                        />
+                    </center>
                 </div>
 
                 <hr />
