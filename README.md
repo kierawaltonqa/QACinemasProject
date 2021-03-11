@@ -15,8 +15,8 @@ Welcome to team Spell's cinema application. The objective for this project was t
 * [Technologies](#Technologies)
 * [Prerequisite](#Prerequisite)
 * [Installing](#Installing)
-* [Testing](#Testing)
 * [Deployment](#Deployment)
+* [Testing](#Testing)
 * [Built With](#Built_With)
 * [Versioning](#Versioning)
 * [Authors](#Authors)
@@ -126,7 +126,8 @@ Robert Tolley - Developer - [Robert Tolley](https://github.com/RobertTolleyQA)
 ## License
 
 * This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details.
-* [BootStrap](https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE) - Bootstrap License
+* [Bootstrap](https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE) - Bootstrap License
+* [Reactstrap](https://github.com/reactstrap/reactstrap/blob/master/LICENSE) - Reactstrap License
 
 ## Acknowledgments
 
