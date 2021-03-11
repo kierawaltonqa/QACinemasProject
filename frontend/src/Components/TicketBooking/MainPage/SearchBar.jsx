@@ -2,6 +2,8 @@ import React from 'react'
 import { FormControl } from 'react-bootstrap'
 import { Form } from 'reactstrap'
 
+
+
 const SearchBar = ({ query, setquery }) => {
     return (
         <div >
@@ -11,7 +13,7 @@ const SearchBar = ({ query, setquery }) => {
                     className="mr-sm-2"
                     onChange={setquery}
                     value={query}
-                    style={{backgroundColor:"ActiveBorder"}}
+                    style={{ backgroundColor: "ActiveBorder" }}
                 />
             </Form>
 

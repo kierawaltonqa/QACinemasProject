@@ -17,7 +17,6 @@ const Screenpage = () => {
 
     const CardInfoStandard = () => {
         setToggleOn("standard");
-        // console.log(screen);
     }
 
     const CardInfoDeluxe = () => {
@@ -31,7 +30,6 @@ const Screenpage = () => {
         // Carousel
 
         <>
-        {/* <div className="container-xxl" style={{backgroundColor:"gold"}}> */}
             <br />
             <div className="row" style={{ height: "400px" }} >
                 <div className="slider-container ">
@@ -48,10 +46,10 @@ const Screenpage = () => {
 
             <div className="row">
                 <div className="col-6">
-                    <p id="beauty" style={{color:"gold"}} className="myTitle">Standard Seating</p>
+                    <p id="beauty" style={{ color: "gold" }} className="myTitle">Standard Seating</p>
                 </div>
                 <div className="col-6">
-                    <p id="beauty"  className="myTitle" style={{color:"gold" }}>Deluxe Seating</p>
+                    <p id="beauty" className="myTitle" style={{ color: "gold" }}>Deluxe Seating</p>
                 </div>
             </div>
 
@@ -70,7 +68,6 @@ const Screenpage = () => {
 
             <br />
             <ReadMoreText toggleOn={toggleOn} />
-            {/* </div> */}
         </>
     )
 

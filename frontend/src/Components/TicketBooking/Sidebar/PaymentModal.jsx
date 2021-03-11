@@ -5,7 +5,8 @@ import CardPayment from './CardPayment';
 
 const PaymentModal = ({ hidden, sethidden }) => {
 
-    const [key, setKey] = useState('home');
+    // Tab choice
+    const [key, setKey] = useState('card');
 
 
     return (
@@ -15,29 +16,21 @@ const PaymentModal = ({ hidden, sethidden }) => {
             <p>Please enter billing info to pay for the your selected tickets.</p>
             </ModalHeader>
             <ModalBody style={{ backgroundColor: "white" }} >
-
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
-                    onSelect={(k) => setKey(k)}
-                >
-                    <Tab eventKey="home" title="Credit/Debit Cards">
-
+                    onSelect={(k) => setKey(k)}>
+                    <Tab eventKey="card" title="Credit/Debit Cards">
                         <CardPayment sethidden={sethidden} />
-
-
                     </Tab>
-                    <Tab eventKey="profile" title="PayPal">
+
+                    <Tab eventKey="paypal" title="PayPal">
                         <hr style={{ borderColor: "black" }} />
                         <h2 style={{ color: "black", textAlign: "center" }}>Coming soon..</h2>
                         <hr style={{ borderColor: "black" }} />
-
                     </Tab>
                 </Tabs>
-
-
             </ModalBody>
-
         </Modal >
     )
 }
