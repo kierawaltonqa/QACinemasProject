@@ -3,7 +3,7 @@ import ReadAll from '../FilmList/ReadAll'
 import Sidebar from '../Sidebar/Sidebar'
 import "../Resources/TicketBooking.css"
 import { Alert } from 'reactstrap'
-import SearchBar from './SearchBar'
+
 
 const TicketBooking = () => {
 
@@ -12,27 +12,27 @@ const TicketBooking = () => {
 
 
 
-    
+
 
 
 
     return (
 
         <>
-        <hr/>
+            <hr />
             <div className="row">
                 <div className="col-9">
                     <br />
-                    <h2 style={{ color: "gold",  marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
-                    <Alert isOpen={ticketAlert} style={{marginLeft:"25px", textAlign:"center"}} color="danger">Please select a movie and seats before purchasing!</Alert>
+                    <h2 style={{ color: "gold", marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
+                    <Alert isOpen={ticketAlert} style={{ marginLeft: "25px", textAlign: "center" }} color="danger">Please select a movie and seats before purchasing!</Alert>
                     <br />
                     <br />
                     <div className="">
                         <ReadAll basketid={setbasketid} />
                     </div>
                 </div>
-                <div className="col-3" style={{backgroundColor:"black"}}>
-                    <Sidebar ticketalert={setticketAlert} basketid={basketid} style={{backgroundColor:"black"}} />
+                <div className="col-3" style={{ backgroundColor: "black" }}>
+                    <Sidebar ticketalert={setticketAlert} basketid={basketid} style={{ backgroundColor: "black" }} />
                 </div>
             </div>
         </>
