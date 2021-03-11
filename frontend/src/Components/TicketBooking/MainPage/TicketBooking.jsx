@@ -7,38 +7,39 @@ import SearchBar from './SearchBar'
 
 const TicketBooking = () => {
 
-    const [basketid, setbasketid] = useState({});
+
+
+    // States
+    const [basketInfo, setbasketinfo] = useState({});
     const [ticketAlert, setticketAlert] = useState(false);
 
 
 
-    
+
 
 
 
     return (
 
         <>
-        <hr/>
+            <hr />
             <div className="row">
                 <div className="col-9">
                     <br />
-                    <h2 style={{ color: "gold",  marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
-                    <Alert isOpen={ticketAlert} style={{marginLeft:"25px", textAlign:"center"}} color="danger">Please select a movie and seats before purchasing!</Alert>
+                    <h2 style={{ color: "gold", marginLeft: "25px" }}><center>Ticket Booking:</center></h2>
+                    <Alert isOpen={ticketAlert} style={{ marginLeft: "25px", textAlign: "center" }} color="danger">Please select a movie and seats before purchasing!</Alert>
                     <br />
                     <br />
                     <div className="">
-                        <ReadAll basketid={setbasketid} />
+                        <ReadAll basketinfo={setbasketinfo} />
                     </div>
                 </div>
-                <div className="col-3" style={{backgroundColor:"black"}}>
-                    <Sidebar ticketalert={setticketAlert} basketid={basketid} style={{backgroundColor:"black"}} />
+                <div className="col-3" style={{ backgroundColor: "black" }}>
+                    <Sidebar ticketalert={setticketAlert} basketinfo={basketInfo} style={{ backgroundColor: "black" }} />
                 </div>
             </div>
         </>
-
     )
-
 }
 
 export default TicketBooking

@@ -5,15 +5,13 @@ import axios from "axios";
 import { BOOKING_URL } from "../Resources/CONST.json"
 
 
-const ToggleInput = ({ filmname, basketid }) => {
+const ToggleInput = ({ filmname, basketinfo }) => {
 
 
     //* States for database
     const date1 = new Date();
     const movieName = filmname;
-    // const [movieName, setMovieName] = useState(filmname)
     const date = date1.toLocaleDateString();
-    // const [date, setDate] = useState(date1.toLocaleDateString())
     const [time, setTime] = useState("")
     const [bookName, setBookName] = useState("")
     const [adultTic, setAdultTic] = useState(0)
@@ -54,8 +52,6 @@ const ToggleInput = ({ filmname, basketid }) => {
         }, 3000);
     }
 
-
-
     // CREATE METHOD
 
     const create = () => {
@@ -82,7 +78,10 @@ const ToggleInput = ({ filmname, basketid }) => {
                 // Final create method
                 let totalCost = (deluxe ? (adultTic * 14) + (childTic * 10)
                     : (adultTic * 8) + (childTic * 4));
-                axios.post(`${BOOKING_URL}/create`, { moviename: movieName, date, time, bookername: bookName, adultseats: adultTic, childseats: childTic, deluxe: deluxeAnswer, totalCost })
+                axios.post(`${BOOKING_URL}/create`, {
+                    moviename: movieName, date, time, bookername: bookName,
+                    adultseats: adultTic, childseats: childTic, deluxe: deluxeAnswer, totalCost
+                })
                     .then(async (res) => {
                         getBasket(res.data)
                         toggleHidden(!hidden);
@@ -99,11 +98,10 @@ const ToggleInput = ({ filmname, basketid }) => {
     // GET METHOD
 
     const getBasket = async (id) => {
-        // const id = basketdata;
         console.log(id);
         await axios.get(`${BOOKING_URL}/readOne/${id}`)
             .then((res) => {
-                basketid(res.data)
+                basketinfo(res.data)
             })
             .catch((err) => {
                 console.log(err);
@@ -140,7 +138,7 @@ const ToggleInput = ({ filmname, basketid }) => {
                         <div>
                             <label htmlFor="" style={{ fontSize: "17px", color: "black" }}>Screen Time:</label>
                             <br />
-                            <input  style={{ width: "110px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
+                            <input style={{ width: "110px" }} type="time" placeholder="Screen Time" onChange={({ target }) => setTime(target.value)} />
                         </div>
                         <br />
                         <div>
@@ -148,9 +146,9 @@ const ToggleInput = ({ filmname, basketid }) => {
                         <label htmlFor="" style={{ fontSize: "17px", color: "black" }}>Tickets:</label>
 
                         <div className="row" style={{ marginLeft: "0px" }}>
-                            <input  style={{ width: "90px", marginRight: "4px" }}  min="0" type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
+                            <input style={{ width: "90px", marginRight: "4px" }} min="0" type="number" placeholder="£8  Adult" onChange={({ target }) => setAdultTic(target.value)} />
                         </div>
-                        <input  style={{ width: "90px", }}  min="0" type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
+                        <input style={{ width: "90px", }} min="0" type="number" placeholder="£4  Child" onChange={({ target }) => setChildTic(target.value)} />
 
                         <hr />
                         <div className="form-check form-switch">
