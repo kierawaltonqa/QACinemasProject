@@ -58,27 +58,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone this repo  
 2. Open the folder in your IDE/VS code 
-3. Run 'npm start' in the terminal in the back end folder
-4. Run 'npm start' in the terminal in the front end folder
-5. Once you have started both servers, you will have access to the webpage and it's functionality
-
-## Testing
-
-1. In the terminal, run npm test to run the tests once CD'd into backend/frontend  
-```
-npm test
-```
-2. In the back end if you wish to get the coverage 
-```
-npm run coverage
-```
-
-Coverage: 88.28% - backend  
-![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
-
-
-
-
 
 
 ## Deployment
@@ -109,6 +88,19 @@ npm start
 ![](https://placehold.it/350x90/009955/fff?text=SUCCESS!)  
 You should now have a fully working MERN stack application!
 
+## Testing
+
+1. In the terminal, run npm test to run the tests once CD'd into backend/frontend  
+```
+npm test
+```
+2. In the back end if you wish to get the coverage 
+```
+npm run coverage
+```
+
+Coverage: 88.28% - backend  
+![BackEndCoverageTesting](QACinemasDocumentsFolder\FinalCoverage.png)  
 
 
 ## Built With
@@ -133,7 +125,8 @@ Robert Tolley - Developer - [Robert Tolley](https://github.com/RobertTolleyQA)
 
 ## License
 
-
+* This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details.
+* [BootStrap](https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE) - Bootstrap License
 
 ## Acknowledgments
 
