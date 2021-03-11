@@ -7,13 +7,11 @@ import { Alert } from 'reactstrap'
 
 const TicketBooking = () => {
 
-    const [basketid, setbasketid] = useState({});
+
+
+    // States
+    const [basketInfo, setbasketinfo] = useState({});
     const [ticketAlert, setticketAlert] = useState(false);
-
-
-
-
-
 
 
     return (
@@ -28,17 +26,15 @@ const TicketBooking = () => {
                     <br />
                     <br />
                     <div className="">
-                        <ReadAll basketid={setbasketid} />
+                        <ReadAll basketinfo={setbasketinfo} />
                     </div>
                 </div>
                 <div className="col-3" style={{ backgroundColor: "black" }}>
-                    <Sidebar ticketalert={setticketAlert} basketid={basketid} style={{ backgroundColor: "black" }} />
+                    <Sidebar ticketalert={setticketAlert} basketinfo={basketInfo} style={{ backgroundColor: "black" }} />
                 </div>
             </div>
         </>
-
     )
-
 }
 
 export default TicketBooking

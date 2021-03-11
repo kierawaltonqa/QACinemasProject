@@ -3,7 +3,7 @@ import { Card, CardBody, CardTitle, CardFooter } from "reactstrap"
 import "../Resources/TicketBooking.css"
 import PaymentModal from './PaymentModal';
 
-const Sidebar = ({ basketid, ticketalert }) => {
+const Sidebar = ({ basketinfo, ticketalert }) => {
 
     const toggleHidden = () => {
 
@@ -14,12 +14,12 @@ const Sidebar = ({ basketid, ticketalert }) => {
     const [payModal, setPayModal] = useState(false);
 
     const purchaseTickets = () => {
-        if (basketid.moviename == null) {
+        if (basketinfo.moviename == null) {
             ticketalert(true);
             ticketAlertOff();
         } else {
             toggleHidden();
-            console.log(basketid);
+            console.log(basketinfo);
         }
     }
 
@@ -28,9 +28,6 @@ const Sidebar = ({ basketid, ticketalert }) => {
             ticketalert(false);
         }, 4000);
     }
-
-
-
 
 
     return (
@@ -46,52 +43,47 @@ const Sidebar = ({ basketid, ticketalert }) => {
                                     <h6 style={{ backgroundColor: "" }}><b>Ticket Holder Name:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara" >{basketid.bookername}</p>
+                                    <p className="shoppingPara" >{basketinfo.bookername}</p>
                                 </div>
                             </div>
-                            {/* <hr className="basketHr"/> */}
                             <div className="row">
                                 <div className="col-6">
                                     <h6 style={{ backgroundColor: "" }}><b>Movie Title:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">{basketid.moviename}</p>
+                                    <p className="shoppingPara">{basketinfo.moviename}</p>
                                 </div>
                             </div>
-                            {/* <hr className="basketHr"/> */}
                             <div className="row">
                                 <div className="col-6">
                                     <h6 style={{ backgroundColor: "" }}><b>Adult Tickets:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">{basketid.adultseats}</p>
+                                    <p className="shoppingPara">{basketinfo.adultseats}</p>
                                 </div>
                             </div>
-                            {/* <hr className="basketHr"/> */}
                             <div className="row">
                                 <div className="col-6">
                                     <h6 style={{ backgroundColor: "" }}><b>Child Tickets:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">{basketid.childseats}</p>
+                                    <p className="shoppingPara">{basketinfo.childseats}</p>
                                 </div>
                             </div>
-                            {/* <hr className="basketHr"/> */}
                             <div className="row">
                                 <div className="col-6">
                                     <h6 style={{ backgroundColor: "" }}><b>Deluxe Seats:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">{basketid.deluxe}</p>
+                                    <p className="shoppingPara">{basketinfo.deluxe}</p>
                                 </div>
                             </div>
-                            {/* <hr className="basketHr"/> */}
                             <div className="row">
                                 <div className="col-6">
                                     <h6 style={{ backgroundColor: "" }}><b>Screening Time:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">{basketid.time}</p>
+                                    <p className="shoppingPara">{basketinfo.time}</p>
                                 </div>
                             </div>
                             <hr className="basketHr" />
@@ -100,7 +92,7 @@ const Sidebar = ({ basketid, ticketalert }) => {
                                     <h6 style={{ backgroundColor: "" }}><b>Total cost:</b></h6>
                                 </div>
                                 <div className="col-6">
-                                    <p className="shoppingPara">£{basketid.totalCost}</p>
+                                    <p className="shoppingPara">£{basketinfo.totalCost}</p>
                                 </div>
                             </div>
                         </div>

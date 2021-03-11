@@ -10,6 +10,8 @@ import {
 
 
 const CarouselComp = ({ image1, image2, image3 }) => {
+
+    // Slide choice and animation
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -31,6 +33,7 @@ const CarouselComp = ({ image1, image2, image3 }) => {
         }
     ];
 
+
     const next = () => {
         if (animating) return;
         const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
@@ -48,6 +51,8 @@ const CarouselComp = ({ image1, image2, image3 }) => {
         setActiveIndex(newIndex);
     }
 
+
+
     const slides = items.map((item) => {
         return (
             <CarouselItem
@@ -60,6 +65,8 @@ const CarouselComp = ({ image1, image2, image3 }) => {
             </CarouselItem>
         );
     });
+
+
 
     return (
         <Carousel
